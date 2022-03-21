@@ -1,0 +1,321 @@
+body{
+    background-color:  #F9F9F9;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    height: 61px;
+    background-color: #6495ED;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.userInfo{
+    display: flex;
+    align-items: center;
+    
+}
+header figure{
+    width: 49px;    
+    height: 46px;
+    margin-left: 14px;
+    margin-right: 9px;   
+}
+
+header figure img{
+    border-radius: 100px;
+    width: 100%;
+}
+header h1{
+    width: 133px;
+    height: 22px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FAFAFA;
+}
+
+header button{
+    width: 97px;
+    height: 30px;
+    background: #EDBC64;
+    border-radius: 5px;
+    margin-right: 39px;
+    border: 2px solid transparent;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+header button:hover{
+    cursor: pointer;
+    border: 2px solid gray;
+}
+
+header button:active{
+    border: 2px solid black;
+}
+
+main{
+    
+    padding-top: 22px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 600px;
+    
+}
+
+form{
+    display: flex;
+    margin-bottom: 36px;    
+}
+
+form textarea{       
+
+        border: none;
+        outline: none;
+        resize: none;
+        width: 601px;
+        height: 97px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;        
+}
+
+form button{
+
+    width: 25px;
+    height: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    background: #EDBC64;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    color: #F8E7E7;
+    align-self: flex-end;   
+}
+form button:hover{
+    border: 2px solid gray;
+    cursor: pointer;
+}
+
+form button:active{
+    border: 2px solid black;
+    
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 575px;
+}
+
+ul li{
+    width: 575px;
+    height: 180px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin-bottom: 6px;
+    list-style: none;
+    display: flex;
+    padding-top: 15px;
+    
+}
+
+ul li figure{
+    width: 70px;
+    padding: 0;
+    margin: 0;
+    margin-left: 21px;
+    margin-right: 33px;
+
+}
+
+ul li figure img{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 100px;
+}
+
+ul li section{
+    padding: 0;
+    margin: 0;
+    width: 351px;
+    margin-right: 33px;
+}
+
+ul li section h2{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+ul li section div{
+   
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #5F5C5C;
+    width: 350px;
+    height: 133px;
+    
+}
+
+
+ul li section div p{
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #5F5C5C;
+    width: 350px;
+    height: 133px;
+    overflow: auto;
+    
+}
+
+ul li div{
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+    padding-bottom: 18px;
+    align-items: center;
+}
+
+ul li div .edit{
+    border: 2px solid transparent;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+
+color: #6495ED;
+background-color: #FFFFFF;
+width: 38px;
+height: 13px;
+margin-bottom: 10px;
+
+}
+
+ul li div .edit:hover{
+    color: green;
+    cursor: pointer;
+}
+ul li div .edit:active{
+    color: #6495ED;
+   
+}
+
+ul li div .apagar{
+    width: 44px;
+    height: 13px;
+    border: 2px solid transparent;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+
+color: #ED6464;
+background-color: #FFFFFF;
+margin-bottom: 10px;
+}
+
+ul li div .apagar:hover{
+    color: purple;
+    cursor: pointer;
+}
+ul li div .apagar:active{
+    color: #ED6464;
+   
+}
+
+ul li div span{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+color: #989898;
+}
+
+.modal{ 
+    display: none;   
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgba(0,0,0,0.5); 
+  z-index: 99999;
+}
+
+.modal form{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+
+.modal form textarea{
+    width: 400px;
+    height: 200px;
+    margin-top:100px;
+    align-self: center;
+}
+
+.modal form button{
+    margin-top: 10px;
+    align-self: center;
+    width: 100px;
+    height: 50px;
+}
+
+.modal form button{
+    margin-top: 10px;
+    align-self: center;
+    width: 100px;
+    height: 50px;
+    border: 2px solid transparent;
+}
+
+.modal form button:hover{
+    border: 2px solid gray;
+    cursor: pointer;
+}
+
+.modal form button:active{
+    border: 2px solid black;
+    
+}

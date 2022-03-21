@@ -1,0 +1,89 @@
+body{
+   display: flex;
+   justify-content: center;
+   background-color: #F9F9F9;
+}
+
+main{
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    flex-direction: column;
+    background-color: #6495ED;
+    width: 458px;
+    height: 460px;
+    margin-top: 120px;
+
+}
+.cadastro{
+    font-family: 'Montserrat';
+    font-style: normal;
+    margin-top: 32px;
+    margin-bottom: 31px;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight:700;
+    line-height: 29px;
+}
+
+.login{
+    font-family: 'Montserrat';
+    font-style: normal;
+    margin-top: 74px;
+    margin-bottom: 31px;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight:700;
+    line-height: 29px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    margin-bottom: 20px;
+    width: 246px;
+    height: 42px;
+    border-radius: 8px;
+    background-color: #F3F3F3;
+    border: none;
+}
+
+button{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    width: 132px;
+    height: 42px;
+    align-self: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    color: #FFFF;
+    background-color: #EDBC64;
+    border: 2px solid transparent;
+    font-size: 18px;
+        
+}
+
+button:hover{
+    cursor: pointer;
+    border: 2px solid gray;
+
+}
+
+button:active{
+    border:2px solid #FFFFFF;
+}
+
+a{
+    margin-bottom: 10px;
+}
+
+span{
+     font-size: 20px;
+     color: red;
+     font-weight: bold;
+     display: none;
+}
