@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/homePage.css">
     <title>Kenzie Food &verbar; Home</title>
 </head>
 <body>
-    <header>
+    <header class="topo">
         <h1>Kenzie</h1>
         <h2>Food</h2>
-        <input type="text" placeholder="Pesquisar por produto">
-        <button>Login / Registrar</button>
+        <input type="text" placeholder="Pesquisar por produto" id="inputPesquisa">
+        <button id="botaoLogin">Login / Registrar</button>
     </header>
     <main>
         <menu>
             <nav>
-                <button>Todos</button>
-                <button>Panificadora</button>
-                <button>Frutas</button>
-                <button>Bebidas</button>
+                <button id="botaoTodos">Todos</button>
+                <button id="botaoPao"><img src="src/img/panificadora.png" alt="Panificadora">Panificadora</button>
+                <button id="botaoFruta"><img src="src/img/frutas.png" alt="Frutas">Frutas</button>
+                <button id="botaoBebida"><img src="src/img/bebida.png" alt="Bebidas">Bebidas</button>
             </nav>
         </menu>
         <section>
@@ -32,12 +37,15 @@
             </ul>
         </section>
         <aside>
-            <div>
+            <div class="div1">
+                <img src="src/img/carrinho.png" alt="Carrinho">
                 <h3>Carrinho</h3>
             </div>
-            <div>
+            <div class="div2">
                 <span>Por enquanto não temos nenhum produto no carrinho</span>
             </div>
+            <div>Quantidade</div>
+            <div>Total</div>
         </aside>
     </main>
 
