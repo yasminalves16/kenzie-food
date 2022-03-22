@@ -1,0 +1,190 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*HEADER*/
+.topo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+    box-shadow:  0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+    background-color: #FFF;
+    font-family: 'Poppins', sans-serif;
+}
+
+.topo h1 {
+    margin-left: 117px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #212529;
+}
+
+.topo h2 {
+    margin-left: 7px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FF2253;
+}
+
+#inputPesquisa {
+    width: 312px;
+    height: 49px;
+    margin-right: 20px;
+    margin-left: 55%;
+    padding-left: 12px;
+    border: 1px solid #E9ECEF;
+    border-radius: 12px;
+    background-color: #E9ECEF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #868E96;
+}
+
+#inputPesquisa:hover {
+    background-color: #F8F9FA;
+}
+
+#botaoLogin {
+    width: 150px;
+    height: 48px;
+    margin-right: 115px;
+    border-radius: 32px;
+    border: 1px solid #FF2253;
+    background-color: #FF2253;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #F8F9FA;
+}
+
+#botaoLogin:hover {
+    cursor: pointer;
+    color: #212529;
+    background-color: #F8F9FA;
+}
+
+/*MAIN*/
+main {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 117px;
+}
+
+#botaoTodos {
+    width: 88px;
+    height: 48px;
+    margin-right: 28px;
+    border-radius: 32px;
+    border: 1px solid #F8F9FA;
+    background-color: #F8F9FA;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #212529;
+}
+
+
+
+#botaoTodos:hover {
+    cursor: pointer;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+#botaoPao {
+    width: 170px;
+    height: 48px;
+    margin-right: 28px;
+    border-radius: 32px;
+    border: 1px solid #FFF7F4;
+    background-color: #FFF7F4;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #212529;
+}
+
+#botaoPao img {
+    padding-right: 10px;
+}
+
+#botaoPao:hover {
+    cursor: pointer;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+#botaoFruta {
+    width: 123px;
+    height: 48px;
+    margin-right: 28px;
+    border-radius: 32px;
+    border: 1px solid #FFF1F4;
+    background-color: #FFF1F4;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #212529;
+}
+
+#botaoFruta img {
+    padding-right: 5px;
+}
+
+#botaoFruta:hover {
+    cursor: pointer;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+#botaoBebida {
+    width: 123px;
+    height: 48px;
+    border-radius: 32px;
+    border: 1px solid #FFF1F4;
+    background-color: #FFF1F4;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #212529;
+}
+
+#botaoBebida img {
+    padding-right: 5px;
+}
+
+#botaoBebida:hover {
+    cursor: pointer;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+/*CARRINHO*/
+aside {
+    width: 320px;
+    height: 582px;
+}
+
+.div1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 56px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+.div1 img {
+    width: 14px;
+    height: 14px;
+    margin-left: 23px;
+    margin-right: 20px;
+}
