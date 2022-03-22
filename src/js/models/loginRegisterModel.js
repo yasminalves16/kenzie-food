@@ -11,9 +11,10 @@ class LoginCadastrar {
 
         })
         const responseData = await response.json()
-
+        
 
         if (responseData.status == 'Error') {
+            
             // const login = document.querySelector('.invalidLogin')
 
             // setTimeout(() => {login.style.display = 'inline'},0)
@@ -22,7 +23,7 @@ class LoginCadastrar {
         else {
             let key = 'auth'
             localStorage.setItem(key, JSON.stringify(responseData));
-            // window.location.href = '/./../index.html'        
+            window.location.href = '/./../index.html'        
         }
     }
 
@@ -37,12 +38,13 @@ class LoginCadastrar {
             .then((response) => response)
             .catch((error) => console.log(error))
 
-
+            
         if (response.ok == true) {
-            // window.location.href = './src/html/login.html'
+            window.location.href = './../../src/html/login.html'
+            
         }
 
-        if (response.ok == false) {
+        else {
             // const login = document.querySelector('.invalidCadastro')
 
             // setTimeout(() => {login.style.display = 'inline'},0)
@@ -51,4 +53,6 @@ class LoginCadastrar {
         }
     }
 }
+
+export {LoginCadastrar}
 

@@ -1,6 +1,8 @@
+import { LoginCadastrar } from "./../models/loginRegisterModel.js"
+
 export class LoginCadastro {
 
-    static capturarValue(event) {
+    static async capturarValue(event) {
 
         event.preventDefault()
         const data = {}
@@ -17,7 +19,14 @@ export class LoginCadastro {
 
             inputs[i].value = ""
         }
-        console.log(data)
+        if(inputs.length === 3){
+        const respota = await LoginCadastrar.login(data)
+        console.log('login')
+        }
+        if(inputs.length == 4){
+        const resp = await LoginCadastrar.cadastrar(data)
+        console.log('cadastrar')
+        }
     }
 
     
