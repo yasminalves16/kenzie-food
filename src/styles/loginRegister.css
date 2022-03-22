@@ -1,1 +1,22 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:  #FF2253;
+}
 
+header{
+    text-align: center;
+}
+
+h2{
+    text-align: center
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+}
+
+footer{
+    text-align: center;
+}
