@@ -20,4 +20,6 @@ export class LoginCadastro {
         console.log(data)
     }
 
+    
+
 }
