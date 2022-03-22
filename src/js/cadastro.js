@@ -1,4 +1,4 @@
-import{LoginCadastro} from "./models/loginRegisterModel.js"
+import{LoginCadastro} from "./controllers/loginRegisterControl.js"
 
 
 const form = document.querySelector('#formCadastro')
