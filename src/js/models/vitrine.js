@@ -12,16 +12,18 @@ class Vitrine {
 
     }
 
-    static templateProdutos({nome, imagem, descricao, categoria, preco}){
+    static templateProdutos({nome, imagem, descricao, categoria, preco, id}){
 
         const li = document.createElement('li')
         li.innerHTML = `
+            <figure>
             <img src="${imagem}" alt="${nome}">
+            </figure>
             <h3>${nome}</h3>
             <p>${descricao}</p>
             <span>${categoria}</span>
             <p>${preco}</p>
-            <button><img src="" alt=""></button>
+            <button id='${id}'><img src="" alt=""></button>
         `
         return li
 
