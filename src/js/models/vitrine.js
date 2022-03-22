@@ -21,10 +21,12 @@ class Vitrine {
             <p>${descricao}</p>
             <span>${categoria}</span>
             <p>${preco}</p>
+            <button><img src="" alt=""></button>
         `
         return li
 
     }
+
 }
 
 export {Vitrine}

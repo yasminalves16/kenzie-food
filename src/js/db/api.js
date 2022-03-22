@@ -28,9 +28,5 @@ class Api {
     }
 }
 
-
-
-
-
-
+export {Api}
 
