@@ -1,18 +1,15 @@
 class Api{
     static url = 'https://kenzie-food-api.herokuapp.com/products'
-
-    static produtos(){
+    static async produtos(){
     const response = await fetch(`${this.url}`, {
         'method': 'GET',
         'headers': {
             'Content-Type': 'application/json',
-            
         },
     })
-
     const responseData = await response.json()
-
     return responseData
 }
-
 }
+
+export {Api}
