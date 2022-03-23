@@ -13,7 +13,7 @@ class LoginCadastrar {
         const responseData = await response.json()
         
 
-        if (responseData.status == 'Error') {
+        if (responseData.error) {
             
             // const login = document.querySelector('.invalidLogin')
 
