@@ -1,3 +1,5 @@
+import { Api } from "../db/api.js";
+
 class Vitrine {
     static async listarProdutos(data){
         const ul = document.querySelector('.vitrine')
@@ -23,10 +25,24 @@ class Vitrine {
             <p>${descricao}</p>
             <span>${categoria}</span>
             <p>${preco}</p>
-            <button id='${id}'><img src="" alt=""></button>
+            <button id='${id}'><img src="./../../src/img/carrinho.png" alt=""></button>
         `
+        
         return li
 
+    }
+
+    static async analisarQualListar(){
+        const token = JSON.parse(localStorage.getItem('auth'))
+        if(token !== null){
+            const meusProdutos = await Api.meusProdutos(token)
+            return meusProdutos            
+        }
+        
+        else{
+            const produtos = await Api.produtos()
+            return produtos
+        }
     }
 
 }

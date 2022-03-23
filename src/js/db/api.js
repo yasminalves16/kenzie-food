@@ -26,7 +26,9 @@ class Api {
         const responseData = await response.json()
         return responseData
     }
+
 }
+
 
 export {Api}
 
