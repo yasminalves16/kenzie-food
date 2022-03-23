@@ -7,7 +7,23 @@ header {
     flex-direction: column;
 }
 
-nav{
+header img{
+    width: 30vw;
+    margin: 20px 0px 0px 20px;
+}
+
+header input {
+    border: 1px solid #E9ECEF;
+    border-radius: 8px;
+    background-color: #E9ECEF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #868E96;
+    margin: 20px 15px 20px 15px;
+    height: 5vh;
+}
+
+header nav{
     display: flex;
     background-color: #ff2253;
 }
@@ -21,16 +37,19 @@ nav{
     margin-left: 15px;
 }
 
-.menu{
+.menuEscondido{
     cursor: pointer;
 }
 
-.menu div{
+.menuEscondido div{
     width: 32px;
     height: 2px;
     background-color: #fff;
     margin: 8px;
+}
 
+.menu button{
+    
 }
 
 
