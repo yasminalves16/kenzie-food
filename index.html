@@ -13,11 +13,23 @@
 </head>
 <body>
     <header class="topo">
-        <h1>Kenzie</h1>
-        <h2>Food</h2>
+        <img src="./src/img/Group 1075.svg">
         <input type="text" placeholder="Pesquisar por produto" id="inputPesquisa">
-        <button id="botaoLogin">Login / Registrar</button>
+        <!-- DISPLAY APENAS NO DESKTOP <button id="botaoLogin">Login / Registrar</button> --> 
+
+        <nav>
+            <div class="menu">
+                <div class="linha1"></div>
+                <div class="linha2"></div>
+                <div class="linha3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="http://127.0.0.1:5500/src/html/login.html">Login</a></li>
+                <li><a href="http://127.0.0.1:5500/src/html/cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
         <menu>
             <nav>
@@ -39,7 +51,7 @@
 
             </ul>
         </section>
-        <aside>
+        <aside class="carrinho">
             <div class="div-titulo">
                 <img src="src/img/carrinho.png" alt="Carrinho">
                 <h3>Carrinho</h3>
@@ -54,6 +66,12 @@
             <div id="precoTotal">Total</div>
             --->
         </aside>
+        <footer>
+            <button><img src="src/img/carrinho.png" alt="Carrinho">
+                <h3>Carrinho</h3>
+            </button>
+        </footer>
+
     </section>
     </main>
 

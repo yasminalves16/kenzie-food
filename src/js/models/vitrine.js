@@ -1,6 +1,6 @@
 class Vitrine {
     static async listarProdutos(data){
-        const ul = document.querySelector('ul')
+        const ul = document.querySelector('.vitrine')
         ul.innerHTML = ''
 
         data.forEach((produto) => {
