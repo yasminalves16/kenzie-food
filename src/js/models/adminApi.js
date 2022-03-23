@@ -1,4 +1,4 @@
-ProdutosAdmin.requisicao()
+
 
 class NovoProduto {
     constructor({ nome, preco, categoria, descricao }) {
@@ -7,6 +7,8 @@ class NovoProduto {
         this._preco = preco
         this._categoria = categoria
         this._descricao = descricao
+
+        
 
     }
 
@@ -22,3 +24,4 @@ class NovoProduto {
         return maxId + 1
     }
 }
+
