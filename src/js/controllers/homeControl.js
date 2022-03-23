@@ -12,6 +12,7 @@ class HomePageControle {
     static async adicionarProduto(event){     
 
         const botao = event.target
+       
         const produtos = await Vitrine.analisarQualListar()
                
 
