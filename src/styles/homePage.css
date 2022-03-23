@@ -172,23 +172,33 @@ nav {
 
 /*CARRINHO*/
 aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 320px;
     height: 582px;
 }
 
-.div1 {
+.div-titulo {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 320px;
     height: 56px;
     border-radius: 8px 8px 0px 0px;
     background-color: #FF2253;
     color: #F8F9FA;
 }
 
-.div1 img {
+.div-titulo img {
     width: 14px;
     height: 14px;
     margin-left: 23px;
     margin-right: 20px;
+}
+
+.div-carrinho {
+    width: 320px;
+    height: 296px;
+    background-color: #F8F9FA;
 }
