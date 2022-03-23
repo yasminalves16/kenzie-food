@@ -1,1 +1,47 @@
 
+#formCadastroDeProdutos{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalCadastro{
+    
+    height: 700px;
+    width:450px;
+    position: relative;
+    background-color: beige;
+}
+
+.modalCadastro .fecharModal{
+    
+}
+
+
+#formEditarProdutos{
+    width: 108px;
+    height: 108px;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalEditar{
+    
+    height: 700px;
+    width:450px;
+    position: relative;
+    background-color: beige;
+}
+
+.hidden{
+    display: none;
+}
