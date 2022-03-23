@@ -1,13 +1,5 @@
 export class Carrinho{
 
-    static valorTotal(){
-
-    }
-
-    static quantidade(){
-
-    }
-
     static listarCarrinho(data){
         const ulCarrinho = document.querySelector('.ulCarrinho')
         ulCarrinho.innerHTML = ''
@@ -39,5 +31,49 @@ export class Carrinho{
     static removerProduto(){
 
     }
-    
+
+    static templateQuantidadePreco(){
+        const divCarrinho = document.querySelector('.div-carrinho')
+        const ulCarrinho = document.querySelector('.ulCarrinho')
+
+        if(ulCarrinho.childElementCount > 0){
+
+            const divQuantidade = document.createElement('div')
+            divQuantidade.innerHTML = `
+                <p>Quantidade <span id="quantidadeTotal">0</span></p>
+            `
+            const divPrecoTotal = document.createElement('div')
+            divPrecoTotal.innerHTML = `
+                <p>Total <span id="precoTotal">00</span></p>
+            `
+
+            divCarrinho.appendChild(divQuantidade)
+            divCarrinho.appendChild(divPrecoTotal)
+
+        }
+    }
+
+    static quantidadeTotal(produtos){
+        const quantidadeTotal = document.querySelector('#quantidadeTotal')
+
+        const somaQuantidade = produtos.forEach((element) => {
+
+            element += 1
+
+        })
+
+        quantidadeTotal.innerText = `${somaQuantidade}`
+    }
+
+    static valorTotal(produtos){
+        const precoTotal = document.querySelector('#precoTotal')
+
+        const somaTotal = produtos.reduce((total, {preco}) => {
+
+            return total += preco
+
+        }, 0)
+
+        precoTotal.innerText = `${somaTotal}`
+    }
 }
