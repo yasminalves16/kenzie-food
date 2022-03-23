@@ -7,17 +7,19 @@ import { Vitrine } from "../models/vitrine.js";
 class HomePageControle {
 
     static produtoAdicionado = JSON.parse(localStorage.getItem('produtosComprados')) === null ? [] :  JSON.parse(localStorage.getItem('produtosComprados')) 
-
+    
 
     static async adicionarProduto(event){     
 
         const botao = event.target
-        const produtos = await Api.produtos()        
+        const produtos = await Vitrine.analisarQualListar()
+               
 
         if(botao.id){            
             
             const produto = produtos.find(function(obj){return obj.id == botao.id})
             this.produtoAdicionado.push(produto)
+            console.log(this.produtoAdicionado)
     
             const key = 'produtosComprados'
             localStorage.setItem(key, JSON.stringify(this.produtoAdicionado));
@@ -27,7 +29,7 @@ class HomePageControle {
     }
 
     static async botaoFiltros(event){
-        const produtosApi = await Api.produtos()
+        const produtosApi =  await Vitrine.analisarQualListar()
         const vitrine = document.querySelector('.vitrine')
         const evento = event.target                          
            
@@ -43,8 +45,8 @@ class HomePageControle {
             vitrine.innerHTML = ``
             Vitrine.listarProdutos(produtosApi)
         }
-
     }
+    
 }
 
 export {HomePageControle}
