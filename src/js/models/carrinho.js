@@ -1,4 +1,6 @@
-export class Carrinho{
+import {HomePageControle} from "../controllers/homeControl.js"
+
+export class Carrinho {
 
     static listarCarrinho(data){
         const ulCarrinho = document.querySelector('.ulCarrinho')
@@ -15,29 +17,33 @@ export class Carrinho{
     static templateCarrinho({nome, imagem, categoria, preco, id}){
         
         const li = document.createElement('li')
+
+        const precoFormatado = HomePageControle.formatarMoedaProdutos(preco)
+
         li.innerHTML = `
             <figure>
             <img src="${imagem}" alt="${nome}">
             </figure>
             <h3>${nome}</h3>
             <span>${categoria}</span>
-            <p>${preco}</p>
+            <p>${precoFormatado}</p>
             <button id='${id}'><img src="src/img/remover-produto.png" alt=""></button>
         `
 
         return li
     }
 
-    static removerProduto(){
+    static removerProduto(event){
+        const evento = event.target
 
     }
 
     static templateQuantidadePreco(){
         const divCarrinho = document.querySelector('.div-carrinho')
         const ulCarrinho = document.querySelector('.ulCarrinho')
-
-        if(ulCarrinho.childElementCount > 0){
-
+        
+        if(ulCarrinho.childElementCount <= 1){
+            
             const divQuantidade = document.createElement('div')
             divQuantidade.innerHTML = `
                 <p>Quantidade <span id="quantidadeTotal">0</span></p>
@@ -56,11 +62,7 @@ export class Carrinho{
     static quantidadeTotal(produtos){
         const quantidadeTotal = document.querySelector('#quantidadeTotal')
 
-        const somaQuantidade = produtos.forEach((element) => {
-
-            element += 1
-
-        })
+        const somaQuantidade = produtos.length
 
         quantidadeTotal.innerText = `${somaQuantidade}`
     }
@@ -74,6 +76,8 @@ export class Carrinho{
 
         }, 0)
 
-        precoTotal.innerText = `${somaTotal}`
+        const precoFormatado = HomePageControle.formatarMoedaProdutos(somaTotal)
+
+        precoTotal.innerText = `${precoFormatado}`
     }
 }
