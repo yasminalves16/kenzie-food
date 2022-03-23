@@ -20,7 +20,7 @@ export class LoginCadastro {
             inputs[i].value = ""
         }
         if(inputs.length === 3){
-        const respota = await LoginCadastrar.login(data)
+        const respota = await LoginCadastrar.login(data)        
         console.log('login')
         }
         if(inputs.length == 4){
