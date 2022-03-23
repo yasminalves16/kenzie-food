@@ -12,6 +12,7 @@ class HomePageControle {
     static async adicionarProduto(event){     
 
         const botao = event.target
+       
         const produtos = await Vitrine.analisarQualListar()
                
 
@@ -34,6 +35,7 @@ class HomePageControle {
 
     static removerProduto(event){
         const botao = event.target
+        console.log('oi')
 
         if(botao.id){
 
@@ -75,11 +77,29 @@ class HomePageControle {
         }
     }
 
-    static logarRegistrarAdmin(event){
+    static async logarRegistrarAdmin(event){
         const button = event.target
         if(button.id == 'botaoLogin'){
             window.location.href = './../../src/html/login.html'
             localStorage.clear()
+        }
+
+        if(button.id == 'logout'){
+            localStorage.clear()
+            const botaoLogout = document.querySelector('#logout')
+            botaoLogout.innerHTML = 'Login / Registrar'
+            botaoLogout.id = 'botaoLogin'
+            const botaoAdmin = document.querySelector('#adminPage')
+            botaoAdmin.style.display = 'none'
+            const api = await Vitrine.analisarQualListar()
+            Vitrine.listarProdutos(api)
+            const ulCarrinho = document.querySelector('.div-carrinho')
+            this.produtoAdicionado = []
+            ulCarrinho.innerHTML = `
+            <ul class="ulCarrinho">                        
+            </ul>`
+                        
+            
         }
         if(button.id == 'adminPage'){
             window.location.href = './../../src/html/admin.html'
