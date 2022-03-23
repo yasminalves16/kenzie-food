@@ -6,6 +6,7 @@ import {Carrinho} from "./models/carrinho.js"
 const api = await Vitrine.analisarQualListar()
 Vitrine.listarProdutos(api)
 Carrinho.listarCarrinho(HomePageControle.produtoAdicionado)
+Vitrine.checarSeLoginExiste()
 
 const inputPesquisa = document.querySelector('#inputPesquisa')
 
@@ -23,7 +24,7 @@ const botaoMenu = document.querySelector('.menu')
 botaoMenu.addEventListener('click', HomePageControle.botaoFiltros)
 
 const header = document.querySelector('.topo')
-header.addEventListener('click',HomePageControle.logarRegistrarAdmin)
+header.addEventListener('click',HomePageControle.logarRegistrarAdmin.bind(HomePageControle))
 
 const botaoRemoverProduto = document.querySelector('.ulCarrinho')
 botaoRemoverProduto.addEventListener('click', HomePageControle.removerProduto.bind(HomePageControle))

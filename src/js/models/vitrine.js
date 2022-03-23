@@ -47,6 +47,24 @@ class Vitrine {
         }
     }
 
+    static checarSeLoginExiste(){
+        const token = JSON.parse(localStorage.getItem('auth'))
+        if(token !== null){
+            const botaoLogin = document.querySelector('#botaoLogin')
+            botaoLogin.innerHTML = 'Logout'
+            botaoLogin.id = 'logout'
+            const botaoAdmin = document.querySelector('#adminPage')
+            botaoAdmin.style.display = 'inline'
+        }
+        else{
+            const botaoLogin = document.querySelector('#botaoLogin')
+            botaoLogin.innerHTML = 'Login / Registrar'
+            botaoLogin.id = 'botaoLogin'
+            const botaoAdmin = document.querySelector('#adminPage')
+            botaoAdmin.style.display = 'none'
+        }
+    }
+
 }
 
 export {Vitrine}

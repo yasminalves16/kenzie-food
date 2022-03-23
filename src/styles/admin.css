@@ -47,4 +47,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #868e96;
 }
