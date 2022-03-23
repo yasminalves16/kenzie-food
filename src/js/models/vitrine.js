@@ -1,3 +1,6 @@
+import { Api } from "../db/api.js";
+import {HomePageControle} from './../controllers/homeControl.js'
+
 class Vitrine {
     static async listarProdutos(data){
         const ul = document.querySelector('ul')
@@ -13,6 +16,7 @@ class Vitrine {
     }
 
     static templateProdutos({nome, imagem, descricao, categoria, preco, id}){
+        const precoFormatado = HomePageControle.formatarMoedaProdutos(preco)
 
         const li = document.createElement('li')
         li.innerHTML = `
@@ -22,11 +26,25 @@ class Vitrine {
             <h3>${nome}</h3>
             <p>${descricao}</p>
             <span>${categoria}</span>
-            <p>${preco}</p>
-            <button id='${id}'><img src="" alt=""></button>
+            <p>${precoFormatado}</p>
+            <button id='${id}'><img src="./../../src/img/carrinho.png" alt="" id='${id}'></button>
         `
+        
         return li
 
+    }
+
+    static async analisarQualListar(){
+        const token = JSON.parse(localStorage.getItem('auth'))
+        if(token !== null){
+            const meusProdutos = await Api.meusProdutos(token)
+            return meusProdutos            
+        }
+        
+        else{
+            const produtos = await Api.produtos()
+            return produtos
+        }
     }
 
 }

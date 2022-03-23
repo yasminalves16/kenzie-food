@@ -5,31 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/styles/admin.css" />
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/homePage.css">
+    <link rel="stylesheet" href="../styles/admin.css" />
     <title>adminPage</title>
 </head>
 
 <body>
-    <header id="cabecalho">
-        <div id="informacoesDoCabecalho">
-            <h1 id="nomeDoSiteCabecalho">Kenzie Food</h1>
+    <header class="topo">
+        
+            <h1 id="nomeDoSiteCabecalho">Kenzie</h1>
+            <h2>Food</h2>
             <input type="text" name="pesquisarProdutos" placeholder="Pesquisar por produto"
-                id="inputAdminPesquisarProduto" />
+                id="inputPesquisa" />
             <div id="imgUsuario">
                 <img src="" id="imgIconeUsuario">
             </div>
-        </div>
+        
     </header>
-    <nav class="divBotoesDeFiltro">
+    <main>
+        <menu>
+    <nav class="menu">
         <button class="botoesDeFiltro" id="botaoTodos">Todos</button>
-        <button class="botoesDeFiltro" id="botaoPanificadora">Panificadora</button>
-        <button class="botoesDeFiltro" id="botaoFrutas">Frutas</button>
-        <button class="botoesDeFiltro" id="botaoBebidas">Bebidas</button>
+        <button class="botoesDeFiltro" id="botaoPao"><img src="../img/panificadora.png" alt="Panificadora">Panificadora</button>
+        <button class="botoesDeFiltro" id="botaoFruta"><img src="../img/frutas.png" alt="Frutas">Frutas</button>
+        <button class="botoesDeFiltro" id="botaoBebida"><img src="../img/bebida.png" alt="Bebidas">Bebidas</button>
         <button class="botoesDeFiltro" id="botaoAdicionar">Adicionar novo produto</button>
 
     </nav>
-    </head>
-
+</menu>
     <section id="secaoListaAdmin">
         <div id="cabecalhoListaAdmin">
             <li id="liListaAdmin">
@@ -49,7 +53,7 @@
                 <h2>Cadastro</h2> 
                 <button class="fecharModalCad">X</button>
             </div>
-           
+    </main>   
 
         <label for="nomeDoProduto">Nome do Produto</label>
         <input type="text" name="nomeDoProduto" placeholder="Nome do produto" class="inputFormAdmin" />
@@ -120,7 +124,7 @@
             <button class="botaoModalExcluir">Não</button>
         </div>
     </div>
-<script type="module" src="./script.js"></script>
+<script type="module" src="../js/admin.js"></script>
 </body>
 
 </html>
