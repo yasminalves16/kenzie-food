@@ -27,15 +27,10 @@ export class Carrinho {
             <h3>${nome}</h3>
             <span>${categoria}</span>
             <p>${precoFormatado}</p>
-            <button id='${id}'><img src="src/img/remover-produto.png" alt=""></button>
+            <button class="botaoRemover" id='${id}'><img id='${id}' src="src/img/remover-produto.png" alt=""></button>
         `
 
         return li
-    }
-
-    static removerProduto(event){
-        const evento = event.target
-
     }
 
     static templateQuantidadePreco(){
@@ -45,10 +40,12 @@ export class Carrinho {
         if(ulCarrinho.childElementCount <= 1){
             
             const divQuantidade = document.createElement('div')
+            divQuantidade.classList.add('divQuantidade')
             divQuantidade.innerHTML = `
                 <p>Quantidade <span id="quantidadeTotal">0</span></p>
             `
             const divPrecoTotal = document.createElement('div')
+            divPrecoTotal.classList.add('divPrecoTotal')
             divPrecoTotal.innerHTML = `
                 <p>Total <span id="precoTotal">00</span></p>
             `
@@ -57,6 +54,21 @@ export class Carrinho {
             divCarrinho.appendChild(divPrecoTotal)
 
         }
+    }
+
+    static templateRemoverProduto(){
+        const ulCarrinho = document.querySelector('.ulCarrinho')
+
+        if(ulCarrinho.childElementCount === 0){
+
+            const divQuantidade = document.querySelector('.divQuantidade')
+            divQuantidade.innerHTML = ""
+
+            const divPrecoTotal = document.querySelector('.divPrecoTotal')
+            divPrecoTotal.innerHTML = ""
+
+        }
+
     }
 
     static quantidadeTotal(produtos){

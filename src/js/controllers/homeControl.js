@@ -33,6 +33,30 @@ class HomePageControle {
 
     }
 
+    static removerProduto(event){
+        const botao = event.target
+
+        if(botao.id){
+
+            const produto = this.produtoAdicionado.find(function(obj){return obj.id == botao.id})
+            
+            const index = this.produtoAdicionado.indexOf(produto)
+
+            this.produtoAdicionado.splice(index, 1)
+    
+            const key = 'produtosComprados'
+            localStorage.setItem(key, JSON.stringify(this.produtoAdicionado));
+            Carrinho.listarCarrinho(this.produtoAdicionado)
+            
+            Carrinho.quantidadeTotal(this.produtoAdicionado)
+            Carrinho.valorTotal(this.produtoAdicionado)
+
+            Carrinho.templateRemoverProduto()
+
+        }
+
+    }
+
     static async botaoFiltros(event){
         const produtosApi =  await Vitrine.analisarQualListar()
         const vitrine = document.querySelector('.vitrine')

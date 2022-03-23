@@ -19,8 +19,11 @@ inputPesquisa.addEventListener('keyup', function(){
 const botaoAdicionarCarrinho = document.querySelector('.vitrine')
 botaoAdicionarCarrinho.addEventListener('click', HomePageControle.adicionarProduto.bind(HomePageControle))
 
-const botao = document.querySelector('.menu')
-botao.addEventListener('click', HomePageControle.botaoFiltros)
+const botaoMenu = document.querySelector('.menu')
+botaoMenu.addEventListener('click', HomePageControle.botaoFiltros)
 
 const header = document.querySelector('.topo')
 header.addEventListener('click',HomePageControle.logarRegistrarAdmin)
+
+const botaoRemoverProduto = document.querySelector('.ulCarrinho')
+botaoRemoverProduto.addEventListener('click', HomePageControle.removerProduto.bind(HomePageControle))
