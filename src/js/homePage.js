@@ -18,3 +18,7 @@ inputPesquisa.addEventListener('keyup', function(){
 
 const botaoAdicionarCarrinho = document.querySelector('.vitrine')
 botaoAdicionarCarrinho.addEventListener('click', HomePageControle.adicionarProduto.bind(HomePageControle))
+
+const botao = document.querySelector('.menu')
+botao.addEventListener('click', HomePageControle.botaoFiltros)
+
