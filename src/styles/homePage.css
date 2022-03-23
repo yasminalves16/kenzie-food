@@ -26,6 +26,11 @@ header input {
 header nav{
     display: flex;
     background-color: #ff2253;
+    display: none;
+}
+
+header button {
+    display:none;
 }
 
 .nav-list {
@@ -48,9 +53,81 @@ header nav{
     margin: 8px;
 }
 
-.menu button{
-    
+.menu{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 15px 20px 15px;
 }
+
+.menu button{
+    height: 8vw;
+    background-color: #ff2253;
+    border: none;
+    border-radius: 15px;
+    color: black;
+}
+
+.vitrine{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.vitrine li{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    height: 430px;
+    align-items: flex-start;
+    margin: 20px 20px 0px 20px;
+    justify-content: space-between;
+}
+
+.vitrine li figure img {
+    background-color:blueviolet;
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.vitrine li p{
+    color: #868E96;
+    font-weight: 400;
+    font-size: 14px
+}
+
+.vitrine li span{
+    width: 100%;
+}
+
+li h3{
+    color: black;
+    font-weight: 600;
+}
+
+footer{
+    width: 99vw;
+    margin: 2px;
+}
+
+footer button{
+    width: 100%;
+    border: none;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    height: 8vh;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+}
+
+footer button img{
+    margin-right: 25px;
+}
+
+
+
 
 
 /*HEADER*/
