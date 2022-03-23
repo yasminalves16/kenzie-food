@@ -1,31 +1,20 @@
 const ProdutosAdmin = class ProdutosAdmin {
 
-    static async requisicao() {
+    static async listarProdutos(data) {
+        data.forEach((produto) => {
 
+            /*const id = produto.id
+            const img = produto.imagem
+            const nome = produto.nome
+            const categoria = produto.categoria
+            const descricao = produto.descricao*/
 
-        fetch('https://kenzie-food-api.herokuapp.com/products')
-            .then(response => response.json())
-            .then((data) => {
-
-                data.forEach((produto) => {
-
-                    console.log(produto)
-
-                    const id = produto.id
-                    const img = produto.imagem
-                    const nome = produto.nome
-                    const categoria = produto.categoria
-                    const descricao = produto.descricao
-
-                    this.vitrineAdmin(id, img, nome, categoria, descricao)
-                })
-
-
-            }).catch((error) => console.log(error))
+            this.vitrineAdmin(produto)
+        })
 
     }
 
-    static vitrineAdmin(id, img, nome, categoria, descricao) {
+    static vitrineAdmin({id, img, nome, categoria, descricao}) {
         const ul = document.querySelector('#listaApi')
         const li = document.createElement('li')
 
@@ -37,8 +26,6 @@ const ProdutosAdmin = class ProdutosAdmin {
         <button id="${id}" class="botaoListaAdmin" class="botaoEditarItemListaAdmin"> <img src="" class="imgBotaoListaAdmin"> </button>
         <button id="${id}" class="botaoListaAdmin" class="botaoExcluirItemListaAdmin"> <img src="" class="imgBotaoListaAdmin"> </button>
         `
-        console.log(ul)
-        console.log(li)
 
 
 
@@ -50,8 +37,6 @@ const ProdutosAdmin = class ProdutosAdmin {
 
     }
 }
-
-ProdutosAdmin.requisicao()
 
   
 const ModalAdmin = class ModalAdmin{
@@ -77,7 +62,7 @@ const ModalAdmin = class ModalAdmin{
     }
 
     static removeModal(evento){
-        console.log(evento) 
+        evento.preventDefault() 
         const modalDeCadastro = document.querySelector("#formCadastroDeProdutos")
         const modalDeEdit = document.querySelector("#formEditarProdutos")
         modalDeCadastro.classList.add("hidden")
@@ -88,11 +73,6 @@ const ModalAdmin = class ModalAdmin{
 
 }
 
-const botaoAdicionar = document.querySelector("#botaoAdicionar")
-botaoAdicionar.addEventListener('click', ModalAdmin.mostrarModalCadastro)
 
-const botaoRemoveModalCadastro = document.querySelector(".fecharModalCad")
-botaoRemoveModalCadastro.addEventListener('click',ModalAdmin.removeModal )
-
-const botaoRemoveModalEdit = document.querySelector(".fecharModalEdit")
-botaoRemoveModalEdit.addEventListener('click',ModalAdmin.removeModal )
+export {ProdutosAdmin}
+export {ModalAdmin}
