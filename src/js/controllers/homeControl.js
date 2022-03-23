@@ -3,12 +3,14 @@ import { Carrinho } from "../models/carrinho.js"
 import {Busca} from "../models/filtro-teste.js"
 import { Vitrine } from "../models/vitrine.js";
 
+
 class HomePageControle {
 
-    static produtoAdicionado = JSON.parse(localStorage.getItem('produtosComprados')); 
+    static produtoAdicionado = JSON.parse(localStorage.getItem('produtosComprados')) === null ? [] :  JSON.parse(localStorage.getItem('produtosComprados')) 
 
-    static async adicionarProduto(event){      
-        
+
+    static async adicionarProduto(event){     
+
         const botao = event.target
         const produtos = await Api.produtos()        
 
@@ -27,8 +29,9 @@ class HomePageControle {
     static async botaoFiltros(event){
         const produtosApi = await Api.produtos()
         const vitrine = document.querySelector('.vitrine')
-        const evento = event.target
-        
+        const evento = event.target                          
+           
+
 
         if(evento.id === "botaoPao" || "botaoFruta" || "botaoBebida"){
             const produtosFiltrados = Busca.filtroCategoria(produtosApi, evento.textContent)
@@ -42,7 +45,6 @@ class HomePageControle {
         }
 
     }
-
 }
 
 export {HomePageControle}
