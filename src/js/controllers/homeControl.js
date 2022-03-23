@@ -1,7 +1,7 @@
 import { Api } from "../db/api.js"
-import { Carrinho } from "../models/carrinho.js"
+import {Carrinho} from "../models/carrinho.js"
 import {Busca} from "../models/filtro-teste.js"
-import { Vitrine } from "../models/vitrine.js";
+import {Vitrine} from "../models/vitrine.js";
 
 
 class HomePageControle {
@@ -19,11 +19,15 @@ class HomePageControle {
             
             const produto = produtos.find(function(obj){return obj.id == botao.id})
             this.produtoAdicionado.push(produto)
-            console.log(this.produtoAdicionado)
     
             const key = 'produtosComprados'
             localStorage.setItem(key, JSON.stringify(this.produtoAdicionado));
             Carrinho.listarCarrinho(this.produtoAdicionado)
+
+            Carrinho.templateQuantidadePreco()
+
+            Carrinho.quantidadeTotal(this.produtoAdicionado)
+            Carrinho.valorTotal(this.produtoAdicionado)
         }
 
     }
@@ -45,6 +49,12 @@ class HomePageControle {
             vitrine.innerHTML = ``
             Vitrine.listarProdutos(produtosApi)
         }
+    }
+
+    static formatarMoedaProdutos(number){
+        return Number(number).toLocaleString("pt-br", {
+            style: 'currency', currency: 'BRL'
+        })
     }
     
 }

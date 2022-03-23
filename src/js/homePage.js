@@ -1,8 +1,7 @@
-import {Api} from "./db/api.js"
 import {Vitrine} from "./models/vitrine.js"
 import {Busca} from "./models/filtro-teste.js"
 import {HomePageControle} from "./controllers/homeControl.js"
-import { Carrinho } from "./models/carrinho.js"
+import {Carrinho} from "./models/carrinho.js"
 
 const api = await Vitrine.analisarQualListar()
 Vitrine.listarProdutos(api)
@@ -12,7 +11,7 @@ const inputPesquisa = document.querySelector('#inputPesquisa')
 
 inputPesquisa.addEventListener('keyup', function(){
     const valuePesquisa = inputPesquisa.value
-    const resultadoPesquisa = Busca.pesquisarProdutos(produtosApi, valuePesquisa)
+    const resultadoPesquisa = Busca.pesquisarProdutos(api, valuePesquisa)
 
     Vitrine.listarProdutos(resultadoPesquisa)
 })
