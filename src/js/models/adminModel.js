@@ -1,3 +1,54 @@
+const ModalAdmin = class ModalAdmin{
+    // static modalCadastro = document.querySelector(".formCadastroDeProdutos")
+    // static modalEditar  = document.querySelector(".formEditarProdutos")
+    
+    
+    
+    static mostrarModalCadastro(evento){
+        console.log(evento.target)
+        const modalDeCadastro = document.querySelector("#formCadastroDeProdutos")
+        modalDeCadastro.classList.remove("hidden")
+        
+        
+    }
+
+    static mostrarModalEditar(evento){
+        console.log(evento.target)
+        const modalDeEdit = document.querySelector("#formEditarProdutos")
+        modalDeEdit.classList.remove("hidden")
+        
+        
+    }
+
+    static mostrarModalExcluir(evento){
+        console.log(evento.target)
+        const modalDeExcluir = document.querySelector("#containerModalExcluir")
+        modalDeExcluir.classList.remove("hidden")
+    }
+
+    static removeModal(evento){
+        console.log(evento) 
+        evento.preventDefault()
+        const modalDeCadastro = document.querySelector("#formCadastroDeProdutos")
+        const modalDeEdit = document.querySelector("#formEditarProdutos")
+        const modalDeExcluir = document.querySelector("#containerModalExcluir")
+        const botaoCancelaExcluir = document.querySelector(".botaoCancelaExcluir")
+        const botaoCancelaExcluirModal = botaoCancelaExcluir.parentNode.parentNode
+        modalDeCadastro.classList.add("hidden")
+        modalDeEdit.classList.add("hidden")
+        modalDeExcluir.classList.add("hidden")
+        botaoCancelaExcluirModal.classList.add("hidden")
+        
+        
+        
+        
+    }
+
+
+}
+
+
+
 const ProdutosAdmin = class ProdutosAdmin {
 
     static async requisicao() {
@@ -34,17 +85,31 @@ const ProdutosAdmin = class ProdutosAdmin {
         <h4 class="infosListaAdmin" class="nomeProdutoListaAdmin">${nome}</h4> 
         <span class="infosListaAdmin" class="categoriasListaAdmin">${categoria}</h4> 
         <span class="infosListaAdmin" class="descricaoListaAdmin">${descricao}</span> 
-        <button id="${id}" class="botaoListaAdmin" class="botaoEditarItemListaAdmin"> <img src="" class="imgBotaoListaAdmin"> </button>
-        <button id="${id}" class="botaoListaAdmin" class="botaoExcluirItemListaAdmin"> <img src="" class="imgBotaoListaAdmin"> </button>
+       
         `
         console.log(ul)
         console.log(li)
 
+        const buttonEdit = document.createElement('button')
+        buttonEdit.classList.add('botaoEditarItemListaAdmin')
+        buttonEdit.classList.add(`${id}`)
+        const imgButtonEdit = document.createElement('img') 
+        imgButtonEdit.classList.add('imgBotaoListaAdmin')
+        const buttonExcluir = document.createElement('button')
+        buttonExcluir.classList.add('botaoExcluirItemListaAdmin')
+        buttonExcluir.classList.add(`${id}`)
+        const imgButtonExcluir = document.createElement('img')
+        imgButtonExcluir.classList.add('imgBotaoListaAdmin')
 
 
+        buttonEdit.appendChild(imgButtonEdit)
+        buttonExcluir.appendChild(imgButtonExcluir)
+        li.appendChild(buttonEdit)
+        li.appendChild(buttonExcluir)
         ul.appendChild(li)
-        const modalCadastro = document.querySelector("#formCadastroDeProdutos")
-        const modalEditar = document.querySelector("#formEditarProdutos")
+      
+        buttonEdit.addEventListener('click',ModalAdmin.mostrarModalEditar)
+        buttonExcluir.addEventListener('click',ModalAdmin.mostrarModalExcluir)
 
 
 
@@ -52,41 +117,6 @@ const ProdutosAdmin = class ProdutosAdmin {
 }
 
 ProdutosAdmin.requisicao()
-
-  
-const ModalAdmin = class ModalAdmin{
-    // static modalCadastro = document.querySelector(".formCadastroDeProdutos")
-    // static modalEditar  = document.querySelector(".formEditarProdutos")
-    
-    
-    
-    static mostrarModalCadastro(evento){
-        console.log(evento.target)
-        const modalDeCadastro = document.querySelector("#formCadastroDeProdutos")
-        modalDeCadastro.classList.remove("hidden")
-        
-        
-    }
-
-    static mostrarModalCadastro(evento){
-        console.log(evento.target)
-        const modalDeEdit = document.querySelector("#formEditarProdutos")
-        modalDeEdit.classList.remove("hidden")
-        
-        
-    }
-
-    static removeModal(evento){
-        console.log(evento) 
-        const modalDeCadastro = document.querySelector("#formCadastroDeProdutos")
-        const modalDeEdit = document.querySelector("#formEditarProdutos")
-        modalDeCadastro.classList.add("hidden")
-        modalDeEdit.classList.add("hidden")
-        
-    }
-
-
-}
 
 const botaoAdicionar = document.querySelector("#botaoAdicionar")
 botaoAdicionar.addEventListener('click', ModalAdmin.mostrarModalCadastro)
@@ -96,3 +126,11 @@ botaoRemoveModalCadastro.addEventListener('click',ModalAdmin.removeModal )
 
 const botaoRemoveModalEdit = document.querySelector(".fecharModalEdit")
 botaoRemoveModalEdit.addEventListener('click',ModalAdmin.removeModal )
+
+const botaoRemoveModalExcluir = document.querySelector(".fecharModalExcluir")
+botaoRemoveModalExcluir.addEventListener('click',ModalAdmin.removeModal )
+
+const botaoCancelaExcluir = document.querySelector(".botaoCancelaExcluir")
+botaoCancelaExcluir.addEventListener('click',ModalAdmin.removeModal )
+
+const botaoDeCadastro = document.querySelector(".formAdminCadastro")
