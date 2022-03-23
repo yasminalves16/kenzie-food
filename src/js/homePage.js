@@ -16,5 +16,5 @@ inputPesquisa.addEventListener('keyup', function(){
     Vitrine.listarProdutos(resultadoPesquisa)
 })
 
-const botaoAdicionarCarrinho = document.querySelector('ul')
-botaoAdicionarCarrinho.addEventListener('click', HomePageControle.adicionarProduto)
+const botaoAdicionarCarrinho = document.querySelector('.vitrine')
+botaoAdicionarCarrinho.addEventListener('click', HomePageControle.adicionarProduto.bind(HomePageControle))
