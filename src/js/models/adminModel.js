@@ -51,32 +51,21 @@ const ModalAdmin = class ModalAdmin{
 
 const ProdutosAdmin = class ProdutosAdmin {
 
-    static async requisicao() {
+    static async listarProdutos(data) {
+        data.forEach((produto) => {
 
+            /*const id = produto.id
+            const img = produto.imagem
+            const nome = produto.nome
+            const categoria = produto.categoria
+            const descricao = produto.descricao*/
 
-        fetch('https://kenzie-food-api.herokuapp.com/products')
-            .then(response => response.json())
-            .then((data) => {
-
-                data.forEach((produto) => {
-
-                    console.log(produto)
-
-                    const id = produto.id
-                    const img = produto.imagem
-                    const nome = produto.nome
-                    const categoria = produto.categoria
-                    const descricao = produto.descricao
-
-                    this.vitrineAdmin(id, img, nome, categoria, descricao)
-                })
-
-
-            }).catch((error) => console.log(error))
+            this.vitrineAdmin(produto)
+        })
 
     }
 
-    static vitrineAdmin(id, img, nome, categoria, descricao) {
+    static vitrineAdmin({id, img, nome, categoria, descricao}) {
         const ul = document.querySelector('#listaApi')
         const li = document.createElement('li')
 
@@ -87,8 +76,6 @@ const ProdutosAdmin = class ProdutosAdmin {
         <span class="infosListaAdmin" class="descricaoListaAdmin">${descricao}</span> 
        
         `
-        console.log(ul)
-        console.log(li)
 
         const buttonEdit = document.createElement('button')
         buttonEdit.classList.add('botaoEditarItemListaAdmin')
@@ -116,6 +103,7 @@ const ProdutosAdmin = class ProdutosAdmin {
     }
 }
 
+
 ProdutosAdmin.requisicao()
 
 const botaoAdicionar = document.querySelector("#botaoAdicionar")
@@ -134,3 +122,11 @@ const botaoCancelaExcluir = document.querySelector(".botaoCancelaExcluir")
 botaoCancelaExcluir.addEventListener('click',ModalAdmin.removeModal )
 
 const botaoDeCadastro = document.querySelector(".formAdminCadastro")
+console.log(botaoDeCadastro)
+  
+
+
+
+export {ProdutosAdmin}
+export {ModalAdmin}
+
