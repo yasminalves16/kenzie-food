@@ -1,1 +1,154 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:  #FF2253;
+}
 
+#principal{
+
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 840px;
+    min-width: 280px;
+    width: 60vw;
+    height: 50vh;
+    margin:auto ;
+    margin-top: 30%;
+
+}
+
+#principal h2{
+    margin-bottom: 15%;
+}
+
+header{
+    text-align: center;
+}
+
+h1{
+    font-weight: 600;
+}
+
+h2{
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    color:#fff;
+    align-items: center;
+}
+
+footer{
+    text-align: center;
+    font-size: 14px;
+    display:flex;
+    flex-direction: column;
+}
+
+input{
+    margin:7px;
+    background-color: #ee4b6e; 
+    border: 3px solid transparent;
+    border-radius: 4px;
+    height: 3vh;
+    color:#fff;
+
+}
+
+input::placeholder{
+    color: #fff;
+}
+
+button{
+    margin: 5px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    height: 4vh;
+    width:  20vw;
+    background-color: #6190e8;
+    color: #fff;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+span{
+    margin-top: 15px;
+    font-weight: 600;
+    cursor: none;
+}
+
+input:hover{
+    border: 3px solid #6190e8
+}
+
+input:focus{
+    border: 2px solid #6190e8;
+}
+
+button:hover{
+    border: 2px solid #ee4b6e;
+}
+
+a:focus{
+    color:#6190e8
+}
+
+a:hover{
+    color:aqua
+}
+
+@media screen and (min-width: 768px){
+
+    #principal{
+        margin-top: 8%;
+        width: 35vw;
+        height: 58vh;
+    
+    }
+
+    #principal h2{
+        margin-bottom: 8%;
+    }
+
+    img{
+        height: 40px;
+    }
+
+    header{
+        margin-top: 20px
+    }
+
+    input{
+        height: 4vh;
+        width: 20vw;
+        font-size: 15px;
+    }
+
+    button{
+        height: 5vh;
+        width: 10vw;
+        font-size: 16px;
+    }
+
+    footer{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    span{
+        color: #ca0d0d;
+        font-style: italic;
+        font-size: larger;
+        display:none;
+    }
+
+    
+}
