@@ -20,7 +20,7 @@ class Busca {
 
     static filtroCategoria(data, value){
         const filtrarCategoria = data.filter((produto) => {
-            return produto.categoria === value
+            return produto.categoria == value
         })
         return filtrarCategoria
     }
