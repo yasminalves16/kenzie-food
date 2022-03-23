@@ -50,7 +50,7 @@ const ModalAdmin = class ModalAdmin {
         console.log(evento)
         console.log(evento.target)
         console.log(evento.value)
-        console.log(evento.target.value)
+        
         for (let i = 0; i < formularioCadastro.legnth; i++) {
             console.log(formularioCadastro[i])
         }
