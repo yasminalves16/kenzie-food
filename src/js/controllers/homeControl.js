@@ -1,18 +1,15 @@
 import { Api } from "../db/api.js"
+import { Carrinho } from "../models/carrinho.js";
+
 
 class HomePageControle {
 
     static produtoAdicionado = JSON.parse(localStorage.getItem('produtosComprados')); 
 
-    static async adicionarProduto(event){
-        
-        
-
-       
+    static async adicionarProduto(event){      
         
         const botao = event.target
-        const produtos = await Api.produtos()
-        
+        const produtos = await Api.produtos()        
 
         if(botao.id){            
             
@@ -20,7 +17,8 @@ class HomePageControle {
             this.produtoAdicionado.push(produto)
     
             const key = 'produtosComprados'
-            localStorage.setItem(key, JSON.stringify(this.produtoAdicionado));            
+            localStorage.setItem(key, JSON.stringify(this.produtoAdicionado));
+            Carrinho.listarCarrinho(this.produtoAdicionado)
         }
         
 
