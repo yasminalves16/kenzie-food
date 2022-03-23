@@ -1,4 +1,5 @@
 import { Api } from "../db/api.js";
+import {HomePageControle} from './../controllers/homeControl.js'
 
 class Vitrine {
     static async listarProdutos(data){
@@ -15,6 +16,7 @@ class Vitrine {
     }
 
     static templateProdutos({nome, imagem, descricao, categoria, preco, id}){
+        const precoFormatado = HomePageControle.formatarMoedaProdutos(preco)
 
         const li = document.createElement('li')
         li.innerHTML = `
@@ -24,8 +26,8 @@ class Vitrine {
             <h3>${nome}</h3>
             <p>${descricao}</p>
             <span>${categoria}</span>
-            <p>${preco}</p>
-            <button id='${id}'><img src="./../../src/img/carrinho.png" alt=""></button>
+            <p>${precoFormatado}</p>
+            <button id='${id}'><img src="./../../src/img/carrinho.png" alt="" id='${id}'></button>
         `
         
         return li

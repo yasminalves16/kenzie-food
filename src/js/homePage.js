@@ -22,3 +22,5 @@ botaoAdicionarCarrinho.addEventListener('click', HomePageControle.adicionarProdu
 const botao = document.querySelector('.menu')
 botao.addEventListener('click', HomePageControle.botaoFiltros)
 
+const header = document.querySelector('.topo')
+header.addEventListener('click',HomePageControle.logarRegistrarAdmin)

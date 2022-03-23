@@ -51,6 +51,18 @@ class HomePageControle {
         }
     }
 
+    static logarRegistrarAdmin(event){
+        const button = event.target
+        if(button.id == 'botaoLogin'){
+            window.location.href = './../../src/html/login.html'
+            localStorage.clear()
+        }
+        if(button.id == 'adminPage'){
+            window.location.href = './../../src/html/admin.html'
+        }
+        
+    }
+
     static formatarMoedaProdutos(number){
         return Number(number).toLocaleString("pt-br", {
             style: 'currency', currency: 'BRL'
