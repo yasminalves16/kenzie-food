@@ -18,15 +18,16 @@ class HomePageControle {
                
 
         if(botao.id){            
-            
+            const ulCarrinho = document.querySelector('.ulCarrinho')
             const produto = produtos.find(function(obj){return obj.id == botao.id})
             this.produtoAdicionado.push(produto)
     
             const key = 'produtosComprados'
             localStorage.setItem(key, JSON.stringify(this.produtoAdicionado));
             Carrinho.listarCarrinho(this.produtoAdicionado)
-
+            if(ulCarrinho.childElementCount<=1){
             Carrinho.templateQuantidadePreco()
+            }
 
             Carrinho.quantidadeTotal(this.produtoAdicionado)
             Carrinho.valorTotal(this.produtoAdicionado)

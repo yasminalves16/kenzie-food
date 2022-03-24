@@ -285,7 +285,7 @@ footer button{
         background-color: #F8F9FA;
     }
 
-    #botaoLogin {
+    #botaoLogin, #adminPage, #logout {
         width: 150px;
         height: 48px;
         margin-right: 115px;
@@ -297,17 +297,13 @@ footer button{
         color: #F8F9FA;
     }
 
-    #botaoLogin:hover {
+    #botaoLogin:hover, #adminPage:hover, #logout:hover {
         cursor: pointer;
         color: #212529;
         background-color: #F8F9FA;
     }
 
-    #botaoLogin:hover {
-        cursor: pointer;
-        color: #212529;
-        background-color: #F8F9FA;
-    } 
+    
 
     /*MAIN*/
      main {
