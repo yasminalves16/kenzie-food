@@ -19,6 +19,7 @@ class HomePageControle {
 
         if (botao.id) {
             
+            const ulCarrinho = document.querySelector('.ulCarrinho')
             const produto = produtos.find(function (obj) { return obj.id == botao.id })
             this.produtoAdicionado.push(produto)
 
