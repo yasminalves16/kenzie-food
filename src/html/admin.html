@@ -67,13 +67,10 @@
                     <input type="text" name="descricao" placeholder="Descrição" class="inputFormAdmin"
                         class="inputFormAdminDescricao" />
 
-                    <label for="Categorias">Categorias</label>
-                    <ul class="modalAdmin">
-                        <div value="panificadora" class="formCategorias">Panificadora</div>
-                        <div value="frutas" class="formCategorias">Frutas</div>
-                        <div value="bebidas" class="formCategorias">Bebidas</div>
-
-                    </ul>
+                        <label for="Categorias">Categorias</label>
+                        <input type="checkbox" name="categoria" placeholder="Panificadora" class="inputFormAdmin">
+                        <input type="checkbox" name="categoria" placeholder="Frutas" class="inputFormAdmin">
+                        <input type="checkbox" name="categoria" placeholder="Bebidas" class="inputFormAdmin">
 
                     <label for="valorDoProduto">Valor do produto</label>
                     <input type="text" name="valorDoProduto" placeholder="Valor do produto" class="inputFormAdmin" />
@@ -104,14 +101,11 @@
                     <input type="text" name="descricao" placeholder="Descrição" class="inputFormAdmin"
                         class="inputFormAdminDescricao" />
 
-                    <label for="Categorias">Categorias</label>
-                    <ul class="modalAdmin">
-                        <div value="panificadora" class="formCategorias">Panificadora</div>
-                        <div value="frutas" class="formCategorias">Frutas</div>
-                        <div value="bebidas" class="formCategorias">Bebidas</div>
-
-                    </ul>
-
+                        <label for="Categorias">Categorias</label>
+                        <input type="checkbox"  name="categoria" placeholder="Panificadora" value="Panificadora" class="inputFormAdmin">
+                        <input type="checkbox" name="categoria" placeholder="Frutas" value="Frutas" class="inputFormAdmin">
+                        <input type="checkbox" name="categoria" placeholder="Bebidas" value="Bebidas" class="inputFormAdmin">
+                    
                     <label for="valorDoProduto">Valor do produto</label>
                     <input type="text" name="valorDoProduto" placeholder="Valor do produto" class="inputFormAdmin" />
 
@@ -125,32 +119,38 @@
 
         </div>
 
-        <div id="modalExcluir" class="hidden" class="modalForm">
-            <div class="cabecalhoModalExcluir">
-                <span>exclusão do produto</span>
+        <div class="containerModalExcluir">
+            <div id="modalExcluir" class="hidden" class="modalForm">
+                <div class="cabecalhoModalExcluir">
+                    <span>exclusão do produto</span>
+                </div>
+                <h2>Tem certeza que quer excluir o produto?</h2>
+                <button class="botaoModalExcluir">Sim</button>
+                <button class="botaoModalNaoExcluir">Não</button>
+    
             </div>
-            <h2>Tem certeza que quer excluir o produto?</h2>
-            <button class="botaoModalExcluir">Sim</button>
-            <button class="botaoModalNaoExcluir">Não</button>
-
         </div>
 
-        <div id="modalStatusAdd" class="hidden" class="modalForm">
-            <div class="cabecalhoModalStatusAdd">
-                <span>Status</span>
-                <button class="fecharStatus" class="fecharStatusAdd">X</button>
-                <h4>Produto adicionado com sucesso</h4>
-                <div class="barraVerde"></div>
-            </div>
+        <div class="containerModalStatusAdd">
+            <div id="modalStatusAdd" class="hidden" class="modalForm">
+                <div class="cabecalhoModalStatusAdd">
+                    <span>Status</span>
+                    <button class="fecharStatus" class="fecharStatusAdd">X</button>
+                    <h4>Produto adicionado com sucesso</h4>
+                    <div class="barraVerde"></div>
+                </div>
+        </div>
 
         </div>
-        <div id="modalStatusErro" class="hidden" class="modalForm">
-            <div class="cabecalhoModalStatusErro">
-                <span>Status</span>
-                <button class="fecharStatus" class="fecharStatusAdd">X</button>
-                <h4>Produto não foi adicionado, ocorreu um erro!</h4>
-                <div class="barraVermelha"></div>
-            </div>
+        <div class="containerModalStatusAdd">
+            <div id="modalStatusErro" class="hidden" class="modalForm">
+                <div class="cabecalhoModalStatusErro">
+                    <span>Status</span>
+                    <button class="fecharStatus" class="fecharStatusAdd">X</button>
+                    <h4>Produto não foi adicionado, ocorreu um erro!</h4>
+                    <div class="barraVermelha"></div>
+                </div>
+        </div>
 
         </div>
     </main>
