@@ -1,7 +1,7 @@
 import { Api } from "./db/api.js";
 import { HomePageControle } from "./controllers/homeControl.js";
 //Lembrar de pedir para mudar o nome da classe
-import { Busca } from "./models/filtro.js";
+import { Busca } from "./models/filtros.js";
 import { ProdutosAdmin } from "./models/adminModel.js";
 import {AdminControle} from "./controllers/adminControl.js"
 import { ModalAdmin } from "./models/adminModel.js";

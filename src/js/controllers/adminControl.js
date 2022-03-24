@@ -1,5 +1,5 @@
 import {Api}  from "../db/api.js";
-import {Busca} from "../models/filtro.js";
+import {Busca} from "../models/filtros.js";
 import { ProdutosAdmin } from "../models/adminModel.js";
 
 
