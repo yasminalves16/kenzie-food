@@ -8,123 +8,153 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/homePage.css">
     <link rel="stylesheet" href="../styles/admin.css" />
+    <link rel="stylesheet" href="../styles/modais.css" />
     <title>adminPage</title>
 </head>
 
 <body>
     <header class="topo">
-        
-            <h1 id="nomeDoSiteCabecalho">Kenzie</h1>
-            <h2>Food</h2>
-            <input type="text" name="pesquisarProdutos" placeholder="Pesquisar por produto"
-                id="inputPesquisa" />
-            <div id="imgUsuario">
-                <img src="" id="imgIconeUsuario">
-            </div>
-        
+
+        <section>
+            <img src="../img/Group 1075.svg">
+        </section>
+        <input type="text" placeholder=" Pesquisar por produto" id="inputPesquisa">
+        <div id="imgUsuario">
+            <img src="" id="imgIconeUsuario">
+        </div>
     </header>
     <main>
         <menu>
-    <nav class="menu">
-        <button class="botoesDeFiltro" id="botaoTodos">Todos</button>
-        <button class="botoesDeFiltro" id="botaoPao"><img src="../img/panificadora.png" alt="Panificadora">Panificadora</button>
-        <button class="botoesDeFiltro" id="botaoFruta"><img src="../img/frutas.png" alt="Frutas">Frutas</button>
-        <button class="botoesDeFiltro" id="botaoBebida"><img src="../img/bebida.png" alt="Bebidas">Bebidas</button>
-        <button class="botoesDeFiltro" id="botaoAdicionar">Adicionar novo produto</button>
+        <nav class="menu">
+            <button class="botoesDeFiltro" id="botaoTodos">Todos</button>
+            <button class="botoesDeFiltro" id="botaoPao"><img src="../img/panificadora.png" alt="Panificadora">Panificadora</button>
+            <button class="botoesDeFiltro" id="botaoFruta"><img src="../img/frutas.png" alt="Frutas">Frutas</button>
+            <button class="botoesDeFiltro" id="botaoBebida"><img src="../img/bebida.png" alt="Bebidas">Bebidas</button>
+            <button class="botoesDeFiltro" id="botaoAdicionar">Adicionar novo produto</button>
 
-    </nav>
-</menu>
+        </nav>
+    </menu>
     <section id="secaoListaAdmin">
         <div id="cabecalhoListaAdmin">
             <li id="liListaAdmin">
-                <h3>Produto</h3>
-                <h3>Categorias</h3>
-                <h3>Descrição</h3>
-                <h3>Ações</h3>
+                <h4>Produto</h4>
+                <h4>Categorias</h4>
+                <h4>Descrição</h4>
+                <h4>Ações</h4>
             </li>
             <ul id="listaApi">
 
             </ul>
+
+
+        
+    
+            </div>
+        </section>
+        <div id="formCadastroDeProdutos" class="hidden" class="modalForm">
+            <div class="modalCadastro">
+                <div class="cabecalhoFormCadastro">
+                    <h2>Cadastro</h2>
+                    <button class="fecharModalCad">X</button>
+                </div>
+
+                <form id="infoFormCadastro">
+
+                    <label for="nomeDoProduto">Nome do Produto</label>
+                    <input type="text" name="nomeDoProduto" placeholder="Nome do produto" class="inputFormAdmin" />
+
+                    <label for="descricao">Descrição</label>
+                    <input type="text" name="descricao" placeholder="Descrição" class="inputFormAdmin"
+                        class="inputFormAdminDescricao" />
+
+                    <label for="Categorias">Categorias</label>
+                    <ul class="modalAdmin">
+                        <div value="panificadora" class="formCategorias">Panificadora</div>
+                        <div value="frutas" class="formCategorias">Frutas</div>
+                        <div value="bebidas" class="formCategorias">Bebidas</div>
+
+                    </ul>
+
+                    <label for="valorDoProduto">Valor do produto</label>
+                    <input type="text" name="valorDoProduto" placeholder="Valor do produto" class="inputFormAdmin" />
+
+                    <label for="linkImg">Link da imagem</label>
+                    <input type="text" name="linkimg" placeholder="Link da imagem" class="inputFormAdmin" />
+
+                    <button class="formAdminCadastro">Cadastrar Produto</button>
+                </form>
+            </div>
+
+
         </div>
-    </section>
-    <div id="formCadastroDeProdutos" class="hidden" >
-        <form class="modalCadastro">
-            <div class="cabecalhoFormCadastro">
-                <h2>Cadastro</h2> 
-                <button class="fecharModalCad">X</button>
+
+        <div id="formEditarProdutos" class="hidden" class="modalForm">
+            <div class="modalEditar">
+                <div class="cabecalhoFormEditar">
+                    <h2>Edição do produto</h2>
+                    <button class="fecharModalEdit">X</button>
+                </div>
+
+                <form id="infoFormEdit">
+
+                    <label for="nomeDoProduto">Nome do Produto</label>
+                    <input type="text" name="nomeDoProduto" placeholder="Nome do produto" class="inputFormAdmin" />
+
+                    <label for="descricao">Descrição</label>
+                    <input type="text" name="descricao" placeholder="Descrição" class="inputFormAdmin"
+                        class="inputFormAdminDescricao" />
+
+                    <label for="Categorias">Categorias</label>
+                    <ul class="modalAdmin">
+                        <div value="panificadora" class="formCategorias">Panificadora</div>
+                        <div value="frutas" class="formCategorias">Frutas</div>
+                        <div value="bebidas" class="formCategorias">Bebidas</div>
+
+                    </ul>
+
+                    <label for="valorDoProduto">Valor do produto</label>
+                    <input type="text" name="valorDoProduto" placeholder="Valor do produto" class="inputFormAdmin" />
+
+                    <label for="linkImg">Link da imagem</label>
+                    <input type="text" name="linkimg" placeholder="Link da imagem" class="inputFormAdmin" />
+
+                    <button class="salvarAlterações">Salvas alterações</button>
+                    <button class="excluirProdutos">Excluir</button>
+                </form>
             </div>
-    </main>   
 
-        <label for="nomeDoProduto">Nome do Produto</label>
-        <input type="text" name="nomeDoProduto" placeholder="Nome do produto" class="inputFormAdmin" />
+        </div>
 
-        <label for="descricao">Descrição</label>
-        <input type="text" name="descricao" placeholder="Descrição" class="inputFormAdmin"
-            class="inputFormAdminDescricao" />
-
-        <label for="Categorias">Categorias</label>
-        <ul class="modalAdmin">
-            <div value="panificadora" class="formCategorias">Panificadora</div>
-            <div value="frutas" class="formCategorias">Frutas</div>
-            <div value="bebidas" class="formCategorias">Bebidas</div>
-
-        </ul>
-
-        <label for="valorDoProduto">Valor do produto</label>
-        <input type="text" name="valorDoProduto" placeholder="Valor do produto" class="inputFormAdmin" />
-
-        <label for="linkImg">Link da imagem</label>
-        <input type="text" name="linkimg" placeholder="Link da imagem" class="inputFormAdmin" />
-
-        <button class="formAdminCadastro">Cadastrar Produto</button>
-        </form>
-        
-    </div>
-
-    <div id="formEditarProdutos" class="hidden">
-        <form class="modalEditar">
-            <div class="cabecalhoFormEditar">
-                <h2>Edição do produto</h2>
-                <button class="fecharModalEdit">X</button>
+        <div id="modalExcluir" class="hidden" class="modalForm">
+            <div class="cabecalhoModalExcluir">
+                <span>exclusão do produto</span>
             </div>
-            
-
-        <label for="nomeDoProduto">Nome do Produto</label>
-        <input type="text" name="nomeDoProduto" placeholder="Nome do produto" class="inputFormAdmin" />
-
-        <label for="descricao">Descrição</label>
-        <input type="text" name="descricao" placeholder="Descrição" class="inputFormAdmin"
-            class="inputFormAdminDescricao" />
-
-        <label for="Categorias">Categorias</label>
-        <ul class="modalAdmin">
-            <div value="panificadora" class="formCategorias">Panificadora</div>
-            <div value="frutas" class="formCategorias">Frutas</div>
-            <div value="bebidas" class="formCategorias">Bebidas</div>
-
-        </ul>
-
-        <label for="valorDoProduto">Valor do produto</label>
-        <input type="text" name="valorDoProduto" placeholder="Valor do produto" class="inputFormAdmin" />
-
-        <label for="linkImg">Link da imagem</label>
-        <input type="text" name="linkimg" placeholder="Link da imagem" class="inputFormAdmin" />
-
-        <button class="salvarAlterações">Salvas alterações</button>
-        <button class="excluirProdutos">Excluir</button>
-        </form>
-        
-    </div>
-
-    <div class="modalExcluir">
-        <div class="cabecalhoModalExcluir">
-            <span>exclusão do produto</span>
             <h2>Tem certeza que quer excluir o produto?</h2>
             <button class="botaoModalExcluir">Sim</button>
-            <button class="botaoModalExcluir">Não</button>
+            <button class="botaoModalNaoExcluir">Não</button>
+
         </div>
-    </div>
-<script type="module" src="../js/admin.js"></script>
+
+        <div id="modalStatusAdd" class="hidden" class="modalForm">
+            <div class="cabecalhoModalStatusAdd">
+                <span>Status</span>
+                <button class="fecharStatus" class="fecharStatusAdd">X</button>
+                <h4>Produto adicionado com sucesso</h4>
+                <div class="barraVerde"></div>
+            </div>
+
+        </div>
+        <div id="modalStatusErro" class="hidden" class="modalForm">
+            <div class="cabecalhoModalStatusErro">
+                <span>Status</span>
+                <button class="fecharStatus" class="fecharStatusAdd">X</button>
+                <h4>Produto não foi adicionado, ocorreu um erro!</h4>
+                <div class="barraVermelha"></div>
+            </div>
+
+        </div>
+    </main>
+    <script type="module" src="../js/admin.js"></script>
 </body>
 
 </html>

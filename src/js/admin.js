@@ -30,3 +30,10 @@ botaoRemoveModalCadastro.addEventListener('click',ModalAdmin.removeModal )
 
 const botaoRemoveModalEdit = document.querySelector(".fecharModalEdit")
 botaoRemoveModalEdit.addEventListener('click',ModalAdmin.removeModal )
+
+const botaoEditor_Excluir = document.querySelector('#listaApi')
+botaoEditor_Excluir.addEventListener('click', ModalAdmin.mostrarModalEditar)
+
+const botaoNaoExcluir = document.querySelector('.botaoModalNaoExcluir')
+botaoNaoExcluir.addEventListener('click',ModalAdmin.removeModal )
+console.log(botaoNaoExcluir)
