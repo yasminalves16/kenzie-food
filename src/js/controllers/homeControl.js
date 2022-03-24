@@ -27,11 +27,11 @@ class HomePageControle {
             localStorage.setItem(key, JSON.stringify(this.produtoAdicionado));
             Carrinho.listarCarrinho(this.produtoAdicionado)
             if(ulCarrinho.childElementCount<=1){
-            Carrinho.templateQuantidadePreco()
+                Carrinho.templateQuantidadePreco('aside', '.ulCarrinho', 'quantidadeTotal', 'precoTotal')
             }
 
-            Carrinho.quantidadeTotal(this.produtoAdicionado)
-            Carrinho.valorTotal(this.produtoAdicionado)
+            Carrinho.quantidadeTotal(this.produtoAdicionado, 'quantidadeTotal')
+            Carrinho.valorTotal(this.produtoAdicionado, 'precoTotal')
         }
 
     }
@@ -51,13 +51,39 @@ class HomePageControle {
             localStorage.setItem(key, JSON.stringify(this.produtoAdicionado));
             Carrinho.listarCarrinho(this.produtoAdicionado)
 
-            Carrinho.quantidadeTotal(this.produtoAdicionado)
-            Carrinho.valorTotal(this.produtoAdicionado)
+            Carrinho.quantidadeTotal(this.produtoAdicionado, 'quantidadeTotal')
+            Carrinho.valorTotal(this.produtoAdicionado, 'precoTotal')
 
-            Carrinho.templateRemoverProduto()
+            Carrinho.templateRemoverProduto('.ulCarrinho')
 
         }
 
+    }
+
+    static removerProdutoModal(event){
+
+        const botao = event.target
+
+        if (botao.id) {
+
+            const produto = this.produtoAdicionado.find(function (obj) { return obj.id == botao.id })
+
+            const index = this.produtoAdicionado.indexOf(produto)
+
+            this.produtoAdicionado.splice(index, 1)
+
+            const key = 'produtosComprados'
+            localStorage.setItem(key, JSON.stringify(this.produtoAdicionado));
+            
+            Carrinho.listarCarrinho(this.produtoAdicionado)
+            Carrinho.listarCarrinhoModal(this.produtoAdicionado)
+
+            Carrinho.quantidadeTotal(this.produtoAdicionado, 'quantidadeTotalModal')
+            Carrinho.valorTotal(this.produtoAdicionado, 'precoTotalModal')
+
+            Carrinho.templateRemoverProduto('.ulCarrinho')
+
+        }
     }
 
     static async botaoFiltros(event) {
@@ -118,6 +144,13 @@ class HomePageControle {
 
             Carrinho.listarCarrinhoModal(this.produtoAdicionado)
 
+            Carrinho.templateQuantidadePreco('.modal', '#ulModalCarrinho', 'quantidadeTotalModal', 'precoTotalModal')
+
+            Carrinho.quantidadeTotal(this.produtoAdicionado, 'quantidadeTotalModal')
+            Carrinho.valorTotal(this.produtoAdicionado, 'precoTotalModal')
+
+            const botaoRemoverProdutoModal = document.querySelector('.divCarrinhoModal')
+            botaoRemoverProdutoModal.addEventListener('click', HomePageControle.removerProdutoModal.bind(HomePageControle))
         }
 
     }
