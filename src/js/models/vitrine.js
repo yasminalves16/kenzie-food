@@ -24,10 +24,10 @@ class Vitrine {
             <img src="${imagem}" alt="${nome}">
             </figure>
             <h3>${nome}</h3>
-            <p>${descricao}</p>
+            <p class="descricao">${descricao}</p>
             <span>${categoria}</span>
-            <p class ="preco">${precoFormatado}</p>
-            <button id='${id}'><img src="./../../src/img/adicionar-carrinho.png" alt="" id='${id}'></button>
+            <p class ="preco" id="preco2">${precoFormatado}</p>
+            <button class="botaoAdicionar" id='${id}'><img src="./../../src/img/adicionar-carrinho.png" alt="" id='${id}'></button>
         `
         
         return li
