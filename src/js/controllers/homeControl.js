@@ -1,6 +1,6 @@
 import { Api } from "../db/api.js"
 import { Carrinho } from "../models/carrinho.js"
-import { Busca } from "../models/filtro-teste.js"
+import { Busca } from "../models/filtros.js"
 import { Vitrine } from "../models/vitrine.js"
 import { ModalCarrinho } from "../models/carrinho.js"
 
@@ -110,9 +110,11 @@ class HomePageControle {
     static callbackModalCarrinho(event) {
         const evento = event.target
 
-        if (evento) {
+        if(evento) {
 
-            return ModalCarrinho.criarModalCarrinho()
+            ModalCarrinho.criarModalCarrinho()
+
+            Carrinho.listarCarrinhoModal(this.produtoAdicionado)
 
         }
 

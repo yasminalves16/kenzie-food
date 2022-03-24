@@ -1,5 +1,5 @@
 import {Vitrine} from "./models/vitrine.js"
-import {Busca} from "./models/filtro-teste.js"
+import {Busca} from "./models/filtros.js"
 import {HomePageControle} from "./controllers/homeControl.js"
 import {Carrinho} from "./models/carrinho.js"
 
