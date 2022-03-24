@@ -1,11 +1,139 @@
 html, body {
-    width: 100%;
-    height: 100%;
     font-family: 'Poppins', sans-serif;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header img{
+    width: 30vw;
+    margin: 20px 0px 0px 20px;
+}
+
+header input {
+    border: 1px solid #E9ECEF;
+    border-radius: 8px;
+    background-color: #E9ECEF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #868E96;
+    margin: 20px 15px 20px 15px;
+    height: 5vh;
+}
+
+header nav{
+    display: flex;
+    background-color: #ff2253;
+    display: none;
+}
+
+header button {
+    display:none;
+}
+
+.nav-list {
+    display:flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 15px;
+}
+
+.menuEscondido{
+    cursor: pointer;
+}
+
+.menuEscondido div{
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 15px 20px 15px;
+}
+
+.menu button{
+    height: 8vw;
+    background-color: #ff2253;
+    border: none;
+    border-radius: 15px;
+    color: black;
+}
+
+.vitrine{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.vitrine li{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    height: 430px;
+    align-items: flex-start;
+    margin: 20px 20px 0px 20px;
+    justify-content: space-between;
+}
+
+.vitrine li figure img {
+    background-color:blueviolet;
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.vitrine li p{
+    color:  #868E96;
+    font-weight: 400;
+    font-size: 14px
+}
+
+.vitrine li span{
+    width: 100%;
+}
+
+li h3{
+    color: black;
+    font-weight: 600;
+}
+
+footer{
+    width: 99vw;
+    margin: 2px;
+}
+
+footer button{
+    width: 100%;
+    border: none;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    height: 8vh;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+}
+
+footer button img{
+    margin-right: 25px;
+}
+
+.preco{
+    color: black;
+}
+
+
+
 /*HEADER*/
-.topo {
+/* .topo {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -14,23 +142,23 @@ html, body {
     box-shadow:  0px 0px 40px -18px rgba(0, 0, 0, 0.25);
     background-color: #FFF;
     font-family: 'Poppins', sans-serif;
-}
+} */
 
-.topo h1 {
+/* .topo h1 {
     margin-left: 117px;
     font-size: 22px;
     font-weight: 700;
     color: #212529;
-}
-
+} */
+/* 
 .topo h2 {
     margin-left: 7px;
     font-size: 16px;
     font-weight: 700;
     color: #FF2253;
-}
+} */
 
-#inputPesquisa {
+/* #inputPesquisa {
     width: 312px;
     height: 49px;
     margin-right: 20px;
@@ -42,9 +170,9 @@ html, body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: #868E96;
-}
+} */
 
-#inputPesquisa:hover {
+/* #inputPesquisa:hover {
     background-color: #F8F9FA;
 }
 
@@ -58,16 +186,16 @@ html, body {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     color: #F8F9FA;
-}
+} */
 
-#botaoLogin:hover {
+/* #botaoLogin:hover {
     cursor: pointer;
     color: #212529;
     background-color: #F8F9FA;
-}
+} */
 
 /*MAIN*/
-main {
+/* main {
     width: 100%;
     height: 100%;    
 }
@@ -83,9 +211,9 @@ nav {
     justify-content: space-between;
     margin-top: 50px;
     margin-left: 117px;
-}
+} */
 
-#botaoTodos {
+/* #botaoTodos {
     width: 88px;
     height: 48px;
     margin-right: 28px;
@@ -168,10 +296,25 @@ nav {
     cursor: pointer;
     background-color: #FF2253;
     color: #F8F9FA;
+} */
+
+
+
+
+aside{
+    display: none;
+}
+
+footer{
+    background-color: #FF2253
+}
+footer button{
+    background-color: #FF2253
 }
 
 /*CARRINHO*/
-aside {
+
+/* aside {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,7 +322,8 @@ aside {
     height: 582px;
 }
 
-.div-titulo {
+/* botao */
+/* .div-titulo {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -201,4 +345,6 @@ aside {
     width: 320px;
     height: 296px;
     background-color: #F8F9FA;
-}
+}  */ 
+
+

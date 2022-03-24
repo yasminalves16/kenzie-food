@@ -26,7 +26,7 @@ export class Carrinho {
             </figure>
             <h3>${nome}</h3>
             <span>${categoria}</span>
-            <p>${precoFormatado}</p>
+            <p class="preco">${precoFormatado}</p>
             <button class="botaoRemover" id='${id}'><img id='${id}' src="src/img/remover-produto.png" alt=""></button>
         `
 
