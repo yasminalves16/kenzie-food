@@ -1,7 +1,8 @@
 import { Api } from "../db/api.js"
 import {Carrinho} from "../models/carrinho.js"
 import {Busca} from "../models/filtro-teste.js"
-import {Vitrine} from "../models/vitrine.js";
+import {Vitrine} from "../models/vitrine.js"
+import {ModalCarrinho} from "../models/carrinho.js"
 
 
 class HomePageControle {
@@ -35,7 +36,6 @@ class HomePageControle {
 
     static removerProduto(event){
         const botao = event.target
-        console.log('oi')
 
         if(botao.id){
 
@@ -105,6 +105,17 @@ class HomePageControle {
             window.location.href = './../../src/html/admin.html'
         }
         
+    }
+
+    static callbackModalCarrinho(event){
+        const evento = event.target
+
+        if(evento){
+
+            return ModalCarrinho.criarModalCarrinho()
+
+        }
+
     }
 
     static formatarMoedaProdutos(number){

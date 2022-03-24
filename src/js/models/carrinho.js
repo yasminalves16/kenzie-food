@@ -93,3 +93,46 @@ export class Carrinho {
         precoTotal.innerText = `${precoFormatado}`
     }
 }
+
+export class ModalCarrinho {
+
+    static localModal = document.querySelector('main')
+
+    static removerModalCarrinho(event){
+        const modalParent = event.target.parentNode.parentNode
+        const modalSeletor = document.querySelector('.containerModal')
+
+        ModalCarrinho.localModal.removeChild(modalSeletor)
+    }
+
+    static criarModalCarrinho(){
+        const containerModal = document.createElement('section')
+        containerModal.classList.add('containerModal')
+
+        const modal = document.createElement('div')
+        modal.classList.add('modal')
+
+        const divTitulo = document.createElement('div')
+        divTitulo.classList.add('div-titulo')
+        divTitulo.innerHTML = `
+            <img src="src/img/carrinho.png" alt="Carrinho">
+            <h3>Carrinho</h3>
+        `
+
+        const divCorpo = document.createElement('div')
+        divCorpo.classList.add('div-carrinho')
+
+        const removerModal = document.createElement('button')
+        removerModal.classList.add('modalRemovido')
+        removerModal.innerText = "x"
+        removerModal.addEventListener('click', ModalCarrinho.removerModal)
+
+
+        divTitulo.appendChild(removerModal)
+        modal.appendChild(divTitulo)
+        modal.appendChild(divCorpo)
+        containerModal.appendChild(modal)
+        ModalCarrinho.localModal.appendChild(containerModal)
+    }
+
+}

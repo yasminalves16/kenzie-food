@@ -323,7 +323,35 @@ footer button{
 }
 
 /* botao */
-/* .div-titulo {
+.containerModal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 345px;
+    height: 628px;
+    border-radius: 10px;
+}
+
+.containerModal .modal button.modalRemovido{
+    color: #000000;
+    background: none;
+    border: none;
+    font-size: 25px;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.div-titulo {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -345,6 +373,4 @@ footer button{
     width: 320px;
     height: 296px;
     background-color: #F8F9FA;
-}  */ 
-
-
+}
