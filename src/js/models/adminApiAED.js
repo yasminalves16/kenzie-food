@@ -13,6 +13,7 @@ class Admin{
 
         })
         const responseData = await response.json()
+        return responseData
     }
 
     static async editarProduto(dados, token, id){
@@ -26,6 +27,7 @@ class Admin{
 
         })
         const responseData = await response.json()
+        return responseData
 
 
     }
@@ -40,7 +42,8 @@ class Admin{
 
         })
         const responseData = await response.json()
-        
+        return responseData
+
     }
 
 }

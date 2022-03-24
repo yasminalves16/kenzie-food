@@ -27,7 +27,7 @@ class Vitrine {
             <p>${descricao}</p>
             <span>${categoria}</span>
             <p class ="preco">${precoFormatado}</p>
-            <button id='${id}'><img src="./../../src/img/carrinho.png" alt="" id='${id}'></button>
+            <button id='${id}'><img src="./../../src/img/adicionar-carrinho.png" alt="" id='${id}'></button>
         `
         
         return li
