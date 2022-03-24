@@ -583,13 +583,15 @@ footer button{
 }
 
 .containerModal .modal button.modalRemovido{
-    color: #000000;
+    color: #FFF;
     background: none;
     border: none;
     font-size: 25px;
-    position: absolute;
-    top: 2px;
-    right: 5px;
+    position: relative;
+    width: 11px;
+    height: 15px;
+    left: 280px;
+    top: 40px;
     cursor: pointer;
 }
 
