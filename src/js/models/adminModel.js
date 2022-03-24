@@ -1,8 +1,4 @@
 const ModalAdmin = class ModalAdmin {
-    // static modalCadastro = document.querySelector(".formCadastroDeProdutos")
-    // static modalEditar  = document.querySelector(".formEditarProdutos")
-
-
 
     static mostrarModalCadastro(evento) {
         console.log(evento.target)
@@ -70,13 +66,9 @@ class ProdutosAdmin {
         ul.innerHTML = ''
         data.forEach((produto) => {
 
-            /*const id = produto.id
-            const img = produto.imagem
-            const nome = produto.nome
-            const categoria = produto.categoria
-            const descricao = produto.descricao*/
 
-           const template =  this.vitrineAdmin(produto)
+            const template = this.vitrineAdmin(produto)
+
             ul.appendChild(template)
         })
 
@@ -84,7 +76,8 @@ class ProdutosAdmin {
     }
 
     static vitrineAdmin({id, imagem, nome, categoria, descricao}) {
-        const ul = document.querySelector('#listaApi')
+
+
         const li = document.createElement('li')
 
         li.innerHTML = `
@@ -92,42 +85,27 @@ class ProdutosAdmin {
         <h4 class="infosListaAdmin" class="nomeProdutoListaAdmin">${nome}</h4> 
         <span class="infosListaAdmin" class="categoriasListaAdmin">${categoria}</h4> 
         <span class="infosListaAdmin" class="descricaoListaAdmin">${descricao}</span> 
-       
+        <button class="botaoEditarItemListaAdmin ${id}"><img src="" class="imgBotaoListaAdmin"></button>
+        <button class="botaoExcluirItemListaAdmin ${id}"><img src="" class="imgBotaoListaAdmin"></button>
         `
 
-        const buttonEdit = document.createElement('button')
-        buttonEdit.classList.add('botaoEditarItemListaAdmin')
-        buttonEdit.classList.add(`${id}`)
-        const imgButtonEdit = document.createElement('img')
-        imgButtonEdit.classList.add('imgBotaoListaAdmin')
-        const buttonExcluir = document.createElement('button')
-        buttonExcluir.classList.add('botaoExcluirItemListaAdmin')
-        buttonExcluir.classList.add(`${id}`)
-        const imgButtonExcluir = document.createElement('img')
-        imgButtonExcluir.classList.add('imgBotaoListaAdmin')
 
-
-        buttonEdit.appendChild(imgButtonEdit)
-        buttonExcluir.appendChild(imgButtonExcluir)
-        li.appendChild(buttonEdit)
-        li.appendChild(buttonExcluir)
         return li
 
-        buttonEdit.addEventListener('click', ModalAdmin.mostrarModalEditar)
-        buttonExcluir.addEventListener('click', ModalAdmin.mostrarModalExcluir)
 
-
+        //buttonEdit.addEventListener('click', ModalAdmin.mostrarModalEditar)
+        //buttonExcluir.addEventListener('click', ModalAdmin.mostrarModalExcluir)
 
     }
 }
 
 
-// ProdutosAdmin.requisicao()
 
 
 
-// const botaoAdicionar = document.querySelector("#botaoAdicionar")
-// botaoAdicionar.addEventListener('click', ModalAdmin.mostrarModalCadastro)
+/*const botaoAdicionar = document.querySelector("#botaoAdicionar")
+botaoAdicionar.addEventListener('click', ModalAdmin.mostrarModalCadastro)
+
 
 // const botaoRemoveModalCadastro = document.querySelector(".fecharModalCad")
 // botaoRemoveModalCadastro.addEventListener('click', ModalAdmin.removeModal)
@@ -141,15 +119,10 @@ class ProdutosAdmin {
 // const botaoCancelaExcluir = document.querySelector(".botaoCancelaExcluir")
 // botaoCancelaExcluir.addEventListener('click', ModalAdmin.removeModal)
 
-// const botaoDeCadastro = document.querySelector(".formAdminCadastro")
-// const formularioCadastro = document.querySelector(".infosFormCadastro")
-// formularioCadastro.addEventListener('submit', ModalAdmin.capturarInfosCadastro)
 
-
-
-
-// <button id="${id}" class="botaoListaAdmin" class="botaoEditarItemListaAdmin"> <img src="" class="imgBotaoListaAdmin"> </button>
-// <button id="${id}" class="botaoListaAdmin" class="botaoExcluirItemListaAdmin"> <img src="" class="imgBotaoListaAdmin"> </button>
+const botaoDeCadastro = document.querySelector(".formAdminCadastro")
+const formularioCadastro = document.querySelector(".infosFormCadastro")
+formularioCadastro.addEventListener('submit', ModalAdmin.capturarInfosCadastro)*/
 
 
 
