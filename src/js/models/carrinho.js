@@ -4,14 +4,29 @@ export class Carrinho {
 
     static listarCarrinho(data){
         const ulCarrinho = document.querySelector('.ulCarrinho')
+        
         ulCarrinho.innerHTML = ''
-    
+
         data.forEach((produto) => {
             
             const template = this.templateCarrinho(produto)
             ulCarrinho.appendChild(template)
 
         });
+    }
+
+    static listarCarrinhoModal(data){
+        const ulModalCarrinho = document.querySelector('#ulModalCarrinho')
+
+        ulModalCarrinho.innerHTML = ''
+
+        data.forEach((produto) => {
+            
+            const template = this.templateCarrinho(produto)
+            ulModalCarrinho.appendChild(template)
+
+        });
+
     }
 
     static templateCarrinho({nome, imagem, categoria, preco, id}){
@@ -76,27 +91,35 @@ export class Carrinho {
     }
 
     static quantidadeTotal(produtos){
+
         const quantidadeTotal = document.querySelector('#quantidadeTotal')
 
-        const somaQuantidade = produtos.length
-
-        quantidadeTotal.innerText = `${somaQuantidade}`
+        if(quantidadeTotal){
+            
+            const somaQuantidade = produtos.length
+    
+            quantidadeTotal.innerText = `${somaQuantidade}`
+        }
     }
 
     static valorTotal(produtos){
         const precoTotal = document.querySelector('#precoTotal')
 
-        const somaTotal = produtos.reduce((total, {preco}) => {
+        if(precoTotal){
 
-            return total += preco
-
-        }, 0)
-
-        const precoFormatado = HomePageControle.formatarMoedaProdutos(somaTotal)
-
-        precoTotal.innerText = `${precoFormatado}`
+            const somaTotal = produtos.reduce((total, {preco}) => {
+    
+                return total += preco
+    
+            }, 0)
+    
+            const precoFormatado = HomePageControle.formatarMoedaProdutos(somaTotal)
+    
+            precoTotal.innerText = `${precoFormatado}`
+        }
     }
 }
+
 
 export class ModalCarrinho {
 
@@ -126,12 +149,16 @@ export class ModalCarrinho {
         const divCorpo = document.createElement('div')
         divCorpo.classList.add('div-carrinho')
 
+        const ulModalCarrinho = document.createElement('ul')
+        ulModalCarrinho.classList.add('ulCarrinho')
+        ulModalCarrinho.id = 'ulModalCarrinho'
+
         const removerModal = document.createElement('button')
         removerModal.classList.add('modalRemovido')
         removerModal.innerText = "x"
         removerModal.addEventListener('click', ModalCarrinho.removerModalCarrinho)
 
-
+        divCorpo.appendChild(ulModalCarrinho)
         modal.appendChild(removerModal)
         modal.appendChild(divTitulo)
         modal.appendChild(divCorpo)
