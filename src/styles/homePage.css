@@ -580,7 +580,7 @@ footer button{
 .containerModal {
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
     display: flex;
@@ -596,9 +596,11 @@ footer button{
 
 .containerModal .modal button.modalRemovido{
     color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     background: none;
     border: none;
-    font-size: 25px;
+    font-size: 20px;
     position: relative;
     width: 11px;
     height: 15px;
