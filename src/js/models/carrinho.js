@@ -39,7 +39,7 @@ export class Carrinho {
         const divCarrinho = document.querySelector('.div-carrinho')
         const ulCarrinho = document.querySelector('.ulCarrinho')
         
-        if(ulCarrinho.childElementCount <= 1){
+        if(ulCarrinho.childElementCount > 0){
             
             const divQuantidade = document.createElement('div')
             divQuantidade.classList.add('divQuantidade')
@@ -66,10 +66,10 @@ export class Carrinho {
         if(ulCarrinho.childElementCount === 0){
 
             const divQuantidade = document.querySelector('.divQuantidade')
-            divQuantidade.innerHTML = ""
+            divQuantidade.remove()
 
             const divPrecoTotal = document.querySelector('.divPrecoTotal')
-            divPrecoTotal.innerHTML = ""
+            divPrecoTotal.remove()
 
         }
 
@@ -129,10 +129,10 @@ export class ModalCarrinho {
         const removerModal = document.createElement('button')
         removerModal.classList.add('modalRemovido')
         removerModal.innerText = "x"
-        removerModal.addEventListener('click', ModalCarrinho.removerModal)
+        removerModal.addEventListener('click', ModalCarrinho.removerModalCarrinho)
 
 
-        divTitulo.appendChild(removerModal)
+        modal.appendChild(removerModal)
         modal.appendChild(divTitulo)
         modal.appendChild(divCorpo)
         containerModal.appendChild(modal)
