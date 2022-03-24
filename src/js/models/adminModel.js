@@ -17,8 +17,8 @@ const ModalAdmin = class ModalAdmin {
             modalDeEdit.classList.remove("hidden")
         }
         if(botao.className == "botaoExcluirItemListaAdmin"){
-            const modalDeExcluir = document.querySelector("#modalExcluir")
-        modalDeExcluir.classList.remove("hidden")
+            const modalDeExcluir = document.querySelector("#containerModalExcluir")
+            modalDeExcluir.classList.remove("hidden")
         }
 
     }
@@ -28,16 +28,16 @@ const ModalAdmin = class ModalAdmin {
         evento.preventDefault()
         const modalDeCadastro = document.querySelector("#formCadastroDeProdutos")
         const modalDeEdit = document.querySelector("#formEditarProdutos")
-        const modalDeExcluir = document.querySelector("#modalExcluir")
-        const modalCertezaQuerExcluir = document.querySelector(".modalExcluir")
+        //const modalDeExcluir = document.querySelector("#modalExcluir")
+        const modalCertezaQuerExcluir = document.querySelector("#containerModalExcluir")
         modalDeCadastro.classList.add("hidden")
         modalDeEdit.classList.add("hidden")
-        modalDeExcluir.classList.add("hidden")
-        // modalCertezaQuerExcluir.classList.add("hidden")
+        //modalDeExcluir.classList.add("hidden")
+        modalCertezaQuerExcluir.classList.add("hidden")
         console.log(modalCertezaQuerExcluir)
         
         
-        ProdutosAdmin.listarProdutos()
+        //ProdutosAdmin.listarProdutos()
 
 
     }

@@ -2,7 +2,7 @@
     display: none;
 }
 
-#formCadastroDeProdutos, #formEditarProdutos, .containerModalExcluir{
+#formCadastroDeProdutos, #formEditarProdutos, #containerModalExcluir{
     width: 100vw;
     height: 100vh;
     position: fixed;
