@@ -26,7 +26,7 @@ class Vitrine {
             <h3>${nome}</h3>
             <p>${descricao}</p>
             <span>${categoria}</span>
-            <p>${precoFormatado}</p>
+            <p class ="preco">${precoFormatado}</p>
             <button id='${id}'><img src="./../../src/img/carrinho.png" alt="" id='${id}'></button>
         `
         

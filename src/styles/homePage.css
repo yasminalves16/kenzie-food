@@ -7,6 +7,11 @@ header {
     flex-direction: column;
 }
 
+header section {
+    display: flex;
+    justify-content: space-between;
+}
+
 header img{
     width: 30vw;
     margin: 20px 0px 0px 20px;
@@ -26,15 +31,99 @@ header input {
 header nav{
     display: flex;
     background-color: #ff2253;
-    display: none;
 }
 
 header button {
     display:none;
 }
 
+#botaoTodos {
+    width: 100px;
+    height: 55px;
+    margin-right: 30px;
+    border-radius: 32px;
+    border: 1px solid #F8F9FA;
+    background-color: #F8F9FA;
+    font-size: 18px;
+    color: #212529;
+    font-weight: bold;
+}
+
+
+#botaoTodos:hover {
+    cursor: pointer;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+#botaoPao {
+    width: 170px;
+    height: 48px;
+    font-size: 18px;
+    margin-right: 28px;
+    border-radius: 32px;
+    border: 1px solid #FFF7F4;
+    background-color: #FFF7F4;
+    color: #212529;
+    font-weight: bold;
+}
+
+#botaoPao img {
+    padding-right: 10px;
+}
+
+#botaoPao:hover {
+    cursor: pointer;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+#botaoFruta {
+    width: 130px;
+    height: 48px;
+    margin-right: 28px;
+    border-radius: 32px;
+    border: 1px solid #FFF1F4;
+    background-color: #FFF1F4;
+    font-size: 18px;
+    color: #212529;
+    font-weight: bold;
+}
+
+#botaoFruta img {
+    padding-right: 5px;
+}
+
+#botaoFruta:hover {
+    cursor: pointer;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+#botaoBebida {
+    width: 130px;
+    height: 48px;
+    border-radius: 32px;
+    border: 1px solid #F3EEF5;
+    background-color: #F3EEF5;
+    font-size: 18px;
+    color: #212529;
+    font-weight: bold;
+}
+
+#botaoBebida img {
+    padding-right: 5px;
+}
+
+#botaoBebida:hover {
+    cursor: pointer;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
 .nav-list {
     display:flex;
+    flex-direction: column;
 }
 
 .nav-list li{
@@ -54,18 +143,13 @@ header button {
 }
 
 .menu{
+    width: 600px;
     display: flex;
     justify-content: space-around;
     margin: 15px 15px 20px 15px;
 }
 
-.menu button{
-    height: 8vw;
-    background-color: #ff2253;
-    border: none;
-    border-radius: 15px;
-    color: black;
-}
+
 
 .vitrine{
     display: flex;
@@ -84,20 +168,23 @@ header button {
 }
 
 .vitrine li figure img {
-    background-color:blueviolet;
     width: 300px;
     height: 200px;
     border-radius: 8px;
 }
 
 .vitrine li p{
-    color:  #868E96;
     font-weight: 400;
     font-size: 14px
 }
 
 .vitrine li span{
     width: 100%;
+    color:  #868E96;
+}
+
+p{
+    color: #868E96;
 }
 
 li h3{
@@ -126,200 +213,359 @@ footer button img{
     margin-right: 25px;
 }
 
-.preco{
-    color: black;
-}
-
-
-
-/*HEADER*/
-/* .topo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 72px;
-    box-shadow:  0px 0px 40px -18px rgba(0, 0, 0, 0.25);
-    background-color: #FFF;
-    font-family: 'Poppins', sans-serif;
-} */
-
-/* .topo h1 {
-    margin-left: 117px;
-    font-size: 22px;
-    font-weight: 700;
-    color: #212529;
-} */
-/* 
-.topo h2 {
-    margin-left: 7px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #FF2253;
-} */
-
-/* #inputPesquisa {
-    width: 312px;
-    height: 49px;
-    margin-right: 20px;
-    margin-left: 55%;
-    padding-left: 12px;
-    border: 1px solid #E9ECEF;
-    border-radius: 12px;
-    background-color: #E9ECEF;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: #868E96;
-} */
-
-/* #inputPesquisa:hover {
-    background-color: #F8F9FA;
-}
-
-#botaoLogin {
-    width: 150px;
-    height: 48px;
-    margin-right: 115px;
-    border-radius: 32px;
-    border: 1px solid #FF2253;
-    background-color: #FF2253;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #F8F9FA;
-} */
-
-/* #botaoLogin:hover {
-    cursor: pointer;
-    color: #212529;
-    background-color: #F8F9FA;
-} */
-
-/*MAIN*/
-/* main {
-    width: 100%;
-    height: 100%;    
-}
-
-.container{
-    display: flex;
-}
-
-nav {
-    width: 500px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 50px;
-    margin-left: 117px;
-} */
-
-/* #botaoTodos {
-    width: 88px;
-    height: 48px;
-    margin-right: 28px;
-    border-radius: 32px;
-    border: 1px solid #F8F9FA;
-    background-color: #F8F9FA;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #212529;
-}
-
-
-
-#botaoTodos:hover {
-    cursor: pointer;
-    background-color: #FF2253;
-    color: #F8F9FA;
-}
-
-#botaoPao {
-    width: 170px;
-    height: 48px;
-    margin-right: 28px;
-    border-radius: 32px;
-    border: 1px solid #FFF7F4;
-    background-color: #FFF7F4;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #212529;
-}
-
-#botaoPao img {
-    padding-right: 10px;
-}
-
-#botaoPao:hover {
-    cursor: pointer;
-    background-color: #FF2253;
-    color: #F8F9FA;
-}
-
-#botaoFruta {
-    width: 123px;
-    height: 48px;
-    margin-right: 28px;
-    border-radius: 32px;
-    border: 1px solid #FFF1F4;
-    background-color: #FFF1F4;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #212529;
-}
-
-#botaoFruta img {
-    padding-right: 5px;
-}
-
-#botaoFruta:hover {
-    cursor: pointer;
-    background-color: #FF2253;
-    color: #F8F9FA;
-}
-
-#botaoBebida {
-    width: 123px;
-    height: 48px;
-    border-radius: 32px;
-    border: 1px solid #FFF1F4;
-    background-color: #FFF1F4;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #212529;
-}
-
-#botaoBebida img {
-    padding-right: 5px;
-}
-
-#botaoBebida:hover {
-    cursor: pointer;
-    background-color: #FF2253;
-    color: #F8F9FA;
-} */
-
-
-
-
 aside{
     display: none;
 }
 
 footer{
-    background-color: #FF2253
+    background-color: #FF2253;
 }
+
 footer button{
     background-color: #FF2253
 }
 
-/*CARRINHO*/
+.preco{
+    color: #212529;
+    font-weight: bold;
+}
 
-/* aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 320px;
-    height: 582px;
+
+
+@media screen and (min-width: 800px){
+
+    body{
+        background-color: #FAFAFA;
+    }
+    
+    header{
+        display: flex;
+        flex-direction: row;
+        align-content: flex-end;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 90px;
+        box-shadow:  0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+        background-color: #FFF;
+    }
+
+    header nav{
+        display: flex;
+        background-color: #ff2253;
+        display: none;
+    }
+
+    header img {
+        width: 7vw;
+        margin: 0px 0px 0px 60px;
+        margin-left: 80%;
+
+    }
+    
+    header button {
+
+       display: inline;
+    }
+
+    #inputPesquisa {
+        margin-left: 1000px;
+        width: 400px;
+        height: 49px;
+        padding-left: 12px;
+        border: 1px solid #E9ECEF;
+        border-radius: 12px;
+        background-color: #E9ECEF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        color: #868E96;
+    }
+
+    #inputPesquisa:hover {
+        background-color: #F8F9FA;
+    }
+
+    #botaoLogin {
+        width: 150px;
+        height: 48px;
+        margin-right: 115px;
+        border-radius: 32px;
+        border: 1px solid #FF2253;
+        background-color: #FF2253;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #F8F9FA;
+    }
+
+    #botaoLogin:hover {
+        cursor: pointer;
+        color: #212529;
+        background-color: #F8F9FA;
+    }
+
+    #botaoLogin:hover {
+        cursor: pointer;
+        color: #212529;
+        background-color: #F8F9FA;
+    } 
+
+    /*MAIN*/
+     main {
+        width: 100%;
+        height: 100%;    
+    }
+
+    .container{
+        display: flex;
+    }
+
+    nav {
+        width: 700px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 50px;
+        margin-left: 130px;
+        
+    } 
+
+    #botaoTodos {
+        width: 100px;
+        height: 55px;
+        margin-right: 30px;
+        border-radius: 32px;
+        border: 1px solid #F8F9FA;
+        background-color: #F8F9FA;
+        font-size: 18px;
+        color: #212529;
+    }
+
+
+
+    #botaoTodos:hover {
+        cursor: pointer;
+        background-color: #FF2253;
+        color: #F8F9FA;
+    }
+
+    #botaoPao {
+        width: 170px;
+        height: 48px;
+        font-size: 18px;
+        margin-right: 28px;
+        border-radius: 32px;
+        border: 1px solid #FFF7F4;
+        background-color: #FFF7F4;
+        color: #212529;
+    }
+
+    #botaoPao img {
+        padding-right: 10px;
+    }
+
+    #botaoPao:hover {
+        cursor: pointer;
+        background-color: #FF2253;
+        color: #F8F9FA;
+    }
+
+    #botaoFruta {
+        width: 130px;
+        height: 48px;
+        margin-right: 28px;
+        border-radius: 32px;
+        border: 1px solid #FFF1F4;
+        background-color: #FFF1F4;
+        font-size: 18px;
+        color: #212529;
+    }
+
+    #botaoFruta img {
+        padding-right: 5px;
+    }
+
+    #botaoFruta:hover {
+        cursor: pointer;
+        background-color: #FF2253;
+        color: #F8F9FA;
+    }
+
+    #botaoBebida {
+        width: 130px;
+        height: 48px;
+        border-radius: 32px;
+        border: 1px solid #F3EEF5;
+        background-color: #F3EEF5;
+        font-size: 18px;
+        color: #212529;
+    }
+
+    #botaoBebida img {
+        padding-right: 5px;
+    }
+
+    #botaoBebida:hover {
+        cursor: pointer;
+        background-color: #FF2253;
+        color: #F8F9FA;
+    } 
+
+    /*CARRINHO*/
+
+     aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 320px;
+        height: 582px;
+    }
+
+    /* botao */
+     .div-titulo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 400px;
+        height: 56px;
+        border-radius: 8px 8px 0px 0px;
+        background-color: #FF2253;
+        color: #F8F9FA;
+    }
+
+    .div-titulo img {
+        width: 14px;
+        height: 14px;
+        margin-left: 23px;
+        margin-right: 20px;
+    }
+
+    .div-carrinho {
+        width: 400px;
+        height: 296px;
+        background-color: #F8F9FA;
+    }  
+
+    footer{
+        display: none;
+    }
+
+    .vitrine{
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 85%;
+        max-width: 90%;
+
+    }
+
+    .vitrine li{
+        min-width: 30%;
+        max-width: 30%;
+    
+        height: 55vh;
+    }
+
+    .vitrine li figure{
+        width: 100%;
+    }
+
+    .vitrine li figure img {
+        width: 100%;
+        height: 280px;
+        border-radius: 8px;
+    }
+
+
+    .container{
+        margin: 20px 140px 0px 80px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li h3{
+        font-size: 18px;
+        color: black;
+        font-weight: 600;
+    }
+
+    .vitrine li p{
+        font-weight: 400;
+        font-size: 18px;
+    }
+    
+    .vitrine li span{
+        width: 100%;
+        font-size: 18px;
+        color:  #868E96;
+    }
+    
+    p{
+        color: #868E96
+    }
+
+    .preco p{
+        color:  #212529;
+        font-weight: bold;
+
+    }
+   
+    .menu{
+        margin-top: 50px;
+        margin-left: 130px;
+    }
+    
+    .ulCarrinho li{
+        margin-top: 30px;
+        height: 13vh;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .ulCarrinho button{
+        height: 4vh;
+        width: 2vw;
+        border: none;
+    }
+
+    ul.carrinho button img {
+        width: 13px;
+    }
+
+    .ulCarrinho li figure img{
+        width: 5vw;
+        height: 11vh;
+        margin-right: 15px;
+        border-radius: 15px;
+    }
+
+    .box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    
+    .box span{
+        color: #868E96;
+
+    }
+
+    .divQuantidade , .divPrecoTotal{
+        height: 6vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        color: black;
+    }
+
+    .divQuantidade p, span {
+        color: black;
+    }
+    
+    .divPrecoTotal p, span{
+        color: black;
+    }
+    
 }
 
 /* botao */
