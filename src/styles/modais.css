@@ -8,14 +8,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 4;
+    
 }
 
 .modalCadastro{
     
     height: 700px;
     width:450px;
-    position: relative;
-    background-color: beige;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%)
+    /* background-color: beige; */
+
 }
 
 .modalCadastro .fecharModal{
@@ -32,15 +37,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
 .modalEditar{
     
     height: 700px;
     width:450px;
-    position: relative;
-    background-color: beige;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    /* transform: translateX(-50%) */
+    /* background-color: beige; */
+    
 }
+
+
 
 .hidden{
     display:none;
