@@ -2,43 +2,44 @@
     display: none;
 }
 
-#formCadastroDeProdutos{
+#formCadastroDeProdutos, #formEditarProdutos, .containerModalExcluir{
     width: 100vw;
     height: 100vh;
-    position: relative;
+    position: fixed;
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    align-items: center;
+    padding-top: 53px;
 }
 
 .modalCadastro{
     display: flex;
+    flex-direction: column;
     height: 700px;
     width:450px;
-    position: relative;
+    position: fixed;
+    margin-left: 50%;
+    transform: translateX(-50%);
     background-color: beige;
 }
 
 
 
 
-#formEditarProdutos{
-    width: 108px;
-    height: 108px;
+/*#formEditarProdutos{
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    align-items: center;
-}
+    z-index: 5;
+}*/
 
 .modalEditar{
-    display: flex;
-    flex-direction: column;
     height: 700px;
     width:450px;
-    position: relative;
+    position: fixed;
+    margin-left: 50%;
+    transform: translateX(-50%);
     background-color: beige;
 }
 
@@ -79,62 +80,105 @@
 }
 
 
-.formCadastroDeProdutos{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 4;
-    
-}
-
-.modalCadastro{
-    
-    height: 700px;
-    width:450px;
-    position: fixed;
-    margin-left: 50%;
-    transform: translateX(-50%)
-    /* background-color: beige; */
-
-}
-
-
 
 .modalCadastro .fecharModal{
     
 }
 
-
-.formEditarProdutos{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+.cabecalhoFormCadastro, .cabecalhoFormEditar, .cabecalhoModalExcluir{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    z-index: 5;
+    padding: 20px 28px;
+    background: #F8F9FA;
 }
 
-.modalEditar{
-    
-    height: 700px;
-    width:450px;
+#infoFormCadastro, #infoFormEdit{
+    height: 80vh;
+    background: #FFFFFF;
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+label{
+    position: static;
+    height: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+    color: #212529;
+}
+
+.inputFormAdmin{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 26px 2px 26px 20px;
+    background: #F8F9FA;
+    border: 1.5px solid #DEE2E6;
+    box-sizing: border-box;
+    border-radius: 12px;
+    align-self: stretch;
+    margin: 0px 0px;
+}
+
+.formAdminCadastro, .salvarAlterações{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 20px;
+    background: #FF2253;
+    border: 1.5px solid #FF2253;
+    box-sizing: border-box;
+    border-radius: 32px;
+}
+
+.formAdminCadastro:hover, .salvarAlterações:hover{
+    cursor: pointer;
+    color: #212529;
+    background-color: #F8F9FA;
+}
+
+.excluirProdutos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 20px;
+    background: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 32px;
+}
+
+.excluirProdutos:hover{
+    cursor: pointer;
+    border-color: #FF2253;
+}
+
+.fecharModalCad, .fecharModalEdit {
+    width: 28px;
+    height: 27px;
+    background: #E9ECEF;
+    border-radius: 4px;
+}
+
+.fecharModalCad:hover, .fecharModalEdit:hover{
+    cursor: pointer;
+    border-style: inset;
+}
+
+#modalExcluir {
+    height: 283px;
+    width: 450px;
     position: fixed;
     margin-left: 50%;
     transform: translateX(-50%);
     background-color: beige;
-    
-}
-
-
-
-.hidden{
-    display:none;
 }
