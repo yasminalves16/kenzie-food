@@ -225,3 +225,99 @@ header button {
     background-color: beige;
 }
 
+#liListaAdmin{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #868e96;
+}
+
+.listaProduto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #E9ECEF;
+}
+
+.imgIconListaAdmin{
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+}
+
+.fotoNomeProduto{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.infosListaAdmin{
+    margin-left: 10px;
+}
+
+
+.formCadastroDeProdutos{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    
+}
+
+.modalCadastro{
+    
+    height: 700px;
+    width:450px;
+    position: fixed;
+    margin-left: 50%;
+    transform: translateX(-50%)
+    /* background-color: beige; */
+
+}
+
+
+
+.modalCadastro .fecharModal{
+    
+}
+
+
+.formEditarProdutos{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.modalEditar{
+    
+    height: 700px;
+    width:450px;
+    position: fixed;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: beige;
+    
+}
+
+
+
+.hidden{
+    display:none;
+}
