@@ -225,38 +225,3 @@ header button {
     background-color: beige;
 }
 
-#liListaAdmin{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #868e96;
-}
-
-.listaProduto{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid #E9ECEF;
-}
-
-.imgIconListaAdmin{
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
-}
-
-.fotoNomeProduto{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
-.infosListaAdmin{
-    margin-left: 10px;
-}
