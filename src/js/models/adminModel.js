@@ -28,11 +28,14 @@ const ModalAdmin = class ModalAdmin {
         evento.preventDefault()
         const modalDeCadastro = document.querySelector("#formCadastroDeProdutos")
         const modalDeEdit = document.querySelector("#formEditarProdutos")
-        const modalDeExcluir = document.querySelector("#containerModalExcluir")
-        // const botaoCancelaExcluir = document.querySelector(".botaoCancelaExcluir")
+        const modalDeExcluir = document.querySelector("#modalExcluir")
+        const modalCertezaQuerExcluir = document.querySelector(".modalExcluir")
         modalDeCadastro.classList.add("hidden")
         modalDeEdit.classList.add("hidden")
         modalDeExcluir.classList.add("hidden")
+        // modalCertezaQuerExcluir.classList.add("hidden")
+        console.log(modalCertezaQuerExcluir)
+
        
 
 
