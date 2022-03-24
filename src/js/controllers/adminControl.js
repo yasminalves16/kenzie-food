@@ -5,7 +5,8 @@ import { ProdutosAdmin } from "../models/adminModel.js";
 
 class AdminControle{
     static async botaoFiltros(event){
-        const meusProdutosApi = await Api.meusProdutos()
+        const token = JSON.parse(localStorage.getItem('auth'))
+        const meusProdutosApi = await Api.meusProdutos(token)
         const vitrine = document.querySelector('#listaApi')
         const evento = event.target                          
            

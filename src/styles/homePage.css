@@ -33,9 +33,6 @@ header nav{
     background-color: #ff2253;
 }
 
-header button {
-    display:none;
-}
 
 #botaoTodos {
     width: 100px;
@@ -121,9 +118,14 @@ header button {
     color: #F8F9FA;
 }
 
+#adminPage, #botaoLogin{
+    display: none;
+}
+
 .nav-list {
     display:flex;
     flex-direction: column;
+    display: none;
 }
 
 .nav-list li{
@@ -131,8 +133,17 @@ header button {
     margin-left: 15px;
 }
 
+.bmenuEscondido{
+    background-color: #FF2253;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
 .menuEscondido{
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .menuEscondido div{
@@ -254,6 +265,8 @@ footer button{
         display: flex;
         background-color: #ff2253;
         display: none;
+        border-radius: 2px;
+        margin: 15px;
     }
 
     header img {
@@ -263,9 +276,8 @@ footer button{
 
     }
     
-    header button {
-
-       display: inline;
+    #adminPage, #botaoLogin{
+        display: inline;
     }
 
     #inputPesquisa {
@@ -285,7 +297,7 @@ footer button{
         background-color: #F8F9FA;
     }
 
-    #botaoLogin {
+    #botaoLogin, #adminPage, #logout {
         width: 150px;
         height: 48px;
         margin-right: 115px;
@@ -297,17 +309,13 @@ footer button{
         color: #F8F9FA;
     }
 
-    #botaoLogin:hover {
+    #botaoLogin:hover, #adminPage:hover, #logout:hover {
         cursor: pointer;
         color: #212529;
         background-color: #F8F9FA;
     }
 
-    #botaoLogin:hover {
-        cursor: pointer;
-        color: #212529;
-        background-color: #F8F9FA;
-    } 
+    
 
     /*MAIN*/
      main {
@@ -587,13 +595,15 @@ footer button{
 }
 
 .containerModal .modal button.modalRemovido{
-    color: #000000;
+    color: #FFF;
     background: none;
     border: none;
     font-size: 25px;
-    position: absolute;
-    top: 2px;
-    right: 5px;
+    position: relative;
+    width: 11px;
+    height: 15px;
+    left: 280px;
+    top: 40px;
     cursor: pointer;
 }
 

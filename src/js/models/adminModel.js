@@ -68,13 +68,18 @@ class ProdutosAdmin {
         ul.innerHTML = ''
         data.forEach((produto) => {
 
+
             const template = this.vitrineAdmin(produto)
+
             ul.appendChild(template)
         })
+
 
     }
 
     static vitrineAdmin({id, imagem, nome, categoria, descricao}) {
+
+
         const li = document.createElement('li')
 
         li.innerHTML = `
@@ -93,6 +98,7 @@ class ProdutosAdmin {
         // buttonEdit.addEventListener('click', ModalAdmin.mostrarModalEditar)
         // buttonExcluir.addEventListener('click', ModalAdmin.mostrarModalExcluir)
 
+
     }
 
     
@@ -103,24 +109,29 @@ class ProdutosAdmin {
 
 
 
+
+
 /*const botaoAdicionar = document.querySelector("#botaoAdicionar")
 botaoAdicionar.addEventListener('click', ModalAdmin.mostrarModalCadastro)
 
-const botaoRemoveModalCadastro = document.querySelector(".fecharModalCad")
-botaoRemoveModalCadastro.addEventListener('click', ModalAdmin.removeModal)
 
-const botaoRemoveModalEdit = document.querySelector(".fecharModalEdit")
-botaoRemoveModalEdit.addEventListener('click', ModalAdmin.removeModal)
+// const botaoRemoveModalCadastro = document.querySelector(".fecharModalCad")
+// botaoRemoveModalCadastro.addEventListener('click', ModalAdmin.removeModal)
 
-const botaoRemoveModalExcluir = document.querySelector(".fecharModalExcluir")
-botaoRemoveModalExcluir.addEventListener('click', ModalAdmin.removeModal)
+// const botaoRemoveModalEdit = document.querySelector(".fecharModalEdit")
+// botaoRemoveModalEdit.addEventListener('click', ModalAdmin.removeModal)
 
-const botaoCancelaExcluir = document.querySelector(".botaoCancelaExcluir")
-botaoCancelaExcluir.addEventListener('click', ModalAdmin.removeModal)
+// const botaoRemoveModalExcluir = document.querySelector(".fecharModalExcluir")
+// botaoRemoveModalExcluir.addEventListener('click', ModalAdmin.removeModal)
+
+// const botaoCancelaExcluir = document.querySelector(".botaoCancelaExcluir")
+// botaoCancelaExcluir.addEventListener('click', ModalAdmin.removeModal)
+
 
 const botaoDeCadastro = document.querySelector(".formAdminCadastro")
 const formularioCadastro = document.querySelector(".infosFormCadastro")
 formularioCadastro.addEventListener('submit', ModalAdmin.capturarInfosCadastro)*/
+
 
 
 

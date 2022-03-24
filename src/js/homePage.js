@@ -7,6 +7,9 @@ const api = await Vitrine.analisarQualListar()
 Vitrine.listarProdutos(api)
 Carrinho.listarCarrinho(HomePageControle.produtoAdicionado)
 Vitrine.checarSeLoginExiste()
+Carrinho.templateQuantidadePreco()
+Carrinho.quantidadeTotal(HomePageControle.produtoAdicionado)
+Carrinho.valorTotal(HomePageControle.produtoAdicionado)
 
 const inputPesquisa = document.querySelector('#inputPesquisa')
 
@@ -31,3 +34,6 @@ botaoRemoverProduto.addEventListener('click', HomePageControle.removerProduto.bi
 
 const botaoModalCarrinho = document.querySelector('#botaoCarrinho')
 botaoModalCarrinho.addEventListener('click', HomePageControle.callbackModalCarrinho.bind(HomePageControle))
+
+const menuEscondido = document.querySelector('.bmenuEscondido')
+menuEscondido.addEventListener('click', HomePageControle.menuMobile())
