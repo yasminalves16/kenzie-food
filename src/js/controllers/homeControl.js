@@ -128,16 +128,6 @@ class HomePageControle {
         })
     }
 
-    static menuMobile() {
-
-        const ul = document.querySelector('.nav-list')
-        if (ul.style.display == 'flex') {
-            ul.style.display = 'none'
-        } else {
-            ul.style.display = 'flex'
-        }
-
-    }
 
 }
 
