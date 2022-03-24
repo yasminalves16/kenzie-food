@@ -35,24 +35,24 @@ const ModalAdmin = class ModalAdmin {
         modalDeExcluir.classList.add("hidden")
         // modalCertezaQuerExcluir.classList.add("hidden")
         console.log(modalCertezaQuerExcluir)
-
-       
-
-
+        
+        
+        ProdutosAdmin.listarProdutos()
 
 
     }
+    
 
     static capturarInfosCadastro(evento) {
         evento.preventDefault()
-        const itemCadastro = {}
-        console.log(evento)
-        console.log(evento.target)
-        console.log(evento.value)
+   
+    const objetoCadastro = {}
+    for (let i = 0; i < infoFormCadastro.length; i++) {
+
+        objetoCadastro[infoFormCadastro[i].name] = infoFormCadastro[i].value
+        console.log(infoFormCadastro[i].value)
+    }
         
-        for (let i = 0; i < formularioCadastro.length; i++) {
-            console.log(formularioCadastro[i])
-        }
 
 
     }
