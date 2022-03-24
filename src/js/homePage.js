@@ -28,3 +28,6 @@ header.addEventListener('click',HomePageControle.logarRegistrarAdmin.bind(HomePa
 
 const botaoRemoverProduto = document.querySelector('.ulCarrinho')
 botaoRemoverProduto.addEventListener('click', HomePageControle.removerProduto.bind(HomePageControle))
+
+const botaoModalCarrinho = document.querySelector('#botaoCarrinho')
+botaoModalCarrinho.addEventListener('click', HomePageControle.callbackModalCarrinho.bind(HomePageControle))
