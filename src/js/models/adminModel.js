@@ -91,6 +91,7 @@ class ProdutosAdmin {
         <button class="botaoExcluirItemListaAdmin" id="${id}"><img src="" class="imgBotaoListaAdmin"></button>
         `
 
+        li.className = 'listaProduto'
         return li 
 
 
