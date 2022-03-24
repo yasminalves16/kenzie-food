@@ -302,6 +302,63 @@ footer button{
     font-weight: bold;
 }
 
+/* botao */
+.containerModal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 345px;
+    height: 628px;
+    border-radius: 10px;
+}
+
+.containerModal .modal button.modalRemovido{
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background: none;
+    border: none;
+    font-size: 20px;
+    position: relative;
+    width: 11px;
+    height: 15px;
+    left: 280px;
+    top: 40px;
+    cursor: pointer;
+}
+
+.div-titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 320px;
+    height: 56px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+.div-titulo img {
+    width: 14px;
+    height: 14px;
+    margin-left: 23px;
+    margin-right: 20px;
+}
+
+.div-carrinho {
+    width: 320px;
+    height: 296px;
+    background-color: #F8F9FA;
+}
+
 
 /* botao */
 .containerModal {
@@ -589,6 +646,7 @@ footer button{
     }
 
     .div-carrinho {
+
         overflow: auto;
         width: 320px;
         height: 296px;
@@ -741,11 +799,13 @@ footer button{
         font-weight: 700;
     }
 
+
     .divQuantidade , .divPrecoTotal {
         margin-left: 18px;
     }
 
     .divQuantidade , .divPrecoTotal {
+
         margin-right: 18px;
     }
 
