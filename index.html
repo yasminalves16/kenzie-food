@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,29 +12,16 @@
     <link rel="stylesheet" href="src/styles/homePage.css">
     <title>Kenzie Food &verbar; Home</title>
 </head>
+
 <body>
     <header class="topo">
         <section>
             <img src="./src/img/Group 1075.svg">
-            <nav>
-                <div class="menuEscondido">
-                    <button class="bmenuEscondido">
-                    <div class="linha1"></div>
-                    <div class="linha2"></div>
-                    <div class="linha3"></div>
-                    </button>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="http://127.0.0.1:5500/src/html/login.html">Login</a></li>
-                    <li><a href="http://127.0.0.1:5500/src/html/cadastro.html">Cadastro</a></li>
-                </ul>
-            </nav>
+            <button id="adminPage">Admin</button>
+            <button id="botaoLogin">Login / Registrar</button>
         </section>
-    
+
         <input type="text" placeholder=" Pesquisar por produto" id="inputPesquisa">
-       
-        <button id="adminPage">Admin</button> 
-        <button id="botaoLogin">Login / Registrar</button>
     </header>
 
     <main>
@@ -48,7 +36,7 @@
 
         <section class="container">
             <section>
-                <ul class="vitrine">           
+                <ul class="vitrine">
 
                 </ul>
             </section>
@@ -60,9 +48,9 @@
                 </div>
                 <div class="div-carrinho">
                     <ul class="ulCarrinho">
-                        
+
                     </ul>
-                                  
+
                 </div>
             </aside>
         </section>
@@ -77,4 +65,5 @@
 
     <script type="module" src="src/js/homePage.js"></script>
 </body>
+
 </html>

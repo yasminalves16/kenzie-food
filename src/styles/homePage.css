@@ -28,12 +28,6 @@ header input {
     height: 5vh;
 }
 
-header nav{
-    display: flex;
-    background-color: #ff2253;
-}
-
-
 #botaoTodos {
     width: 100px;
     height: 55px;
@@ -45,7 +39,6 @@ header nav{
     color: #212529;
     font-weight: bold;
 }
-
 
 #botaoTodos:hover {
     cursor: pointer;
@@ -118,49 +111,12 @@ header nav{
     color: #F8F9FA;
 }
 
-#adminPage, #botaoLogin{
-    display: none;
-}
-
-.nav-list {
-    display:flex;
-    flex-direction: column;
-    display: none;
-}
-
-.nav-list li{
-    letter-spacing: 3px;
-    margin-left: 15px;
-}
-
-.bmenuEscondido{
-    background-color: #FF2253;
-    height: 100%;
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-}
-
-.menuEscondido{
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-.menuEscondido div{
-    width: 32px;
-    height: 2px;
-    background-color: #fff;
-    margin: 8px;
-}
-
 .menu{
     width: 600px;
     display: flex;
     justify-content: space-around;
     margin: 15px 15px 20px 15px;
 }
-
-
 
 .vitrine{
     display: flex;
@@ -267,6 +223,7 @@ li h3{
 footer{
     width: 99vw;
     margin: 2px;
+    background-color: #FF2253
 }
 
 footer button{
@@ -279,6 +236,7 @@ footer button{
     height: 8vh;
     align-items: center;
     border-radius: 0px 0px 10px 10px;
+    background-color: #FF2253
 }
 
 footer button img{
@@ -287,14 +245,6 @@ footer button img{
 
 aside{
     display: none;
-}
-
-footer{
-    background-color: #FF2253;
-}
-
-footer button{
-    background-color: #FF2253
 }
 
 .preco{
