@@ -7,6 +7,9 @@ const api = await Vitrine.analisarQualListar()
 Vitrine.listarProdutos(api)
 Carrinho.listarCarrinho(HomePageControle.produtoAdicionado)
 Vitrine.checarSeLoginExiste()
+Carrinho.templateQuantidadePreco()
+Carrinho.quantidadeTotal(HomePageControle.produtoAdicionado)
+Carrinho.valorTotal(HomePageControle.produtoAdicionado)
 
 const inputPesquisa = document.querySelector('#inputPesquisa')
 

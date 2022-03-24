@@ -66,6 +66,8 @@ const ModalAdmin = class ModalAdmin {
 class ProdutosAdmin {
 
     static async listarProdutos(data) {
+        const ul = document.querySelector('#listaApi')
+        ul.innerHTML = ''
         data.forEach((produto) => {
 
             /*const id = produto.id
@@ -74,17 +76,19 @@ class ProdutosAdmin {
             const categoria = produto.categoria
             const descricao = produto.descricao*/
 
-            this.vitrineAdmin(produto)
+           const template =  this.vitrineAdmin(produto)
+            ul.appendChild(template)
         })
+
 
     }
 
-    static vitrineAdmin({id, img, nome, categoria, descricao}) {
+    static vitrineAdmin({id, imagem, nome, categoria, descricao}) {
         const ul = document.querySelector('#listaApi')
         const li = document.createElement('li')
 
         li.innerHTML = `
-        <img src="${img}" class="imgIconListaAdmin"> 
+        <img src="${imagem}" class="imgIconListaAdmin"> 
         <h4 class="infosListaAdmin" class="nomeProdutoListaAdmin">${nome}</h4> 
         <span class="infosListaAdmin" class="categoriasListaAdmin">${categoria}</h4> 
         <span class="infosListaAdmin" class="descricaoListaAdmin">${descricao}</span> 
@@ -107,7 +111,7 @@ class ProdutosAdmin {
         buttonExcluir.appendChild(imgButtonExcluir)
         li.appendChild(buttonEdit)
         li.appendChild(buttonExcluir)
-        ul.appendChild(li)
+        return li
 
         buttonEdit.addEventListener('click', ModalAdmin.mostrarModalEditar)
         buttonExcluir.addEventListener('click', ModalAdmin.mostrarModalExcluir)
@@ -118,28 +122,28 @@ class ProdutosAdmin {
 }
 
 
-ProdutosAdmin.requisicao()
+// ProdutosAdmin.requisicao()
 
 
 
-const botaoAdicionar = document.querySelector("#botaoAdicionar")
-botaoAdicionar.addEventListener('click', ModalAdmin.mostrarModalCadastro)
+// const botaoAdicionar = document.querySelector("#botaoAdicionar")
+// botaoAdicionar.addEventListener('click', ModalAdmin.mostrarModalCadastro)
 
-const botaoRemoveModalCadastro = document.querySelector(".fecharModalCad")
-botaoRemoveModalCadastro.addEventListener('click', ModalAdmin.removeModal)
+// const botaoRemoveModalCadastro = document.querySelector(".fecharModalCad")
+// botaoRemoveModalCadastro.addEventListener('click', ModalAdmin.removeModal)
 
-const botaoRemoveModalEdit = document.querySelector(".fecharModalEdit")
-botaoRemoveModalEdit.addEventListener('click', ModalAdmin.removeModal)
+// const botaoRemoveModalEdit = document.querySelector(".fecharModalEdit")
+// botaoRemoveModalEdit.addEventListener('click', ModalAdmin.removeModal)
 
-const botaoRemoveModalExcluir = document.querySelector(".fecharModalExcluir")
-botaoRemoveModalExcluir.addEventListener('click', ModalAdmin.removeModal)
+// const botaoRemoveModalExcluir = document.querySelector(".fecharModalExcluir")
+// botaoRemoveModalExcluir.addEventListener('click', ModalAdmin.removeModal)
 
-const botaoCancelaExcluir = document.querySelector(".botaoCancelaExcluir")
-botaoCancelaExcluir.addEventListener('click', ModalAdmin.removeModal)
+// const botaoCancelaExcluir = document.querySelector(".botaoCancelaExcluir")
+// botaoCancelaExcluir.addEventListener('click', ModalAdmin.removeModal)
 
-const botaoDeCadastro = document.querySelector(".formAdminCadastro")
-const formularioCadastro = document.querySelector(".infosFormCadastro")
-formularioCadastro.addEventListener('submit', ModalAdmin.capturarInfosCadastro)
+// const botaoDeCadastro = document.querySelector(".formAdminCadastro")
+// const formularioCadastro = document.querySelector(".infosFormCadastro")
+// formularioCadastro.addEventListener('submit', ModalAdmin.capturarInfosCadastro)
 
 
 
