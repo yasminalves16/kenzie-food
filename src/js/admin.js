@@ -36,4 +36,6 @@ botaoEditor_Excluir.addEventListener('click', ModalAdmin.mostrarModalEditar)
 
 const botaoNaoExcluir = document.querySelector('.botaoModalNaoExcluir')
 botaoNaoExcluir.addEventListener('click',ModalAdmin.removeModal )
-console.log(botaoNaoExcluir)
+
+const formularioAdd = document.querySelector('#infoFormCadastro')
+formularioAdd.addEventListener('submit',ModalAdmin.capturarInfosCadastro)
