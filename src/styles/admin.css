@@ -155,7 +155,35 @@ header button {
     
 }
 
+#liListaAdmin{
+    display: flex;
+}
 
+#listaAp li{
+    display: flex;
+    
+}
+
+.imgIconListaAdmin{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin: 25px;
+} 
+
+.listaProduto{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    border: 1px solid #E9ECEF;
+    height: 62px;
+    align-items: center;
+}
+
+.listaProduto h4{
+    background-color: blue;
+    width: 230px;
+}
 
 
 
@@ -205,7 +233,6 @@ header button {
     background-color: beige;
 }
 
-
 #formEditarProdutos{
     width: 108px;
     height: 108px;
@@ -224,43 +251,6 @@ header button {
     position: relative;
     background-color: beige;
 }
-
-#liListaAdmin{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #868e96;
-}
-
-.listaProduto{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid #E9ECEF;
-}
-
-.imgIconListaAdmin{
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
-}
-
-.fotoNomeProduto{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
-.infosListaAdmin{
-    margin-left: 10px;
-}
-
 
 .formCadastroDeProdutos{
     width: 100vw;
@@ -287,12 +277,6 @@ header button {
 }
 
 
-
-.modalCadastro .fecharModal{
-    
-}
-
-
 .formEditarProdutos{
     width: 100vw;
     height: 100vh;
@@ -315,7 +299,6 @@ header button {
     background-color: beige;
     
 }
-
 
 
 .hidden{
