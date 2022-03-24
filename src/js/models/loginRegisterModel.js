@@ -15,10 +15,10 @@ class LoginCadastrar {
 
         if (responseData.error) {
             
-            // const login = document.querySelector('.invalidLogin')
+            const login = document.querySelector('.erro')
 
-            // setTimeout(() => {login.style.display = 'inline'},0)
-            // setTimeout(() => {login.style.display = 'none'},3000)           
+            setTimeout(() => {login.style.display = 'inline'},0)
+            setTimeout(() => {login.style.display = 'none'},3000)           
         }
         else {
             let key = 'auth'
@@ -45,10 +45,10 @@ class LoginCadastrar {
         }
 
         else {
-            // const login = document.querySelector('.invalidCadastro')
+            const cadastro = document.querySelector('.erro')
 
-            // setTimeout(() => {login.style.display = 'inline'},0)
-            // setTimeout(() => {login.style.display = 'none'},3000)
+            setTimeout(() => {cadastro.style.display = 'inline'},0)
+            setTimeout(() => {cadastro.style.display = 'none'},3000)
 
         }
     }
