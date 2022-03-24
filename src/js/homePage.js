@@ -31,3 +31,14 @@ botaoRemoverProduto.addEventListener('click', HomePageControle.removerProduto.bi
 
 const botaoModalCarrinho = document.querySelector('#botaoCarrinho')
 botaoModalCarrinho.addEventListener('click', HomePageControle.callbackModalCarrinho.bind(HomePageControle))
+
+const menuEscondido = document.querySelector('.bmenuEscondido')
+menuEscondido.addEventListener('click', function(){
+    const ul = document.querySelector('.nav-list')
+    if(ul.style.display == 'flex'){
+        ul.style.display = 'none'
+    }else{
+        ul.style.display = 'flex'
+    }
+    
+})
