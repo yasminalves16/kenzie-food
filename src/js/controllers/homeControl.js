@@ -13,19 +13,12 @@ class HomePageControle {
     static async adicionarProduto(event) {
 
         const botao = event.target
-
-<<<<<<< HEAD
         const produtos = await Vitrine.analisarQualListar()
-
-
-        if (botao.id) {
-
-            const produto = produtos.find(function (obj) { return obj.id == botao.id })
-=======
+               
         if(botao.id){            
             const ulCarrinho = document.querySelector('.ulCarrinho')
             const produto = produtos.find(function(obj){return obj.id == botao.id})
->>>>>>> c0e3d41a68646f5b42c5b8acec5c5df3822d8278
+
             this.produtoAdicionado.push(produto)
 
             const key = 'produtosComprados'
