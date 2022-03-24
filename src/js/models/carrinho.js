@@ -24,9 +24,11 @@ export class Carrinho {
             <figure>
             <img src="${imagem}" alt="${nome}">
             </figure>
+            <div class ="box">
             <h3>${nome}</h3>
             <span>${categoria}</span>
             <p class="preco">${precoFormatado}</p>
+            </div>
             <button class="botaoRemover" id='${id}'><img id='${id}' src="src/img/remover-produto.png" alt=""></button>
         `
 
@@ -42,12 +44,14 @@ export class Carrinho {
             const divQuantidade = document.createElement('div')
             divQuantidade.classList.add('divQuantidade')
             divQuantidade.innerHTML = `
-                <p>Quantidade <span id="quantidadeTotal">0</span></p>
+                <p>Quantidade </p>
+                <span id="quantidadeTotal">0</span>
             `
             const divPrecoTotal = document.createElement('div')
             divPrecoTotal.classList.add('divPrecoTotal')
             divPrecoTotal.innerHTML = `
-                <p>Total <span id="precoTotal">00</span></p>
+                <p>Total </p>
+                <span id="precoTotal">00</span>
             `
 
             divCarrinho.appendChild(divQuantidade)
