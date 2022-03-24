@@ -91,7 +91,7 @@ header button {
 }
 
 .vitrine li p{
-    color: #868E96;
+    color:  #868E96;
     font-weight: 400;
     font-size: 14px
 }
@@ -126,7 +126,9 @@ footer button img{
     margin-right: 25px;
 }
 
-
+.preco{
+    color: black;
+}
 
 
 
