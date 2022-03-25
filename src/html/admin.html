@@ -77,7 +77,7 @@
                             
                           </select>
 
-                    <label for="valorDoProduto">Valor do produto</label>
+                <label for="valorDoProduto">Valor do produto</label>
                     <input type="text" name="preco" placeholder="Valor do produto" class="inputFormAdmin" />
 
                     <label for="linkImg">Link da imagem</label>
@@ -146,24 +146,32 @@
             </div>
         </div>
 
-        <div class="containerModalStatusAdd">
-            <div id="modalStatusAdd" class="hidden" class="modalForm">
-                <div class="cabecalhoModalStatusAdd">
-                    <span>Status</span>
-                    <button class="fecharStatus" class="fecharStatusAdd">X</button>
-                    <h4>Produto adicionado com sucesso</h4>
-                    <div class="barraVerde"></div>
+        <div id="containerModalStatusAdd" class="hidden">
+            <div id="modalStatusAdd" class="modalForm">
+                <div>
+                    <div class="cabecalhoModalStatusAdd">
+                        <h2>Status</h2>
+                        <button class="fecharStatus" class="fecharStatusAdd">X</button>
+                    </div>
+                    <div class="internalModalStatusAdd">
+                        <h4>Produto adicionado com sucesso</h4>
+                        <div class="barraVerde"></div>
+                    </div>
                 </div>
+            </div>
         </div>
 
-        </div>
-        <div id="containerModalStatusAdd" class="hidden">
+        <div id="containerModalStatusAddErro" class="hidden">
             <div id="modalStatusErro"  class="modalForm">
-                <div class="cabecalhoModalStatusErro">
-                    <span>Status</span>
-                    <button class="fecharStatus" class="fecharStatusAdd">X</button>
-                    <h4>Produto não foi adicionado, ocorreu um erro!</h4>
+                <div>
+                    <div class="cabecalhoModalStatusErro">
+                        <h2>Status</h2>
+                        <button class="fecharStatus" class="fecharStatusAdd">X</button>
+                    </div>
+                    <div class="internalModalStatusAdd">
+                        <h4>Produto não foi adicionado, ocorreu um erro!</h4>
                     <div class="barraVermelha"></div>
+                    </div>
                 </div>
         </div>
 

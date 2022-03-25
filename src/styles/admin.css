@@ -412,6 +412,45 @@ aside{
     color: black;
 }
 
+.botaoModalExcluir{
+    margin-right: 15px;
+}
+
+.botaoModalExcluir:hover, .botaoModalNaoExcluir:hover{
+    cursor: pointer;
+    border-color: #FF2253;
+}
+
+#containerModalStatusAdd, #containerModalStatusAddErro{
+    width: 490px;
+    height: 130px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #F8F9FA;
+}
+
+h4{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.barraVerde{
+    width: -webkit-fill-available;
+    height: 8px;
+    background: #39DF8F;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.barraVermelha{
+    width: -webkit-fill-available;
+    height: 8px;
+    background: #FF2253;
+    border-radius: 0px 0px 8px 8px;
+}
 
 
 @media screen and (min-width: 800px){
