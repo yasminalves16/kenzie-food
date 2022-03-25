@@ -49,4 +49,6 @@ botaoExcluir.addEventListener('click', ModalAdmin.excluirProduto)
 const botaoExcluirModalExc = document.querySelector(".fecharModalExcluir")
 botaoExcluirModalExc.addEventListener('click',ModalAdmin.removeModal)
 
+const statusFecha = document.querySelector(".fecharStatus")
+statusFecha.addEventListener('click',ModalAdmin.removeModal )
 
