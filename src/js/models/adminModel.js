@@ -79,7 +79,14 @@ const ModalAdmin = class ModalAdmin {
         
     }
   
-    Admin.adicionarProduto(objetoCadastro,token)
+    const resposta = await Admin.adicionarProduto(objetoCadastro,token)
+    
+    if(resposta.ok == true){
+        const modalDeEdit = document.querySelector("#formCadastroDeProdutos")
+        modalDeEdit.classList.add("hidden")
+        document.location.reload(true)
+
+       }
         
     }
 
