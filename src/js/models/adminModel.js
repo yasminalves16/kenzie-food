@@ -28,7 +28,7 @@ const ModalAdmin = class ModalAdmin {
         }
         if(botao.className == "botaoExcluirItemListaAdmin"){
 
-            const modalDeExcluir = document.querySelector("#modalExcluir")
+            const modalDeExcluir = document.querySelector("#containerModalExcluir")
             modalDeExcluir.classList.remove("hidden")
             const idProduto = botao.id 
             const botaoExcluir = document.querySelector('.botaoModalExcluir')
