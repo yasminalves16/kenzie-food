@@ -39,3 +39,9 @@ botaoNaoExcluir.addEventListener('click',ModalAdmin.removeModal )
 
 const formularioAdd = document.querySelector('#infoFormCadastro')
 formularioAdd.addEventListener('submit',ModalAdmin.capturarInfosCadastro)
+
+const formularioEdit = document.querySelector("#infoFormEdit")
+formularioEdit.addEventListener('submit', ModalAdmin.edicaoDeProduto)
+
+// const BotaoSalvarEdicoes = document.querySelector('.salvarAlterações')
+// BotaoSalvarEdicoes.addEventListener('submit',ModalAdmin.edicaoDeProduto )
