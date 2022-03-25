@@ -55,13 +55,22 @@ header button {
     border: 1px solid #FF2253;
     background-color: #FF2253;
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #F8F9FA;
 }
 
+header button:hover{
+    color:#212529;
+    cursor: pointer;
+    background-color: #F8F9FA;
+}
+
 .menu{
+    width: 80%;
+    margin: 120px 10px 30px 160px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 #botaoTodos {
@@ -71,7 +80,7 @@ header button {
     border-radius: 32px;
     border: 1px solid #F8F9FA;
     background-color: #FFF;
-    font-size: 16px;
+    font-size: 18px;
     color: #212529;
 }
 
@@ -84,7 +93,7 @@ header button {
 #botaoPao {
     width: 170px;
     height: 48px;
-    font-size: 16px;
+    font-size: 18px;
     margin-right: 28px;
     border-radius: 32px;
     border: 1px solid #FFF7F4;
@@ -110,7 +119,7 @@ header button {
     border-radius: 32px;
     border: 1px solid #FFF1F4;
     background-color: #FFF1F4;
-    font-size: 16px;
+    font-size: 18px;
     color: #212529;
 }
 
@@ -131,7 +140,7 @@ header button {
     border-radius: 32px;
     border: 1px solid #F3EEF5;
     background-color: #F3EEF5;
-    font-size: 16px;
+    font-size: 18px;
     color: #212529;
 }
 
@@ -147,9 +156,10 @@ header button {
 
 .botoesDeFiltro{
     
-    width: 150px;
+    width: 190px;
     height: 48px;
-    margin-right: 115px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border-radius: 32px;
     border: 1px solid #FF2253;
     background-color: #FF2253;
@@ -159,8 +169,10 @@ header button {
     
 }
 
-#liListaAdmin{
-    display: flex;
+.botoesDeFiltro:hover{
+    color:#212529;
+    cursor: pointer;
+    background-color: #F8F9FA;
 }
 
 #listaAp li{
@@ -222,29 +234,17 @@ header button {
     border: none;
 }
 
+.dois{
+    margin-left: 400px;
+}
 
+.tres{
+    margin-left: 200px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.quatro{
+    margin-left: 900px;
+}
 
 
 
@@ -259,6 +259,7 @@ header button {
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
     padding-top: 53px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .modalCadastro{
@@ -272,12 +273,6 @@ header button {
     background-color: beige;
 }
 
-
-
-
-
-
-
 .modalEditar{
     height: 700px;
     width:450px;
@@ -287,49 +282,16 @@ header button {
     background-color: beige;
 }
 
-
 #liListaAdmin{
-    list-style: none;
+    margin-left: 200px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 14px;
     line-height: 24px;
     color: #868e96;
-}
-
-.listaProduto{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid #E9ECEF;
-}
-
-.imgIconListaAdmin{
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
-}
-
-.fotoNomeProduto{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
-.infosListaAdmin{
-    margin-left: 10px;
-}
-
-
-
-.modalCadastro .fecharModal{
-
-
-    
+    font-size: 21px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cabecalhoFormCadastro, .cabecalhoFormEditar, .cabecalhoModalExcluir{
@@ -339,6 +301,7 @@ header button {
     align-items: center;
     padding: 20px 28px;
     background: #F8F9FA;
+    font-family: 'Poppins', sans-serif;
 }
 
 #infoFormCadastro, #infoFormEdit{
@@ -350,6 +313,7 @@ header button {
     justify-content: space-evenly;
     padding-left: 28px;
     padding-right: 28px;
+    font-family: 'Poppins', sans-serif;
 }
 
 label{
@@ -361,6 +325,7 @@ label{
     font-size: 14px;
     line-height: 0px;
     color: #212529;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -375,6 +340,7 @@ label{
     border-radius: 12px;
     align-self: stretch;
     margin: 0px 0px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .formAdminCadastro, .salvarAlterações{
@@ -386,6 +352,8 @@ label{
     border: 1.5px solid #FF2253;
     box-sizing: border-box;
     border-radius: 32px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
 .formAdminCadastro:hover, .salvarAlterações:hover{
@@ -403,6 +371,7 @@ label{
     border: 1.5px solid #F8F9FA;
     box-sizing: border-box;
     border-radius: 32px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .excluirProdutos:hover{
@@ -415,6 +384,7 @@ label{
     height: 27px;
     background: #E9ECEF;
     border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -430,5 +400,8 @@ label{
     margin-left: 50%;
     transform: translateX(-50%);
     background-color: beige;
+    font-family: 'Poppins', sans-serif;
 }
+
+
 
