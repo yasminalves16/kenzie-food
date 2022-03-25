@@ -383,7 +383,7 @@ label{
     border-color: #FF2253;
 }
 
-.fecharModalCad, .fecharModalEdit {
+.fecharModalCad, .fecharModalEdit, .fecharModalExcluir {
     width: 28px;
     height: 27px;
     background: #E9ECEF;
@@ -392,7 +392,7 @@ label{
 }
 
 
-.fecharModalCad:hover, .fecharModalEdit:hover{
+.fecharModalCad:hover, .fecharModalEdit:hover, .fecharModalExcluir:hover{
     cursor: pointer;
     border-style: inset;
 }
@@ -434,3 +434,5 @@ label{
 #botoesModalExcluir{
     
 }
+
+

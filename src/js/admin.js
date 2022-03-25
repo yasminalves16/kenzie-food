@@ -18,7 +18,7 @@ inputPesquisaAdmin.addEventListener('keyup', function(){
     ProdutosAdmin.listarProdutos(resultadoPesquisa)
 })
 
-const botao = document.querySelector('.menu')
+const botao = document.querySelector('.menuFiltroDosProdutos')
 botao.addEventListener('click', AdminControle.botaoFiltros)
 
 
