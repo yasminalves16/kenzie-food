@@ -1,3 +1,7 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
 .topo{
     display: flex;
     height: 7vh;
@@ -165,24 +169,57 @@ header button {
 }
 
 .imgIconListaAdmin{
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
     margin: 25px;
 } 
 
 .listaProduto{
-    width: 80%;
+    width: 85%;
     margin: auto;
     display: flex;
     border: 1px solid #E9ECEF;
-    height: 62px;
+    height: 70px;
     align-items: center;
 }
+#nomeProdutoListaAdmin{
+    width: 340px;
+    color: #212529;
+    font-weight: 600;
+    font-size: 20px;
 
-.listaProduto h4{
-    background-color: blue;
-    width: 230px;
+}
+
+#categoriasListaAdmin{
+    width: 130px;
+    height: 30px;
+    margin: 40px;
+    font-size: 21px;
+    color: #868E96;
+    background-color: #F8F9FA;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+
+}
+
+.teste{
+    display: flex;
+    width: 1070px;
+    margin-left: 150px;
+    justify-content: space-between;
+    color: #868E96;
+    font-size: 21px;
+
+}
+
+.teste Button{
+    margin-left: 15px;
+    width: 35px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
 }
 
 

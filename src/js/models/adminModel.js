@@ -76,24 +76,27 @@ class ProdutosAdmin {
 
             ul.appendChild(template)
         })
-
+        
 
     }
+    
 
     static vitrineAdmin({id, imagem, nome, categoria, descricao}) {
-
+        
 
         const li = document.createElement('li')
 
         li.innerHTML = `
         <img src="${imagem}" class="imgIconListaAdmin"> 
-        <h4 class="infosListaAdmin" class="nomeProdutoListaAdmin">${nome}</h4>
-        <span class="infosListaAdmin" class="categoriasListaAdmin">${categoria}</span> 
+        <h4 class="infosListaAdmin" id="nomeProdutoListaAdmin">${nome}</h4>
+        <span class="infosListaAdmin" id="categoriasListaAdmin">${categoria}</span> 
+        <section class='teste'>
         <span class="infosListaAdmin" class="descricaoListaAdmin">${descricao}</span>
         <div> 
         <button class="botaoEditarItemListaAdmin" id="${id}"><img src="" class="imgBotaoListaAdmin"></button>
         <button class="botaoExcluirItemListaAdmin" id="${id}"><img src="" class="imgBotaoListaAdmin"></button>
         </div>
+        </section>
         `
 
         li.className = 'listaProduto'
