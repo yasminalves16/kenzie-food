@@ -28,7 +28,11 @@ const ModalAdmin = class ModalAdmin {
         }
         if(botao.className == "botaoExcluirItemListaAdmin"){
             const modalDeExcluir = document.querySelector("#modalExcluir")
-        modalDeExcluir.classList.remove("hidden")
+            modalDeExcluir.classList.remove("hidden")
+            const idProduto = botao.id 
+            const botaoExcluir = document.querySelector('.botaoModalExcluir')
+            botaoExcluir.id = idProduto
+
         }
 
     }
@@ -89,7 +93,25 @@ const ModalAdmin = class ModalAdmin {
         const resposta = await Admin.editarProduto(objetoEditado,token,id)
         console.log(resposta)
         console.log(objetoEditado)
+
         
+        
+    }
+
+    static async excluirProduto(evento){
+        evento.preventDefault()
+        console.log(evento)
+        console.log(evento.target)
+        const token = JSON.parse(localStorage.getItem('auth'))
+        const botao = document.querySelector('.botaoModalExcluir')
+        const id = botao.id 
+
+        const resposta = await Admin.deletarProduto(token, id)
+        ModalAdmin.removeModal()
+
+        
+
+
     }
 
     
