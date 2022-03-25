@@ -121,8 +121,10 @@
                     <label for="linkImg">Link da imagem</label>
                     <input type="text" name="imagem" placeholder="Link da imagem" class="inputFormAdmin" />
 
-                    <button class="salvarAlterações">Salvas alterações</button>
-                    <button class="excluirProdutos">Excluir</button>
+                    <div class="botoesModalEditar">
+                        <button class="salvarAlterações">Salvar alterações</button>
+                        <button class="excluirProdutos">Excluir</button>
+                    </div>
                 </form>
             </div>
 
@@ -131,12 +133,16 @@
         <div id="containerModalExcluir" class="hidden">
             <div id="modalExcluir" class="modalForm">
                 <div class="cabecalhoModalExcluir">
-                    <span>exclusão do produto</span>
+                    <h2>Exclusão de produto</h2>
+                    <button class="fecharModalExcluir">X</button>
                 </div>
-                <h2>Tem certeza que quer excluir o produto?</h2>
-                <button class="botaoModalExcluir">Sim</button>
-                <button class="botaoModalNaoExcluir">Não</button>
-    
+                <div class="internoModalExcluir">
+                    <h2>Tem certeza que deseja excluir este produto?</h2>
+                    <div id="botoesModalExcluir">
+                        <button class="botaoModalExcluir">Sim</button>
+                        <button class="botaoModalNaoExcluir">Não</button>
+                    </div>
+                </div>
             </div>
         </div>
 
