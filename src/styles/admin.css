@@ -4,84 +4,61 @@ body{
 
 .topo{
     display: flex;
-    height: 7vh;
-}
+} 
 
-header{
+header {
     display: flex;
-    flex-direction: row;
-    align-content: flex-end;
+    flex-direction: column;
+}
+
+header section {
+    display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 90px;
-    box-shadow:  0px 0px 40px -18px rgba(0, 0, 0, 0.25);
-    background-color: #FFF;
 }
 
-header section img {
-    width: 7vw;
-    margin: 0px 0px 0px 60px;
-    margin-left: 80%;
+header img{
+    width: 30vw;
+    margin: 20px 0px 0px 20px;
 }
 
-header div img {
-    width: 50px;
-    height: 50px;
+#imgUsuario{
+    display:none;
 }
 
-#inputPesquisa {
-    margin-left: 1000px;
-    width: 400px;
-    height: 49px;
-    padding-left: 12px;
-    border: 1px solid #E9ECEF;
-    border-radius: 12px;
-    background-color: #E9ECEF;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: #868E96;
-}
+#login{
 
-#inputPesquisa:hover {
-    background-color: #F8F9FA;
-}
-
-header button {
     width: 100px;
     height: 48px;
-    margin-right: 80px;
     border-radius: 32px;
     border: 1px solid #FF2253;
     background-color: #FF2253;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: #F8F9FA;
+
 }
 
-header button:hover{
-    color:#212529;
-    cursor: pointer;
-    background-color: #F8F9FA;
-}
-
-.menu{
-    width: 80%;
-    margin: 120px 10px 30px 160px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+header input {
+    border: 1px solid #E9ECEF;
+    border-radius: 8px;
+    background-color: #E9ECEF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #868E96;
+    margin: 20px 15px 20px 15px;
+    height: 5vh;
 }
 
 #botaoTodos {
     width: 100px;
-    height: 48px;
+    height: 55px;
     margin-right: 30px;
     border-radius: 32px;
     border: 1px solid #F8F9FA;
-    background-color: #FFF;
+    background-color: #F8F9FA;
     font-size: 18px;
     color: #212529;
+    font-weight: bold;
 }
 
 #botaoTodos:hover {
@@ -99,6 +76,7 @@ header button:hover{
     border: 1px solid #FFF7F4;
     background-color: #FFF7F4;
     color: #212529;
+    font-weight: bold;
 }
 
 #botaoPao img {
@@ -115,12 +93,12 @@ header button:hover{
     width: 130px;
     height: 48px;
     margin-right: 28px;
-    padding-bottom: 7px;
     border-radius: 32px;
     border: 1px solid #FFF1F4;
     background-color: #FFF1F4;
     font-size: 18px;
     color: #212529;
+    font-weight: bold;
 }
 
 #botaoFruta img {
@@ -136,12 +114,12 @@ header button:hover{
 #botaoBebida {
     width: 130px;
     height: 48px;
-    padding-bottom: 7px;
     border-radius: 32px;
     border: 1px solid #F3EEF5;
     background-color: #F3EEF5;
     font-size: 18px;
     color: #212529;
+    font-weight: bold;
 }
 
 #botaoBebida img {
@@ -152,287 +130,727 @@ header button:hover{
     cursor: pointer;
     background-color: #FF2253;
     color: #F8F9FA;
-} 
-
-.botoesDeFiltro{
-    
-    width: 190px;
-    height: 48px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 32px;
-    border: 1px solid #FF2253;
-    background-color: #FF2253;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #F8F9FA;
-    
 }
 
-.botoesDeFiltro:hover{
-    color:#212529;
-    cursor: pointer;
-    background-color: #F8F9FA;
-}
-
-#listaAp li{
+.menu{
+    width: 600px;
     display: flex;
-    
+    justify-content: space-around;
+    margin: 15px 15px 20px 15px;
 }
 
-.imgIconListaAdmin{
-    width: 50px;
-    height: 50px;
-    border-radius: 40px;
-    margin: 25px;
-} 
-
-.listaProduto{
-    width: 85%;
-    margin: auto;
+.vitrine{
     display: flex;
-    border: 1px solid #E9ECEF;
-    height: 70px;
-    align-items: center;
-}
-#nomeProdutoListaAdmin{
-    width: 340px;
-    color: #212529;
-    font-weight: 600;
-    font-size: 20px;
-
+    flex-direction: row;
+    align-items: flex-start;
 }
 
-#categoriasListaAdmin{
-    width: 130px;
-    height: 30px;
-    margin: 40px;
-    font-size: 21px;
-    color: #868E96;
-    background-color: #F8F9FA;
-    text-align: center;
-    padding-top: 10px;
-    border-radius: 10px;
-
-}
-
-.teste{
+.vitrine li{
     display: flex;
-    width: 1070px;
-    margin-left: 150px;
+    flex-wrap: wrap;
+    align-content: stretch;
+    height: 430px;
+    align-items: flex-start;
+    margin: 20px 20px 0px 20px;
     justify-content: space-between;
-    color: #868E96;
-    font-size: 21px;
-
 }
 
-.teste Button{
-    margin-left: 15px;
-    width: 35px;
-    height: 40px;
-    border-radius: 40px;
+.vitrine li figure img {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.vitrine .descricao {
+    font-weight: 400;
+    font-size: 14px
+}
+
+.vitrine .botaoAdicionar {
+    width: 38px;
+    height: 38px;
+    margin-right: 20px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #E4F7EF;
+}
+
+.vitrine li span{
+    width: 100%;
+    color:  #868E96;
+}
+
+p{
+    color: #868E96;
+}
+
+li h3{
+    color: black;
+    font-weight: 600;
+}
+
+.ulCarrinho li{
+    padding-top: 10px;
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ulCarrinho button{
+    height: 3vh;
+    width: 2vw;
+    margin-right: 8px;
     border: none;
 }
 
-.dois{
-    margin-left: 400px;
+.ulcarrinho button img {
+    width: 13px;
 }
 
-.tres{
-    margin-left: 200px;
+.ulCarrinho button img:hover {
+    cursor: pointer;
 }
 
-.quatro{
-    margin-left: 900px;
+.ulCarrinho li figure img{
+    width: 12vw;
+    height: 10vh;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: 15px;
 }
 
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
 
+.box h3 {
+    font-size: 14px;
+}
 
-.hidden{
+.box p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.box span{
+    font-size: 12px;
+    color: #868E96;
+
+}
+
+footer{
+    width: 99vw;
+    margin: 2px;
+    background-color: #FF2253
+}
+
+footer button{
+    width: 100%;
+    border: none;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    height: 8vh;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #FF2253
+}
+
+footer button img{
+    margin-right: 25px;
+}
+
+aside{
     display: none;
 }
 
-#formCadastroDeProdutos, #formEditarProdutos, #containerModalExcluir{
+.preco{
+    color: #212529;
+    font-weight: bold;
+}
+
+/* botao */
+.containerModal {
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
-    padding-top: 53px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.modalCadastro{
     display: flex;
-    flex-direction: column;
-    height: 700px;
-    width:450px;
-    position: fixed;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    background-color: beige;
-}
-
-.modalEditar{
-    height: 700px;
-    width:450px;
-    position: fixed;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    background-color: beige;
-}
-
-#liListaAdmin{
-    margin-left: 200px;
-    display: flex;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    line-height: 24px;
-    color: #868e96;
-    font-size: 21px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.cabecalhoFormCadastro, .cabecalhoFormEditar, .cabecalhoModalExcluir{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 28px;
-    background: #F8F9FA;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-#infoFormCadastro, #infoFormEdit{
-    height: 80vh;
-    background: #FFFFFF;
-    border-radius: 0px 0px 8px 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding-left: 28px;
-    padding-right: 28px;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-label{
-    position: static;
-    height: 0px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 0px;
-    color: #212529;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-.inputFormAdmin{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 26px 2px 26px 20px;
-    background: #F8F9FA;
-    border: 1.5px solid #DEE2E6;
-    box-sizing: border-box;
-    border-radius: 12px;
-    align-self: stretch;
-    margin: 0px 0px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.formAdminCadastro, .salvarAlterações{
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    padding: 15px 20px;
-    background: #FF2253;
-    border: 1.5px solid #FF2253;
-    box-sizing: border-box;
-    border-radius: 32px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    align-items: center;
 }
 
-.formAdminCadastro:hover, .salvarAlterações:hover{
+.modal {
+    width: 345px;
+    height: 628px;
+    border-radius: 10px;
+}
+
+.containerModal .modal button.modalRemovido{
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background: none;
+    border: none;
+    font-size: 20px;
+    position: relative;
+    width: 11px;
+    height: 15px;
+    left: 280px;
+    top: 40px;
     cursor: pointer;
-    color: #212529;
+}
+
+.div-titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 320px;
+    height: 56px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+.div-titulo img {
+    width: 14px;
+    height: 14px;
+    margin-left: 23px;
+    margin-right: 20px;
+}
+
+.div-carrinho {
+    width: 320px;
+    height: 296px;
     background-color: #F8F9FA;
 }
 
-.excluirProdutos{
+
+/* botao */
+.containerModal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    padding: 15px 20px;
-    background: #F8F9FA;
-    border: 1.5px solid #F8F9FA;
-    box-sizing: border-box;
-    border-radius: 32px;
-    font-family: 'Poppins', sans-serif;
-    width: 192px;
-    height: 52px;
-}
-
-.excluirProdutos:hover{
-    cursor: pointer;
-    border-color: #FF2253;
-}
-
-.fecharModalCad, .fecharModalEdit, .fecharModalExcluir {
-    width: 28px;
-    height: 27px;
-    background: #E9ECEF;
-    border-radius: 4px;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-.fecharModalCad:hover, .fecharModalEdit:hover, .fecharModalExcluir:hover{
-    cursor: pointer;
-    border-style: inset;
-}
-
-#modalExcluir {
-    height: 283px;
-    width: 450px;
-    position: fixed;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    /* margin-bottom: 50%;
-    transform: translateY(-50%); */
-    background-color: beige;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-
-.botoesModalEditar{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-}
-
-.salvarAlterações{
-    width: 192px;
-    height: 52px;
-}
-
-.internoModalExcluir{
-    background: #FFFFFF;
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
 }
 
-#botoesModalExcluir{
-    
+.modal {
+    width: 345px;
+    height: 628px;
+    border-radius: 10px;
+}
+
+.containerModal .modal button.modalRemovido{
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background: none;
+    border: none;
+    font-size: 18px;
+    position: relative;
+    width: 11px;
+    height: 15px;
+    left: 280px;
+    top: 40px;
+    cursor: pointer;
+}
+
+.div-titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 320px;
+    height: 56px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+.div-titulo img {
+    width: 14px;
+    height: 14px;
+    margin-left: 23px;
+    margin-right: 20px;
+}
+
+.divCarrinhoModal {
+    overflow: auto;
+    width: 320px;
+    height: 296px;
+    background-color: #F8F9FA;
+}
+
+.divQuantidade , .divPrecoTotal{
+    width: 320px;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    color: black;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #F8F9FA;
+}
+
+.divQuantidade p , .divPrecoTotal p {
+    margin-left: 18px;
+    color: black;
+}
+
+.divQuantidade span , .divPrecoTotal span {
+    margin-right: 18px;
+    color: black;
 }
 
 
+
+@media screen and (min-width: 800px){
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .topo{
+        display: flex;
+        height: 7vh;
+    }
+
+    header{
+        display: flex;
+        flex-direction: row;
+        align-content: flex-end;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 90px;
+        box-shadow:  0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+        background-color: #FFF;
+    }
+
+    header section img {
+        width: 7vw;
+        margin: 0px 0px 0px 60px;
+        margin-left: 80%;
+    }
+
+    header div img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #inputPesquisa {
+        margin-left: 1000px;
+        width: 400px;
+        height: 49px;
+        padding-left: 12px;
+        border: 1px solid #E9ECEF;
+        border-radius: 12px;
+        background-color: #E9ECEF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        color: #868E96;
+    }
+
+    #inputPesquisa:hover {
+        background-color: #F8F9FA;
+    }
+
+    header button {
+        width: 100px;
+        height: 48px;
+        margin-right: 80px;
+        border-radius: 32px;
+        border: 1px solid #FF2253;
+        background-color: #FF2253;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        color: #F8F9FA;
+    }
+
+    header button:hover{
+        color:#212529;
+        cursor: pointer;
+        background-color: #F8F9FA;
+    }
+
+    .menu{
+        width: 80%;
+        margin: 120px 10px 30px 160px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    #botaoTodos {
+        width: 100px;
+        height: 48px;
+        margin-right: 30px;
+        border-radius: 32px;
+        border: 1px solid #F8F9FA;
+        background-color: #FFF;
+        font-size: 18px;
+        color: #212529;
+    }
+
+    #botaoTodos:hover {
+        cursor: pointer;
+        background-color: #FF2253;
+        color: #F8F9FA;
+    }
+
+    #botaoPao {
+        width: 170px;
+        height: 48px;
+        font-size: 18px;
+        margin-right: 28px;
+        border-radius: 32px;
+        border: 1px solid #FFF7F4;
+        background-color: #FFF7F4;
+        color: #212529;
+    }
+
+    #botaoPao img {
+        padding-right: 10px;
+    }
+
+    #botaoPao:hover {
+        cursor: pointer;
+        background-color: #FF2253;
+        color: #F8F9FA;
+    }
+
+    #botaoFruta {
+        width: 130px;
+        height: 48px;
+        margin-right: 28px;
+        padding-bottom: 7px;
+        border-radius: 32px;
+        border: 1px solid #FFF1F4;
+        background-color: #FFF1F4;
+        font-size: 18px;
+        color: #212529;
+    }
+
+    #botaoFruta img {
+        padding-right: 5px;
+    }
+
+    #botaoFruta:hover {
+        cursor: pointer;
+        background-color: #FF2253;
+        color: #F8F9FA;
+    }
+
+    #botaoBebida {
+        width: 130px;
+        height: 48px;
+        padding-bottom: 7px;
+        border-radius: 32px;
+        border: 1px solid #F3EEF5;
+        background-color: #F3EEF5;
+        font-size: 18px;
+        color: #212529;
+    }
+
+    #botaoBebida img {
+        padding-right: 5px;
+    }
+
+    #botaoBebida:hover {
+        cursor: pointer;
+        background-color: #FF2253;
+        color: #F8F9FA;
+    } 
+
+    .botoesDeFiltro{
+        
+        width: 190px;
+        height: 48px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 32px;
+        border: 1px solid #FF2253;
+        background-color: #FF2253;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #F8F9FA;
+        
+    }
+
+    .botoesDeFiltro:hover{
+        color:#212529;
+        cursor: pointer;
+        background-color: #F8F9FA;
+    }
+
+    #listaAp li{
+        display: flex;
+        
+    }
+
+    .imgIconListaAdmin{
+        width: 50px;
+        height: 50px;
+        border-radius: 40px;
+        margin: 25px;
+    } 
+
+    .listaProduto{
+        width: 85%;
+        margin: auto;
+        display: flex;
+        border: 1px solid #E9ECEF;
+        height: 70px;
+        align-items: center;
+    }
+    #nomeProdutoListaAdmin{
+        width: 340px;
+        color: #212529;
+        font-weight: 600;
+        font-size: 20px;
+
+    }
+
+    #categoriasListaAdmin{
+        width: 130px;
+        height: 30px;
+        margin: 40px;
+        font-size: 21px;
+        color: #868E96;
+        background-color: #F8F9FA;
+        text-align: center;
+        padding-top: 10px;
+        border-radius: 10px;
+
+    }
+
+    .teste{
+        display: flex;
+        width: 1070px;
+        margin-left: 150px;
+        justify-content: space-between;
+        color: #868E96;
+        font-size: 21px;
+
+    }
+
+    .teste Button{
+        margin-left: 15px;
+        width: 35px;
+        height: 40px;
+        border-radius: 40px;
+        border: none;
+    }
+
+    .dois{
+        margin-left: 400px;
+    }
+
+    .tres{
+        margin-left: 200px;
+    }
+
+    .quatro{
+        margin-left: 900px;
+    }
+
+
+
+    .hidden{
+        display: none;
+    }
+
+    #formCadastroDeProdutos, #formEditarProdutos, #containerModalExcluir{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding-top: 53px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .modalCadastro{
+        display: flex;
+        flex-direction: column;
+        height: 700px;
+        width:450px;
+        position: fixed;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        background-color: beige;
+    }
+
+    .modalEditar{
+        height: 700px;
+        width:450px;
+        position: fixed;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        background-color: beige;
+    }
+
+    #liListaAdmin{
+        margin-left: 200px;
+        display: flex;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        line-height: 24px;
+        color: #868e96;
+        font-size: 21px;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .cabecalhoFormCadastro, .cabecalhoFormEditar, .cabecalhoModalExcluir{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 28px;
+        background: #F8F9FA;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+    #infoFormCadastro, #infoFormEdit{
+        height: 80vh;
+        background: #FFFFFF;
+        border-radius: 0px 0px 8px 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 28px;
+        padding-right: 28px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+    label{
+        position: static;
+        height: 0px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 0px;
+        color: #212529;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+    .inputFormAdmin{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 26px 2px 26px 20px;
+        background: #F8F9FA;
+        border: 1.5px solid #DEE2E6;
+        box-sizing: border-box;
+        border-radius: 12px;
+        align-self: stretch;
+        margin: 0px 0px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .formAdminCadastro, .salvarAlterações{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px 20px;
+        background: #FF2253;
+        border: 1.5px solid #FF2253;
+        box-sizing: border-box;
+        border-radius: 32px;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+    }
+
+    .formAdminCadastro:hover, .salvarAlterações:hover{
+        cursor: pointer;
+        color: #212529;
+        background-color: #F8F9FA;
+    }
+
+    .excluirProdutos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px 20px;
+        background: #F8F9FA;
+        border: 1.5px solid #F8F9FA;
+        box-sizing: border-box;
+        border-radius: 32px;
+        font-family: 'Poppins', sans-serif;
+        width: 192px;
+        height: 52px;
+    }
+
+    .excluirProdutos:hover{
+        cursor: pointer;
+        border-color: #FF2253;
+    }
+
+    .fecharModalCad, .fecharModalEdit, .fecharModalExcluir {
+        width: 28px;
+        height: 27px;
+        background: #E9ECEF;
+        border-radius: 4px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+    .fecharModalCad:hover, .fecharModalEdit:hover, .fecharModalExcluir:hover{
+        cursor: pointer;
+        border-style: inset;
+    }
+
+    #modalExcluir {
+        height: 283px;
+        width: 450px;
+        position: fixed;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        /* margin-bottom: 50%;
+        transform: translateY(-50%); */
+        background-color: beige;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+
+    .botoesModalEditar{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+
+    .salvarAlterações{
+        width: 192px;
+        height: 52px;
+    }
+
+    .internoModalExcluir{
+        background: #FFFFFF;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #botoesModalExcluir{
+        
+    }
+
+
+}
