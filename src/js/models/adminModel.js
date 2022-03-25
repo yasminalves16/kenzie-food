@@ -25,19 +25,12 @@ const ModalAdmin = class ModalAdmin {
             const idProduto = botao.id
             const botaoEditar = document.querySelector('.salvarAlterações')
             botaoEditar.id = idProduto 
-            
-        }
-
-        if(botao.className == ".excluirProdutos"){
-            const modalDeEdit = document.querySelector("#formEditarProdutos")
-            modalDeEdit.classList.remove("hidden")
-
-            const idProduto = botao.id
             const botaoExcluir = document.querySelector('.excluirProdutos')
             botaoExcluir.id = idProduto 
             console.log(botaoExcluir.id)
-
+            
         }
+
 
         if(botao.className == "botaoExcluirItemListaAdmin"){
 
@@ -57,12 +50,14 @@ const ModalAdmin = class ModalAdmin {
         evento.preventDefault()
         const modalDeCadastro = document.querySelector("#formCadastroDeProdutos")
         const modalDeEdit = document.querySelector("#formEditarProdutos")
-        //const modalDeExcluir = document.querySelector("#modalExcluir")
+        const botaoEXC = document.querySelector(".fecharModalExcluir")
         const modalCertezaQuerExcluir = document.querySelector("#containerModalExcluir")
         modalDeCadastro.classList.add("hidden")
         modalDeEdit.classList.add("hidden")
         //modalDeExcluir.classList.add("hidden")
         modalCertezaQuerExcluir.classList.add("hidden")
+        botaoEXC.classList.add('hidden')
+
         
         
         
@@ -117,19 +112,21 @@ const ModalAdmin = class ModalAdmin {
     }
 
     static async excluirProduto(evento){
-        evento.preventDefault()
-        console.log(evento)
-        console.log(evento.id)
         
         const token = JSON.parse(localStorage.getItem('auth'))
         const botao = document.querySelector('.botaoModalExcluir')
         const id = botao.id 
 
         const resposta = await Admin.deletarProduto(token, id)
-        ModalAdmin.removeModal()
+        console.log(resposta)
+       if(resposta.ok == true){
+        const modalDeEdit = document.querySelector("#modalExcluir")
+        modalDeEdit.classList.add("hidden")
+        document.location.reload(true)
+
+       }
 
         
-
 
     }
 
