@@ -431,10 +431,10 @@ aside{
 }
 
 h4{
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 21px;
     line-height: 24px;
 }
 
