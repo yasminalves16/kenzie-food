@@ -86,10 +86,8 @@ class ProdutosAdmin {
         const li = document.createElement('li')
 
         li.innerHTML = `
-        <div class="fotoNomeProduto">
         <img src="${imagem}" class="imgIconListaAdmin"> 
         <h4 class="infosListaAdmin" class="nomeProdutoListaAdmin">${nome}</h4>
-        </div>
         <span class="infosListaAdmin" class="categoriasListaAdmin">${categoria}</span> 
         <span class="infosListaAdmin" class="descricaoListaAdmin">${descricao}</span>
         <div> 
