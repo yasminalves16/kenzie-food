@@ -98,7 +98,9 @@
     width:450px;
     position: fixed;
     margin-left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    /* margin-bottom: 50%;
+    transform: translateY(-50%); */
     /* background-color: beige; */
 
 }
@@ -129,6 +131,8 @@
     position: fixed;
     margin-left: 50%;
     transform: translateX(-50%);
+    /* margin-bottom: 50%;
+    transform: translateY(-50%); */
     background-color: beige;
     
 }
