@@ -1,4 +1,4 @@
-html, body {
+body {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -8,13 +8,34 @@ header {
 }
 
 header section {
+    width: 2000px;
     display: flex;
     justify-content: space-between;
+}
+
+header section button{
+    margin-left: 50px;
 }
 
 header img{
     width: 30vw;
     margin: 20px 0px 0px 20px;
+}
+
+#adminPage{
+    margin-left: 50px;
+}
+
+header button{
+        width: 100px;
+        height: 48px;
+        margin-right: 100px;
+        border-radius: 32px;
+        border: 1px solid #FF2253;
+        background-color: #FF2253;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        color: #F8F9FA;
 }
 
 header input {
@@ -421,8 +442,7 @@ aside{
     header img {
         width: 7vw;
         margin: 0px 0px 0px 60px;
-        margin-left: 80%;
-
+    
     }
     
     #adminPage, #botaoLogin{
@@ -430,7 +450,8 @@ aside{
     }
 
     #inputPesquisa {
-        margin-left: 1000px;
+        margin-left: 300px;
+        margin-right: 150px;
         width: 400px;
         height: 49px;
         padding-left: 12px;
