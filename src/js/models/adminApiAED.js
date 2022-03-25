@@ -41,8 +41,10 @@ class Admin{
             },           
 
         })
-        const responseData = await response.json()
-        return responseData
+       
+       
+        return response
+
 
     }
 
