@@ -294,7 +294,7 @@ header button:hover{
     font-family: 'Poppins', sans-serif;
 }
 
-.cabecalhoFormCadastro, .cabecalhoFormEditar, .cabecalhoModalExcluir, .cabecalhoModalStatusAdd{
+.cabecalhoFormCadastro, .cabecalhoFormEditar, .cabecalhoModalExcluir, .cabecalhoModalStatusAdd, .cabecalhoModalStatusErro{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -457,7 +457,7 @@ label{
     border-color: #FF2253;
 }
 
-#containerModalStatusAdd{
+#containerModalStatusAdd, #containerModalStatusAddErro{
     width: 490px;
     height: 130px;
     position: fixed;
@@ -478,6 +478,13 @@ h4{
     width: -webkit-fill-available;
     height: 8px;
     background: #39DF8F;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.barraVermelha{
+    width: -webkit-fill-available;
+    height: 8px;
+    background: #FF2253;
     border-radius: 0px 0px 8px 8px;
 }
 
