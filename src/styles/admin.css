@@ -1,46 +1,292 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.topo{
+    display: flex;
+    height: 7vh;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    box-shadow:  0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+    background-color: #FFF;
+}
+
+header section img {
+    width: 7vw;
+    margin: 0px 0px 0px 60px;
+    margin-left: 80%;
+}
+
+header div img {
+    width: 50px;
+    height: 50px;
+}
+
+#inputPesquisa {
+    margin-left: 1000px;
+    width: 400px;
+    height: 49px;
+    padding-left: 12px;
+    border: 1px solid #E9ECEF;
+    border-radius: 12px;
+    background-color: #E9ECEF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #868E96;
+}
+
+#inputPesquisa:hover {
+    background-color: #F8F9FA;
+}
+
+header button {
+    width: 100px;
+    height: 48px;
+    margin-right: 80px;
+    border-radius: 32px;
+    border: 1px solid #FF2253;
+    background-color: #FF2253;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #F8F9FA;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+#botaoTodos {
+    width: 100px;
+    height: 48px;
+    margin-right: 30px;
+    border-radius: 32px;
+    border: 1px solid #F8F9FA;
+    background-color: #FFF;
+    font-size: 16px;
+    color: #212529;
+}
+
+#botaoTodos:hover {
+    cursor: pointer;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+#botaoPao {
+    width: 170px;
+    height: 48px;
+    font-size: 16px;
+    margin-right: 28px;
+    border-radius: 32px;
+    border: 1px solid #FFF7F4;
+    background-color: #FFF7F4;
+    color: #212529;
+}
+
+#botaoPao img {
+    padding-right: 10px;
+}
+
+#botaoPao:hover {
+    cursor: pointer;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+#botaoFruta {
+    width: 130px;
+    height: 48px;
+    margin-right: 28px;
+    padding-bottom: 7px;
+    border-radius: 32px;
+    border: 1px solid #FFF1F4;
+    background-color: #FFF1F4;
+    font-size: 16px;
+    color: #212529;
+}
+
+#botaoFruta img {
+    padding-right: 5px;
+}
+
+#botaoFruta:hover {
+    cursor: pointer;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+#botaoBebida {
+    width: 130px;
+    height: 48px;
+    padding-bottom: 7px;
+    border-radius: 32px;
+    border: 1px solid #F3EEF5;
+    background-color: #F3EEF5;
+    font-size: 16px;
+    color: #212529;
+}
+
+#botaoBebida img {
+    padding-right: 5px;
+}
+
+#botaoBebida:hover {
+    cursor: pointer;
+    background-color: #FF2253;
+    color: #F8F9FA;
+} 
+
+.botoesDeFiltro{
+    
+    width: 150px;
+    height: 48px;
+    margin-right: 115px;
+    border-radius: 32px;
+    border: 1px solid #FF2253;
+    background-color: #FF2253;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #F8F9FA;
+    
+}
+
+#liListaAdmin{
+    display: flex;
+}
+
+#listaAp li{
+    display: flex;
+    
+}
+
+.imgIconListaAdmin{
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    margin: 25px;
+} 
+
+.listaProduto{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    border: 1px solid #E9ECEF;
+    height: 70px;
+    align-items: center;
+}
+#nomeProdutoListaAdmin{
+    width: 340px;
+    color: #212529;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+#categoriasListaAdmin{
+    width: 130px;
+    height: 30px;
+    margin: 40px;
+    font-size: 21px;
+    color: #868E96;
+    background-color: #F8F9FA;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+
+}
+
+.teste{
+    display: flex;
+    width: 1070px;
+    margin-left: 150px;
+    justify-content: space-between;
+    color: #868E96;
+    font-size: 21px;
+
+}
+
+.teste Button{
+    margin-left: 15px;
+    width: 35px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hidden{
     display: none;
 }
 
-#formCadastroDeProdutos{
+#formCadastroDeProdutos, #formEditarProdutos, #containerModalExcluir{
     width: 100vw;
     height: 100vh;
-    position: relative;
+    position: fixed;
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    align-items: center;
+    padding-top: 53px;
 }
 
 .modalCadastro{
     display: flex;
-    height: 700px;
-    width:450px;
-    position: relative;
-    background-color: beige;
-}
-
-
-
-
-#formEditarProdutos{
-    width: 108px;
-    height: 108px;
-    position: fixed;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    align-items: center;
-}
-
-.modalEditar{
-    display: flex;
     flex-direction: column;
     height: 700px;
     width:450px;
-    position: relative;
+    position: fixed;
+    margin-left: 50%;
+    transform: translateX(-50%);
     background-color: beige;
 }
+
+
+
+
+
+
+
+.modalEditar{
+    height: 700px;
+    width:450px;
+    position: fixed;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: beige;
+}
+
 
 #liListaAdmin{
     list-style: none;
@@ -79,66 +325,114 @@
 }
 
 
-.formCadastroDeProdutos{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 4;
-    
-}
-
-.modalCadastro{
-    
-    height: 700px;
-    width:450px;
-    position: fixed;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    /* margin-bottom: 50%;
-    transform: translateY(-50%); */
-    /* background-color: beige; */
-
-}
-
-
 
 .modalCadastro .fecharModal{
+
+
     
 }
 
-
-.formEditarProdutos{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+.cabecalhoFormCadastro, .cabecalhoFormEditar, .cabecalhoModalExcluir{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    z-index: 5;
+    padding: 20px 28px;
+    background: #F8F9FA;
 }
 
-.modalEditar{
-    
-    height: 700px;
-    width:450px;
+
+#infoFormCadastro, #infoFormEdit{
+    height: 80vh;
+    background: #FFFFFF;
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+
+label{
+    position: static;
+    height: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+    color: #212529;
+}
+
+
+.inputFormAdmin{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 26px 2px 26px 20px;
+    background: #F8F9FA;
+    border: 1.5px solid #DEE2E6;
+    box-sizing: border-box;
+    border-radius: 12px;
+    align-self: stretch;
+    margin: 0px 0px;
+}
+
+.formAdminCadastro, .salvarAlterações{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 20px;
+    background: #FF2253;
+    border: 1.5px solid #FF2253;
+    box-sizing: border-box;
+    border-radius: 32px;
+}
+
+.formAdminCadastro:hover, .salvarAlterações:hover{
+    cursor: pointer;
+    color: #212529;
+    background-color: #F8F9FA;
+}
+
+.excluirProdutos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 20px;
+    background: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 32px;
+}
+
+.excluirProdutos:hover{
+    cursor: pointer;
+    border-color: #FF2253;
+}
+
+.fecharModalCad, .fecharModalEdit {
+    width: 28px;
+    height: 27px;
+    background: #E9ECEF;
+    border-radius: 4px;
+}
+
+
+.fecharModalCad:hover, .fecharModalEdit:hover{
+    cursor: pointer;
+    border-style: inset;
+}
+
+#modalExcluir {
+    height: 283px;
+    width: 450px;
     position: fixed;
     margin-left: 50%;
     transform: translateX(-50%);
     /* margin-bottom: 50%;
     transform: translateY(-50%); */
     background-color: beige;
-    
 }
 
-
-
-.hidden{
-    display:none;
-}

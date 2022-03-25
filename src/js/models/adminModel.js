@@ -27,11 +27,13 @@ const ModalAdmin = class ModalAdmin {
             botaoEditar.id = idProduto 
         }
         if(botao.className == "botaoExcluirItemListaAdmin"){
+
             const modalDeExcluir = document.querySelector("#modalExcluir")
             modalDeExcluir.classList.remove("hidden")
             const idProduto = botao.id 
             const botaoExcluir = document.querySelector('.botaoModalExcluir')
             botaoExcluir.id = idProduto
+
 
         }
 
@@ -42,16 +44,16 @@ const ModalAdmin = class ModalAdmin {
         evento.preventDefault()
         const modalDeCadastro = document.querySelector("#formCadastroDeProdutos")
         const modalDeEdit = document.querySelector("#formEditarProdutos")
-        const modalDeExcluir = document.querySelector("#modalExcluir")
-        const modalCertezaQuerExcluir = document.querySelector(".modalExcluir")
+        //const modalDeExcluir = document.querySelector("#modalExcluir")
+        const modalCertezaQuerExcluir = document.querySelector("#containerModalExcluir")
         modalDeCadastro.classList.add("hidden")
         modalDeEdit.classList.add("hidden")
-        modalDeExcluir.classList.add("hidden")
-        // modalCertezaQuerExcluir.classList.add("hidden")
+        //modalDeExcluir.classList.add("hidden")
+        modalCertezaQuerExcluir.classList.add("hidden")
         console.log(modalCertezaQuerExcluir)
         
         
-        ProdutosAdmin.listarProdutos()
+        //ProdutosAdmin.listarProdutos()
 
 
     }
@@ -134,26 +136,27 @@ class ProdutosAdmin {
 
             ul.appendChild(template)
         })
-
+        
 
     }
+    
 
     static vitrineAdmin({id, imagem, nome, categoria, descricao}) {
-
+        
 
         const li = document.createElement('li')
 
         li.innerHTML = `
-        <div class="fotoNomeProduto">
         <img src="${imagem}" class="imgIconListaAdmin"> 
-        <h4 class="infosListaAdmin" class="nomeProdutoListaAdmin">${nome}</h4>
-        </div>
-        <span class="infosListaAdmin" class="categoriasListaAdmin">${categoria}</span> 
+        <h4 class="infosListaAdmin" id="nomeProdutoListaAdmin">${nome}</h4>
+        <span class="infosListaAdmin" id="categoriasListaAdmin">${categoria}</span> 
+        <section class='teste'>
         <span class="infosListaAdmin" class="descricaoListaAdmin">${descricao}</span>
         <div> 
         <button class="botaoEditarItemListaAdmin" id="${id}"><img src="" class="imgBotaoListaAdmin"></button>
         <button class="botaoExcluirItemListaAdmin" id="${id}"><img src="" class="imgBotaoListaAdmin"></button>
         </div>
+        </section>
         `
 
         li.className = 'listaProduto'

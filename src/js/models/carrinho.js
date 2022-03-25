@@ -50,9 +50,9 @@ export class Carrinho {
         return li
     }
 
-    static templateQuantidadePreco(){
-        const divCarrinho = document.querySelector('.div-carrinho')
-        const ulCarrinho = document.querySelector('.ulCarrinho')
+    static templateQuantidadePreco(div, ul, qtde, valor){
+        const divCarrinho = document.querySelector(div)
+        const ulCarrinho = document.querySelector(ul)
         
         if(ulCarrinho.childElementCount > 0){
             
@@ -60,13 +60,13 @@ export class Carrinho {
             divQuantidade.classList.add('divQuantidade')
             divQuantidade.innerHTML = `
                 <p>Quantidade </p>
-                <span id="quantidadeTotal">0</span>
+                <span id="${qtde}">0</span>
             `
             const divPrecoTotal = document.createElement('div')
             divPrecoTotal.classList.add('divPrecoTotal')
             divPrecoTotal.innerHTML = `
                 <p>Total </p>
-                <span id="precoTotal">00</span>
+                <span id="${valor}">00</span>
             `
 
             divCarrinho.appendChild(divQuantidade)
@@ -75,8 +75,8 @@ export class Carrinho {
         }
     }
 
-    static templateRemoverProduto(){
-        const ulCarrinho = document.querySelector('.ulCarrinho')
+    static templateRemoverProduto(ul){
+        const ulCarrinho = document.querySelector(ul)
 
         if(ulCarrinho.childElementCount === 0){
 
@@ -90,9 +90,9 @@ export class Carrinho {
 
     }
 
-    static quantidadeTotal(produtos){
+    static quantidadeTotal(produtos, qtde){
 
-        const quantidadeTotal = document.querySelector('#quantidadeTotal')
+        const quantidadeTotal = document.querySelector(`#${qtde}`)
 
         if(quantidadeTotal){
             
@@ -102,8 +102,8 @@ export class Carrinho {
         }
     }
 
-    static valorTotal(produtos){
-        const precoTotal = document.querySelector('#precoTotal')
+    static valorTotal(produtos, valor){
+        const precoTotal = document.querySelector(`#${valor}`)
 
         if(precoTotal){
 
@@ -147,7 +147,7 @@ export class ModalCarrinho {
         `
 
         const divCorpo = document.createElement('div')
-        divCorpo.classList.add('div-carrinho')
+        divCorpo.classList.add('divCarrinhoModal')
 
         const ulModalCarrinho = document.createElement('ul')
         ulModalCarrinho.classList.add('ulCarrinho')

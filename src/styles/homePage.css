@@ -28,12 +28,6 @@ header input {
     height: 5vh;
 }
 
-header nav{
-    display: flex;
-    background-color: #ff2253;
-}
-
-
 #botaoTodos {
     width: 100px;
     height: 55px;
@@ -45,7 +39,6 @@ header nav{
     color: #212529;
     font-weight: bold;
 }
-
 
 #botaoTodos:hover {
     cursor: pointer;
@@ -118,49 +111,12 @@ header nav{
     color: #F8F9FA;
 }
 
-#adminPage, #botaoLogin{
-    display: none;
-}
-
-.nav-list {
-    display:flex;
-    flex-direction: column;
-    display: none;
-}
-
-.nav-list li{
-    letter-spacing: 3px;
-    margin-left: 15px;
-}
-
-.bmenuEscondido{
-    background-color: #FF2253;
-    height: 100%;
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-}
-
-.menuEscondido{
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-.menuEscondido div{
-    width: 32px;
-    height: 2px;
-    background-color: #fff;
-    margin: 8px;
-}
-
 .menu{
     width: 600px;
     display: flex;
     justify-content: space-around;
     margin: 15px 15px 20px 15px;
 }
-
-
 
 .vitrine{
     display: flex;
@@ -184,9 +140,18 @@ header nav{
     border-radius: 8px;
 }
 
-.vitrine li p{
+.vitrine .descricao {
     font-weight: 400;
     font-size: 14px
+}
+
+.vitrine .botaoAdicionar {
+    width: 38px;
+    height: 38px;
+    margin-right: 20px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #E4F7EF;
 }
 
 .vitrine li span{
@@ -203,9 +168,62 @@ li h3{
     font-weight: 600;
 }
 
+.ulCarrinho li{
+    padding-top: 10px;
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ulCarrinho button{
+    height: 3vh;
+    width: 2vw;
+    margin-right: 8px;
+    border: none;
+}
+
+.ulcarrinho button img {
+    width: 13px;
+}
+
+.ulCarrinho button img:hover {
+    cursor: pointer;
+}
+
+.ulCarrinho li figure img{
+    width: 12vw;
+    height: 10vh;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: 15px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.box h3 {
+    font-size: 14px;
+}
+
+.box p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.box span{
+    font-size: 12px;
+    color: #868E96;
+
+}
+
 footer{
     width: 99vw;
     margin: 2px;
+    background-color: #FF2253
 }
 
 footer button{
@@ -218,6 +236,7 @@ footer button{
     height: 8vh;
     align-items: center;
     border-radius: 0px 0px 10px 10px;
+    background-color: #FF2253
 }
 
 footer button img{
@@ -228,19 +247,149 @@ aside{
     display: none;
 }
 
-footer{
-    background-color: #FF2253;
-}
-
-footer button{
-    background-color: #FF2253
-}
-
 .preco{
     color: #212529;
     font-weight: bold;
 }
 
+/* botao */
+.containerModal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 345px;
+    height: 628px;
+    border-radius: 10px;
+}
+
+.containerModal .modal button.modalRemovido{
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background: none;
+    border: none;
+    font-size: 20px;
+    position: relative;
+    width: 11px;
+    height: 15px;
+    left: 280px;
+    top: 40px;
+    cursor: pointer;
+}
+
+.div-titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 320px;
+    height: 56px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+.div-titulo img {
+    width: 14px;
+    height: 14px;
+    margin-left: 23px;
+    margin-right: 20px;
+}
+
+.div-carrinho {
+    width: 320px;
+    height: 296px;
+    background-color: #F8F9FA;
+}
+
+
+/* botao */
+.containerModal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 345px;
+    height: 628px;
+    border-radius: 10px;
+}
+
+.containerModal .modal button.modalRemovido{
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background: none;
+    border: none;
+    font-size: 18px;
+    position: relative;
+    width: 11px;
+    height: 15px;
+    left: 280px;
+    top: 40px;
+    cursor: pointer;
+}
+
+.div-titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 320px;
+    height: 56px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+
+.div-titulo img {
+    width: 14px;
+    height: 14px;
+    margin-left: 23px;
+    margin-right: 20px;
+}
+
+.divCarrinhoModal {
+    overflow: auto;
+    width: 320px;
+    height: 296px;
+    background-color: #F8F9FA;
+}
+
+.divQuantidade , .divPrecoTotal{
+    width: 320px;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    color: black;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #F8F9FA;
+}
+
+.divQuantidade p , .divPrecoTotal p {
+    margin-left: 18px;
+    color: black;
+}
+
+.divQuantidade span , .divPrecoTotal span {
+    margin-right: 18px;
+    color: black;
+}
 
 
 @media screen and (min-width: 800px){
@@ -334,21 +483,18 @@ footer button{
         justify-content: space-between;
         margin-top: 50px;
         margin-left: 130px;
-        
     } 
 
     #botaoTodos {
         width: 100px;
-        height: 55px;
+        height: 48px;
         margin-right: 30px;
         border-radius: 32px;
         border: 1px solid #F8F9FA;
-        background-color: #F8F9FA;
-        font-size: 18px;
+        background-color: #FFF;
+        font-size: 16px;
         color: #212529;
     }
-
-
 
     #botaoTodos:hover {
         cursor: pointer;
@@ -359,7 +505,7 @@ footer button{
     #botaoPao {
         width: 170px;
         height: 48px;
-        font-size: 18px;
+        font-size: 16px;
         margin-right: 28px;
         border-radius: 32px;
         border: 1px solid #FFF7F4;
@@ -381,10 +527,11 @@ footer button{
         width: 130px;
         height: 48px;
         margin-right: 28px;
+        padding-bottom: 7px;
         border-radius: 32px;
         border: 1px solid #FFF1F4;
         background-color: #FFF1F4;
-        font-size: 18px;
+        font-size: 16px;
         color: #212529;
     }
 
@@ -401,10 +548,11 @@ footer button{
     #botaoBebida {
         width: 130px;
         height: 48px;
+        padding-bottom: 7px;
         border-radius: 32px;
         border: 1px solid #F3EEF5;
         background-color: #F3EEF5;
-        font-size: 18px;
+        font-size: 16px;
         color: #212529;
     }
 
@@ -433,7 +581,7 @@ footer button{
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 400px;
+        width: 320px;
         height: 56px;
         border-radius: 8px 8px 0px 0px;
         background-color: #FF2253;
@@ -448,7 +596,9 @@ footer button{
     }
 
     .div-carrinho {
-        width: 400px;
+
+        overflow: auto;
+        width: 320px;
         height: 296px;
         background-color: #F8F9FA;
     }  
@@ -477,9 +627,10 @@ footer button{
     }
 
     .vitrine li figure img {
-        width: 100%;
-        height: 280px;
+        width: 350px;
+        height: 220px;
         border-radius: 8px;
+
     }
 
 
@@ -490,30 +641,43 @@ footer button{
     }
 
     li h3{
-        font-size: 18px;
+        font-size: 16px;
         color: black;
         font-weight: 600;
     }
 
-    .vitrine li p{
+    .vitrine .descricao li {
         font-weight: 400;
-        font-size: 18px;
+        font-size: 14px;
     }
     
     .vitrine li span{
         width: 100%;
-        font-size: 18px;
+        font-size: 12px;
         color:  #868E96;
+    }
+
+    #preco2 p {
+        color:  #212529;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .vitrine .botaoAdicionar {
+        width: 38px;
+        height: 38px;
+        margin-right: 20px;
+        border-radius: 50px;
+        border: 0;
+        background-color: #E4F7EF;
+    }
+
+    .vitrine .botaoAdicionar:hover {
+        cursor: pointer;
     }
     
     p{
         color: #868E96
-    }
-
-    .preco p{
-        color:  #212529;
-        font-weight: bold;
-
     }
    
     .menu{
@@ -529,19 +693,25 @@ footer button{
     }
     
     .ulCarrinho button{
-        height: 4vh;
+        height: 3vh;
         width: 2vw;
+        margin-right: 5px;
         border: none;
     }
 
-    ul.carrinho button img {
+    .ulcarrinho button img {
         width: 13px;
+    }
+
+    .ulCarrinho button img:hover {
+        cursor: pointer;
     }
 
     .ulCarrinho li figure img{
         width: 5vw;
-        height: 11vh;
+        height: 10vh;
         margin-right: 15px;
+        margin-left: 15px;
         border-radius: 15px;
     }
 
@@ -552,18 +722,41 @@ footer button{
         align-items: flex-start;
     }
     
+    .box h3 {
+        font-size: 14px;
+    }
+
+    .box p {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
     .box span{
+        font-size: 12px;
         color: #868E96;
 
     }
 
     .divQuantidade , .divPrecoTotal{
+        width: 15vw;
         height: 6vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
         align-content: center;
         color: black;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+
+    .divQuantidade , .divPrecoTotal {
+        margin-left: 18px;
+    }
+
+    .divQuantidade , .divPrecoTotal {
+
+        margin-right: 18px;
     }
 
     .divQuantidade p, span {
@@ -574,61 +767,4 @@ footer button{
         color: black;
     }
     
-}
-
-/* botao */
-.containerModal {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal {
-    width: 345px;
-    height: 628px;
-    border-radius: 10px;
-}
-
-.containerModal .modal button.modalRemovido{
-    color: #FFF;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    background: none;
-    border: none;
-    font-size: 20px;
-    position: relative;
-    width: 11px;
-    height: 15px;
-    left: 280px;
-    top: 40px;
-    cursor: pointer;
-}
-
-.div-titulo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 320px;
-    height: 56px;
-    border-radius: 8px 8px 0px 0px;
-    background-color: #FF2253;
-    color: #F8F9FA;
-}
-
-.div-titulo img {
-    width: 14px;
-    height: 14px;
-    margin-left: 23px;
-    margin-right: 20px;
-}
-
-.div-carrinho {
-    width: 320px;
-    height: 296px;
-    background-color: #F8F9FA;
 }
