@@ -294,7 +294,7 @@ header button:hover{
     font-family: 'Poppins', sans-serif;
 }
 
-.cabecalhoFormCadastro, .cabecalhoFormEditar, .cabecalhoModalExcluir{
+.cabecalhoFormCadastro, .cabecalhoFormEditar, .cabecalhoModalExcluir, .cabecalhoModalStatusAdd{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -422,7 +422,7 @@ label{
     height: 52px;
 }
 
-.internoModalExcluir{
+.internoModalExcluir, .internalModalStatusAdd{
     background: #FFFFFF;
     height: inherit;
     display: flex;
@@ -431,8 +431,53 @@ label{
     align-items: center;
 }
 
-#botoesModalExcluir{
-    
+
+.botaoModalExcluir, .botaoModalNaoExcluir{
+    width: 190px;
+    height: 50px;
+    background: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 32px;
+    color: #868E96;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
 }
 
+.botaoModalExcluir{
+    margin-right: 15px;
+}
+
+.botaoModalExcluir:hover, .botaoModalNaoExcluir:hover{
+    cursor: pointer;
+    border-color: #FF2253;
+}
+
+#containerModalStatusAdd{
+    width: 490px;
+    height: 130px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #F8F9FA;
+}
+
+h4{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.barraVerde{
+    width: -webkit-fill-available;
+    height: 8px;
+    background: #39DF8F;
+    border-radius: 0px 0px 8px 8px;
+}
 
