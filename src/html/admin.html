@@ -61,22 +61,26 @@
                 <form id="infoFormCadastro">
 
                     <label for="nomeDoProduto">Nome do Produto</label>
-                    <input type="text" name="nomeDoProduto" placeholder="Nome do produto" class="inputFormAdmin" />
+                    <input type="text" name="nome" placeholder="Nome do produto" class="inputFormAdmin" />
 
                     <label for="descricao">Descrição</label>
                     <input type="text" name="descricao" placeholder="Descrição" class="inputFormAdmin"
                         class="inputFormAdminDescricao" />
 
-                        <label for="Categorias">Categorias</label>
-                        <input type="checkbox" name="categoria" placeholder="Panificadora" class="inputFormAdmin">
-                        <input type="checkbox" name="categoria" placeholder="Frutas" class="inputFormAdmin">
-                        <input type="checkbox" name="categoria" placeholder="Bebidas" class="inputFormAdmin">
+                        <label name ="categoria" for="Categorias">Categorias</label>
+
+                        <select name="categoria"class="categoria">
+                            <option name="categoria" value="Panificadora">Panificadora</option>
+                            <option name="categoria" value="Frutas">Frutas</option>
+                            <option name="categoria" value="Bebidas">Bebidas</option>
+                            
+                          </select>
 
                     <label for="valorDoProduto">Valor do produto</label>
-                    <input type="text" name="valorDoProduto" placeholder="Valor do produto" class="inputFormAdmin" />
+                    <input type="text" name="preco" placeholder="Valor do produto" class="inputFormAdmin" />
 
                     <label for="linkImg">Link da imagem</label>
-                    <input type="text" name="linkimg" placeholder="Link da imagem" class="inputFormAdmin" />
+                    <input type="text" name="imagem" placeholder="Link da imagem" class="inputFormAdmin" />
 
                     <button class="formAdminCadastro">Cadastrar Produto</button>
                 </form>
@@ -95,22 +99,26 @@
                 <form id="infoFormEdit">
 
                     <label for="nomeDoProduto">Nome do Produto</label>
-                    <input type="text" name="nomeDoProduto" placeholder="Nome do produto" class="inputFormAdmin" />
+                    <input type="text" name="nome" placeholder="Nome do produto" class="inputFormAdmin" />
 
                     <label for="descricao">Descrição</label>
                     <input type="text" name="descricao" placeholder="Descrição" class="inputFormAdmin"
                         class="inputFormAdminDescricao" />
 
-                        <label for="Categorias">Categorias</label>
-                        <input type="checkbox"  name="categoria" placeholder="Panificadora" value="Panificadora" class="inputFormAdmin">
-                        <input type="checkbox" name="categoria" placeholder="Frutas" value="Frutas" class="inputFormAdmin">
-                        <input type="checkbox" name="categoria" placeholder="Bebidas" value="Bebidas" class="inputFormAdmin">
-                    
+                        <label name ="categoria" for="Categorias">Categorias</label>
+
+                        <select name="categoria"class="categoria">
+                            <option name="categoria" value="Panificadora">Panificadora</option>
+                            <option name="categoria" value="Frutas">Frutas</option>
+                            <option name="categoria" value="Bebidas">Bebidas</option>
+                            
+                          </select>
+                        
                     <label for="valorDoProduto">Valor do produto</label>
-                    <input type="text" name="valorDoProduto" placeholder="Valor do produto" class="inputFormAdmin" />
+                    <input type="text" name="preco" placeholder="Valor do produto" class="inputFormAdmin" />
 
                     <label for="linkImg">Link da imagem</label>
-                    <input type="text" name="linkimg" placeholder="Link da imagem" class="inputFormAdmin" />
+                    <input type="text" name="imagem" placeholder="Link da imagem" class="inputFormAdmin" />
 
                     <button class="salvarAlterações">Salvas alterações</button>
                     <button class="excluirProdutos">Excluir</button>
