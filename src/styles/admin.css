@@ -459,6 +459,27 @@ label{
     align-items: center;
 }
 
-#botoesModalExcluir{
+.botaoModalExcluir, .botaoModalNaoExcluir{
+    width: 190px;
+    height: 50px;
+    background: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 32px;
+    color: #868E96;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
 
+.botaoModalExcluir{
+    margin-right: 15px;
+}
+
+.botaoModalExcluir:hover, .botaoModalNaoExcluir:hover{
+    cursor: pointer;
+    border-color: #FF2253;
 }
