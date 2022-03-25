@@ -12,8 +12,9 @@ class Admin{
             'body': JSON.stringify(dados)
 
         })
-        const responseData = await response.json()
-        return responseData
+        
+        
+        return response
     }
 
     static async editarProduto(dados, token, id){
