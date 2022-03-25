@@ -90,6 +90,27 @@ export class Carrinho {
 
     }
 
+    static templateTextoCarrinho(){
+
+        const divCarrinho = document.querySelector('.div-carrinho')
+        const carrinhoVazio = document.createElement('div')
+        carrinhoVazio.classList.add('carrinhoVazio')
+        carrinhoVazio.innerHTML = `
+            <img src="src/img/shopping-bag.png" alt="">
+            <p>Por enquanto não temos produtos no carrinho</p>
+        `
+
+        divCarrinho.appendChild(carrinhoVazio)
+
+    }
+
+    static removerTextoCarrinho(){
+
+        const textoCarrinho = document.querySelector('.carrinhoVazio')
+        textoCarrinho.remove()
+        
+    }
+
     static quantidadeTotal(produtos, qtde){
 
         const quantidadeTotal = document.querySelector(`#${qtde}`)
