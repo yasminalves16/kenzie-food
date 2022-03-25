@@ -76,12 +76,13 @@ class ProdutosAdmin {
 
             ul.appendChild(template)
         })
-
+        
 
     }
+    
 
     static vitrineAdmin({id, imagem, nome, categoria, descricao}) {
-
+        
 
         const li = document.createElement('li')
 
