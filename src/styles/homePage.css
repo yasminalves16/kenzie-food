@@ -617,12 +617,17 @@ aside{
     }
 
     .div-carrinho {
-
         overflow: auto;
         width: 320px;
         height: 296px;
         background-color: #F8F9FA;
-    }  
+    }
+
+    .carrinhoVazio {
+        width: 15vw;
+        margin: 50px auto;
+        text-align: center;
+    }
 
     footer{
         display: none;
@@ -759,7 +764,7 @@ aside{
     }
 
     .divQuantidade , .divPrecoTotal{
-        width: 15vw;
+        width: 17vw;
         height: 6vh;
         display: flex;
         align-items: center;
