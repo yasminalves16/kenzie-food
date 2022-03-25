@@ -1,7 +1,12 @@
+import {Admin} from './adminApiAED.js'
+
 const ModalAdmin = class ModalAdmin {
 
+    // static token = JSON.parse(localStorage.getItem('auth'))
+    // static meusProdutos = await Api.meusProdutos(token)
+
     static mostrarModalCadastro(evento) {
-        console.log(evento.target)
+       
         const modalDeCadastro = document.querySelector("#formCadastroDeProdutos")
         modalDeCadastro.classList.remove("hidden")
 
@@ -9,22 +14,32 @@ const ModalAdmin = class ModalAdmin {
     }
 
     static mostrarModalEditar(evento) {
-        console.dir(evento.target)
+        
+        
         const botao = evento.target 
         if(botao.className == "botaoEditarItemListaAdmin"){
             
             const modalDeEdit = document.querySelector("#formEditarProdutos")
             modalDeEdit.classList.remove("hidden")
+            const idProduto = botao.id
+            const botaoEditar = document.querySelector('.salvarAlterações')
+            botaoEditar.id = idProduto 
         }
         if(botao.className == "botaoExcluirItemListaAdmin"){
+
             const modalDeExcluir = document.querySelector("#containerModalExcluir")
             modalDeExcluir.classList.remove("hidden")
+            const idProduto = botao.id 
+            const botaoExcluir = document.querySelector('.botaoModalExcluir')
+            botaoExcluir.id = idProduto
+
+
         }
 
     }
 
     static removeModal(evento) {
-        console.log(evento)
+        
         evento.preventDefault()
         const modalDeCadastro = document.querySelector("#formCadastroDeProdutos")
         const modalDeEdit = document.querySelector("#formEditarProdutos")
@@ -34,7 +49,7 @@ const ModalAdmin = class ModalAdmin {
         modalDeEdit.classList.add("hidden")
         //modalDeExcluir.classList.add("hidden")
         modalCertezaQuerExcluir.classList.add("hidden")
-        console.log(modalCertezaQuerExcluir)
+        
         
         
         //ProdutosAdmin.listarProdutos()
@@ -43,20 +58,66 @@ const ModalAdmin = class ModalAdmin {
     }
     
 
-    static capturarInfosCadastro(evento) {
+    static async capturarInfosCadastro(evento) {
         evento.preventDefault()
-   
+        
+        
+    const token = JSON.parse(localStorage.getItem('auth'))
     const objetoCadastro = {}
     for (let i = 0; i < infoFormCadastro.length; i++) {
 
         objetoCadastro[infoFormCadastro[i].name] = infoFormCadastro[i].value
-        console.log(infoFormCadastro[i].value)
+        
     }
+  
+    Admin.adicionarProduto(objetoCadastro,token)
+        
+    }
+
+    
+    static async edicaoDeProduto(evento){
+        evento.preventDefault()
+        
+        const token = JSON.parse(localStorage.getItem('auth'))
+        const botao = document.querySelector('.salvarAlterações')
+        const id = botao.id 
+
+        const objetoEditado = {}
+        for(let i = 0; i < infoFormEdit.length; i++) {
+
+            objetoEditado[infoFormEdit[i].name] = infoFormEdit[i].value
+            
+        }
+
+        
+        const resposta = await Admin.editarProduto(objetoEditado,token,id)
+        console.log(resposta.msg)
+        if(resposta.msg == 'produto Atualizado'){            
+            const modalDeEdit = document.querySelector("#formEditarProdutos")
+            modalDeEdit.classList.add("hidden")
+            document.location.reload(true)
+        }
+
+        
+        
+    }
+
+    static async excluirProduto(evento){
+        evento.preventDefault()
+        
+        const token = JSON.parse(localStorage.getItem('auth'))
+        const botao = document.querySelector('.botaoModalExcluir')
+        const id = botao.id 
+
+        const resposta = await Admin.deletarProduto(token, id)
+        ModalAdmin.removeModal()
+
         
 
 
     }
 
+    
 
 }
 

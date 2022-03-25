@@ -304,6 +304,7 @@ header button:hover{
     font-family: 'Poppins', sans-serif;
 }
 
+
 #infoFormCadastro, #infoFormEdit{
     height: 80vh;
     background: #FFFFFF;
@@ -315,6 +316,7 @@ header button:hover{
     padding-right: 28px;
     font-family: 'Poppins', sans-serif;
 }
+
 
 label{
     position: static;
@@ -372,6 +374,8 @@ label{
     box-sizing: border-box;
     border-radius: 32px;
     font-family: 'Poppins', sans-serif;
+    width: 192px;
+    height: 52px;
 }
 
 .excluirProdutos:hover{
@@ -399,9 +403,34 @@ label{
     position: fixed;
     margin-left: 50%;
     transform: translateX(-50%);
+    /* margin-bottom: 50%;
+    transform: translateY(-50%); */
     background-color: beige;
     font-family: 'Poppins', sans-serif;
 }
 
 
 
+.botoesModalEditar{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.salvarAlterações{
+    width: 192px;
+    height: 52px;
+}
+
+.internoModalExcluir{
+    background: #FFFFFF;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#botoesModalExcluir{
+    
+}
