@@ -21,10 +21,24 @@ const ModalAdmin = class ModalAdmin {
             
             const modalDeEdit = document.querySelector("#formEditarProdutos")
             modalDeEdit.classList.remove("hidden")
+
             const idProduto = botao.id
             const botaoEditar = document.querySelector('.salvarAlterações')
             botaoEditar.id = idProduto 
+            
         }
+
+        if(botao.className == ".excluirProdutos"){
+            const modalDeEdit = document.querySelector("#formEditarProdutos")
+            modalDeEdit.classList.remove("hidden")
+
+            const idProduto = botao.id
+            const botaoExcluir = document.querySelector('.excluirProdutos')
+            botaoExcluir.id = idProduto 
+            console.log(botaoExcluir.id)
+
+        }
+
         if(botao.className == "botaoExcluirItemListaAdmin"){
 
             const modalDeExcluir = document.querySelector("#containerModalExcluir")
@@ -32,7 +46,7 @@ const ModalAdmin = class ModalAdmin {
             const idProduto = botao.id 
             const botaoExcluir = document.querySelector('.botaoModalExcluir')
             botaoExcluir.id = idProduto
-
+            
 
         }
 
@@ -104,6 +118,8 @@ const ModalAdmin = class ModalAdmin {
 
     static async excluirProduto(evento){
         evento.preventDefault()
+        console.log(evento)
+        console.log(evento.id)
         
         const token = JSON.parse(localStorage.getItem('auth'))
         const botao = document.querySelector('.botaoModalExcluir')
