@@ -388,6 +388,7 @@ label{
     border: 1.5px solid #FF2253;
     box-sizing: border-box;
     border-radius: 32px;
+    color: #F8F9FA;
 }
 
 .formAdminCadastro:hover, .salvarAlterações:hover{
@@ -405,6 +406,8 @@ label{
     border: 1.5px solid #F8F9FA;
     box-sizing: border-box;
     border-radius: 32px;
+    width: 192px;
+    height: 52px;
 }
 
 .excluirProdutos:hover{
@@ -436,3 +439,26 @@ label{
     background-color: beige;
 }
 
+.botoesModalEditar{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.salvarAlterações{
+    width: 192px;
+    height: 52px;
+}
+
+.internoModalExcluir{
+    background: #FFFFFF;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#botoesModalExcluir{
+    
+}
