@@ -47,3 +47,5 @@ class Admin{
     }
 
 }
+
+export{Admin}
