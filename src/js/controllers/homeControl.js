@@ -25,8 +25,11 @@ class HomePageControle {
 
             const key = 'produtosComprados'
             localStorage.setItem(key, JSON.stringify(this.produtoAdicionado));
+            
             Carrinho.listarCarrinho(this.produtoAdicionado)
+
             if(ulCarrinho.childElementCount<=1){
+                Carrinho.removerTextoCarrinho()
                 Carrinho.templateQuantidadePreco('aside', '.ulCarrinho', 'quantidadeTotal', 'precoTotal')
             }
 
@@ -40,6 +43,8 @@ class HomePageControle {
         const botao = event.target
 
         if (botao.id) {
+
+            const ulCarrinho = document.querySelector('.ulCarrinho')
 
             const produto = this.produtoAdicionado.find(function (obj) { return obj.id == botao.id })
 
@@ -55,6 +60,12 @@ class HomePageControle {
             Carrinho.valorTotal(this.produtoAdicionado, 'precoTotal')
 
             Carrinho.templateRemoverProduto('.ulCarrinho')
+
+            if(ulCarrinho.childElementCount < 1){
+
+                Carrinho.templateTextoCarrinho()
+
+            }
 
         }
 
