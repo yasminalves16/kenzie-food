@@ -6,6 +6,8 @@ const ModalAdmin = class ModalAdmin {
     // static meusProdutos = await Api.meusProdutos(token)
 
     static mostrarModalCadastro(evento) {
+
+        
        
         const modalDeCadastro = document.querySelector("#formCadastroDeProdutos")
         modalDeCadastro.classList.remove("hidden")
@@ -52,17 +54,15 @@ const ModalAdmin = class ModalAdmin {
         const modalDeEdit = document.querySelector("#formEditarProdutos")
         const botaoEXC = document.querySelector(".fecharModalExcluir")
         const modalCertezaQuerExcluir = document.querySelector("#containerModalExcluir")
+        const statusFecha = document.querySelector("#containerModalStatusAdd")
+        const statusFecha2 = document.querySelector("#containerModalStatusAddErro")
         modalDeCadastro.classList.add("hidden")
         modalDeEdit.classList.add("hidden")
         //modalDeExcluir.classList.add("hidden")
         modalCertezaQuerExcluir.classList.add("hidden")
         botaoEXC.classList.add('hidden')
-
-        
-        
-        
-        //ProdutosAdmin.listarProdutos()
-
+        statusFecha.classList.add('hidden')
+        statusFecha2.classList.add('hidden')
 
     }
     
@@ -80,13 +80,17 @@ const ModalAdmin = class ModalAdmin {
     }
   
     const resposta = await Admin.adicionarProduto(objetoCadastro,token)
+    const status = resposta.ok
     
     if(resposta.ok == true){
         const modalDeEdit = document.querySelector("#formCadastroDeProdutos")
         modalDeEdit.classList.add("hidden")
-        document.location.reload(true)
+        // document.location.reload(true)
+        ModalAdmin.showStatus(status)
 
        }
+        
+
         
     }
 
@@ -135,6 +139,21 @@ const ModalAdmin = class ModalAdmin {
 
         
 
+    }
+
+    static showStatus(status){
+        
+        console.log(status)
+        const modalDeEdit = document.querySelector("#formCadastroDeProdutos")
+        const erro = document.querySelector('#containerModalStatusAddErro')
+        const correto = document.querySelector('#containerModalStatusAdd')
+        if(status == true){
+            correto.classList.remove('hidden')
+            modalDeEdit.classList.add('hidden')
+        } else{
+            erro.classList.remove('hidden')
+            modalDeEdit.classList.add('hidden')
+        }
     }
 
     
