@@ -1,1 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/admin.css" />
+    
+    <title>adminPage</title>
+</head>
+
+<body>
+    <header class="topo">
+
+        <section>
+            <img src="../img/Group 1075.svg">
+        </section>
+        <input type="text" placeholder=" Pesquisar por produto" id="inputPesquisa">
+        <div id="imgUsuario">
+        <img src="https://thumbs.dreamstime.com/b/imagem-do-placeholder-perfil-silhueta-cinzenta-nenhuma-foto-127393540.jpg" id="imgIconeUsuario">
+        </div>
+        <button id="login">Home Page</button>
+    </header>
+    <main>
+        <menu>
+        <nav class="menu">
+            <section class="menuFiltroDosProdutos">
+                <button class="botoesDeFiltro" id="botaoTodos">Todos</button>
+                <button class="botoesDeFiltro" id="botaoPao"><img src="../img/panificadora.png" alt="Panificadora">Panificadora</button>
+                <button class="botoesDeFiltro" id="botaoFruta"><img src="../img/frutas.png" alt="Frutas">Frutas</button>
+                <button class="botoesDeFiltro" id="botaoBebida"><img src="../img/bebida.png" alt="Bebidas">Bebidas</button>
+            </section>
+            <button class="botoesDeFiltro" id="botaoAdicionar">Adicionar novo produto</button>
+        </nav>
+    </menu>
+    <section id="secaoListaAdmin">
+        <div id="cabecalhoListaAdmin">
+            <li id="liListaAdmin">
+                <h4 class="um">Produto</h4>
+                <h4 class="dois">Categorias</h4>
+                <h4 class="tres">Descrição</h4>
+                <h4 class="quatro">Ações</h4>
+            </li>
+            <ul id="listaApi">
+
+            </ul>
+
+
+        
+    
+            </div>
+        </section>
+        <div id="formCadastroDeProdutos" class="hidden" class="modalForm">
+            <div class="modalCadastro">
+                <div class="cabecalhoFormCadastro">
+                    <h2>Cadastro de Produto</h2>
+                    <button class="fecharModalCad">X</button>
+                </div>
+
+                <form id="infoFormCadastro">
+
+                    <label for="nomeDoProduto">Nome do Produto</label>
+                    <input type="text" name="nome" placeholder="Nome do produto" class="inputFormAdmin" />
+
+                    <label for="descricao">Descrição</label>
+                    <input type="text" name="descricao" placeholder="Descrição" class="inputFormAdmin"
+                        class="inputFormAdminDescricao" />
+
+                        <label name ="categoria" for="Categorias">Categorias</label>
+
+                        <select name="categoria"class="categoria">
+                            <option name="categoria" value="Panificadora">Panificadora</option>
+                            <option name="categoria" value="Frutas">Frutas</option>
+                            <option name="categoria" value="Bebidas">Bebidas</option>
+                            
+                          </select>
+
+                <label for="valorDoProduto">Valor do produto</label>
+                    <input type="text" name="preco" placeholder="Valor do produto" class="inputFormAdmin" />
+
+                    <label for="linkImg">Link da imagem</label>
+                    <input type="text" name="imagem" placeholder="Link da imagem" class="inputFormAdmin" />
+
+                    <button class="formAdminCadastro">Cadastrar Produto</button>
+                </form>
+            </div>
+
+
+        </div>
+
+        <div id="formEditarProdutos" class="hidden" class="modalForm">
+            <div class="modalEditar">
+                <div class="cabecalhoFormEditar">
+                    <h2>Edição do produto</h2>
+                    <button class="fecharModalEdit">X</button>
+                </div>
+
+                <form id="infoFormEdit">
+
+                    <label for="nomeDoProduto">Nome do Produto</label>
+                    <input type="text" name="nome" placeholder="Nome do produto" class="inputFormAdmin" />
+
+                    <label for="descricao">Descrição</label>
+                    <input type="text" name="descricao" placeholder="Descrição" class="inputFormAdmin"
+                        class="inputFormAdminDescricao" />
+
+                        <label name ="categoria" for="Categorias">Categorias</label>
+
+                        <select name="categoria"class="categoria">
+                            <option name="categoria" value="Panificadora">Panificadora</option>
+                            <option name="categoria" value="Frutas">Frutas</option>
+                            <option name="categoria" value="Bebidas">Bebidas</option>
+                            
+                          </select>
+                        
+                    <label for="valorDoProduto">Valor do produto</label>
+                    <input type="text" name="preco" placeholder="Valor do produto" class="inputFormAdmin" />
+
+                    <label for="linkImg">Link da imagem</label>
+                    <input type="text" name="imagem" placeholder="Link da imagem" class="inputFormAdmin" />
+
+                    <div class="botoesModalEditar">
+                        <button class="salvarAlterações">Salvar alterações</button>
+                        <button class="excluirProdutos">Excluir</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div id="containerModalExcluir" class="hidden">
+            <div id="modalExcluir" class="modalForm">
+                <div class="cabecalhoModalExcluir">
+                    <h2>Exclusão de produto</h2>
+                    <button class="fecharModalExcluir">X</button>
+                </div>
+                <div class="internoModalExcluir">
+                    <h2>Tem certeza que deseja excluir este produto?</h2>
+                    <div id="botoesModalExcluir">
+                        <button class="botaoModalExcluir">Sim</button>
+                        <button class="botaoModalNaoExcluir">Não</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="containerModalStatusAdd" class="hidden">
+            <div id="modalStatusAdd" class="modalForm">
+                <div>
+                    <div class="cabecalhoModalStatusAdd">
+                        <h2>Status</h2>
+                        <button class="fecharStatus" class="fecharStatusAdd">X</button>
+                    </div>
+                    <div class="internalModalStatusAdd">
+                        <h4>Produto adicionado com sucesso</h4>
+                        <div class="barraVerde"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="containerModalStatusAddErro" class="hidden">
+            <div id="modalStatusErro"  class="modalForm">
+                <div>
+                    <div class="cabecalhoModalStatusErro">
+                        <h2>Status</h2>
+                        <button class="fecharStatus" class="fecharStatusAdd">X</button>
+                    </div>
+                    <div class="internalModalStatusAdd">
+                        <h4>Produto não foi adicionado, ocorreu um erro!</h4>
+                    <div class="barraVermelha"></div>
+                    </div>
+                </div>
+        </div>
+
+        </div>
+    </main>
+    <script type="module" src="../js/admin.js"></script>
+</body>
+
+</html>
