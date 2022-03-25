@@ -10,6 +10,7 @@ Vitrine.checarSeLoginExiste()
 Carrinho.templateQuantidadePreco('aside', '.ulCarrinho', 'quantidadeTotal', 'precoTotal')
 Carrinho.quantidadeTotal(HomePageControle.produtoAdicionado, 'quantidadeTotal')
 Carrinho.valorTotal(HomePageControle.produtoAdicionado, 'precoTotal')
+Carrinho.templateTextoCarrinho()
 
 const inputPesquisa = document.querySelector('#inputPesquisa')
 
@@ -35,6 +36,6 @@ botaoRemoverProduto.addEventListener('click', HomePageControle.removerProduto.bi
 const botaoModalCarrinho = document.querySelector('#botaoCarrinho')
 botaoModalCarrinho.addEventListener('click', HomePageControle.callbackModalCarrinho.bind(HomePageControle))
 
-const menuEscondido = document.querySelector('.bmenuEscondido')
-menuEscondido.addEventListener('click', HomePageControle.menuMobile)
+//const menuEscondido = document.querySelector('.bmenuEscondido')
+//menuEscondido.addEventListener('click', HomePageControle.menuMobile)
 
