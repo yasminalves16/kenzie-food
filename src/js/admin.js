@@ -21,6 +21,8 @@ inputPesquisaAdmin.addEventListener('keyup', function(){
 const botao = document.querySelector('.menuFiltroDosProdutos')
 botao.addEventListener('click', AdminControle.botaoFiltros)
 
+const botaoVoltar = document.querySelector('.topo')
+botaoVoltar.addEventListener('click', ModalAdmin.voltarParaHome)
 
 const botaoAdicionar = document.querySelector("#botaoAdicionar")
 botaoAdicionar.addEventListener('click', ModalAdmin.mostrarModalCadastro)

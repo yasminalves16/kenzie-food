@@ -63,7 +63,15 @@ const ModalAdmin = class ModalAdmin {
         botaoEXC.classList.add('hidden')
         statusFecha.classList.add('hidden')
         statusFecha2.classList.add('hidden')
+        document.location.reload(true)
 
+    }
+
+    static voltarParaHome(event){
+        const botao = event.target
+        if(botao.id == 'login'){
+            window.location.href = './../../index.html'
+        }
     }
     
 

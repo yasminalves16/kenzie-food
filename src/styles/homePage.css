@@ -444,7 +444,10 @@ aside{
         margin: 0px 0px 0px 60px;
     
     }
-    
+    .botoesDesktop{
+        display:flex;
+        align-items: center;
+    }
     #adminPage, #botaoLogin{
         display: inline;
     }
