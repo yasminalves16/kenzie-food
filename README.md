@@ -28,3 +28,6 @@ O Kenzie Food foi o primeiro projeto em equipe desenvolvido do zero com o uso de
 
 -   Scrum Master: Yasmin Alves https://www.linkedin.com/in/devyasmin/
 -   Tech Lead: Henrique Andrade https://www.linkedin.com/in/henriqueyujiandrade/
+-   Product Owner: Victoria Viana https://www.linkedin.com/in/victoriavianx/
+-   Dev: https://www.linkedin.com/in/ddaniel-araujo/
+-   Dev: https://www.linkedin.com/in/lacerda-fernando/
