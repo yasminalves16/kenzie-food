@@ -1,5 +1,5 @@
-<img src="../img/Group 1075.svg"  alt="logo Kenzie Food" />
-# ![Kenzie Food, logo da Kenzie ](./src/img/Group%201075.svg)
+<img src="../img/Group1075.svg"  alt="logo Kenzie Food" />
+# ![Kenzie Food, logo da Kenzie ](./src/img/Group1075.svg)
 
 # API-KenzieFood
 
